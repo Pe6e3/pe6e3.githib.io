@@ -1,3 +1,3 @@
-# :aple: pe6e3.githib.io :apple:
+# :apple: pe6e3.githib.io :apple:
 `
 `
