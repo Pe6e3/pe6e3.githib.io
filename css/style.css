@@ -18,10 +18,22 @@
 
 
 
-.test2 img{
+.test2 img {
     background-color: red;
     margin: 0;
     width: 100%;
     height: 50vh;
     object-fit: cover;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.navbar {
+    padding: 0;
+    color: red;
+}
+.navbar-expand {
+    color: red;
 }
