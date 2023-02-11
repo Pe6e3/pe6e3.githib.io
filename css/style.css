@@ -1,28 +1,8 @@
-.test {
-    background-color: yellow;
-    margin: 0;
-    width: 100%;
-}
-
-.carousel {
-    height: 400px !important;
-    overflow: hidden;
-}
-
-
-.carousel-inner img {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-
-
-
-.test2 img {
+.top-slider img {
     background-color: red;
     margin: 0;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     object-fit: cover;
 }
 
@@ -30,10 +10,39 @@ body {
     background-color: antiquewhite;
 }
 
-.navbar {
-    padding: 0;
-    color: red;
+
+.navbar-style {
+    font-size: large;
+    font-family: 'Raleway';
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(0deg, rgb(0, 0, 0), rgb(13, 77, 79) 93%, rgb(144, 152, 98) 100%);
+    background: -moz-linear-gradient(0deg, rgb(0, 0, 0), rgb(13, 77, 79) 93%, rgb(144, 152, 98) 100%);
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(13, 77, 79) 93%, rgb(144, 152, 98) 100%);
 }
-.navbar-expand {
-    color: red;
+
+.MainPage {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Neucha', cursive;
 }
+
+.contacts{
+    margin-top: 20px;
+}
+
+
+.row-cont{
+    border: solid ;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.row-cont:hover{
+    background-color: yellow;
+}
+
+  
