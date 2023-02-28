@@ -98,3 +98,26 @@ body {
     max-width: 40vw;
     max-width: 40vh;
 }
+
+.card {
+    margin: auto;
+    height: 500px;
+    width: calc(20rem + 10px);
+    
+}
+.card-text{
+ height: 140px;
+}
+
+.card-img-top{
+    height: 170px;
+}
+
+.card-body{
+    display: inline-block;
+    justify-content: center;
+    vertical-align: middle;
+
+    
+    height: 100px;
+}
