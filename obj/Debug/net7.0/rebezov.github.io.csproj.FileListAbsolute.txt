@@ -1,0 +1,14 @@
+C:\Users\User\Source\Repos\rebezov.github.io\bin\Debug\net7.0\rebezov.github.io.exe
+C:\Users\User\Source\Repos\rebezov.github.io\bin\Debug\net7.0\rebezov.github.io.deps.json
+C:\Users\User\Source\Repos\rebezov.github.io\bin\Debug\net7.0\rebezov.github.io.runtimeconfig.json
+C:\Users\User\Source\Repos\rebezov.github.io\bin\Debug\net7.0\rebezov.github.io.dll
+C:\Users\User\Source\Repos\rebezov.github.io\bin\Debug\net7.0\rebezov.github.io.pdb
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.AssemblyInfo.cs
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.dll
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\refint\rebezov.github.io.dll
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.pdb
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\rebezov.github.io.genruntimeconfig.cache
+C:\Users\User\Source\Repos\rebezov.github.io\obj\Debug\net7.0\ref\rebezov.github.io.dll
