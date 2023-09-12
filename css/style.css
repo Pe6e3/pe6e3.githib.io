@@ -1037,13 +1037,13 @@ TpuModal {
     width: 42px;
     margin: 0 auto;
 }
-.services-detail,img{
+.services-detail > img {
     width: 90px;
     margin-top: 50px;
     display: inline-block;
     vertical-align: middle;
-
 }
+
 
 .services-section .services-detail {
     border-radius: 100%;
