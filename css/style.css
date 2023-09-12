@@ -1,45 +1,17 @@
-/*
-   
-    Template Name : WebRes - Personal Resume Template
-    Author : UiPasta Team
-    Website : http://www.uipasta.com/
-    Support : http://www.uipasta.com/support/
-	
-	
-*/
-
-
-
-/*
-   
-   Table Of Content
-   
-   1. Global Style
-   2. Preloader
-   3. Home Section and Navigation Menu
-   4. Qualification and Experience
-   5. About
-      5.1 Skills
-      5.2 Subscribe
-   6. Portfolio
-   7. Testimonial
-   8. Statistics
-   9. Services
-  10. Call to Action
-  11. Contact Us
-  12. Social Icons
-  13. Footer
-  14. Scroll To Top
-  15. Responsive
-  16. Useful Classes ( Such as : Margin, Padding, colors  "This classes will be helpful for you during designing/development time.")
-  17. UiPasta Credit
- 
-
-*/
-
-
-
 /* Global Style */
+
+:root {
+    --aboutBG: url('../images/bg/13.jpg');
+    --servicesBG: url('../images/bg/1.jpg');
+    --contactsBG: url('../images/bg/2.jpg');
+    --portfolioBG: url('../images/bg/15.jpg');
+    --sertificateBG: url('../images/bg/1.jpg');
+    --jobExpBG: url('../images/bg/5.jpg');
+    --footerBG: url('../images/bg/111.bmp');
+    --homeBG: url('../images/bg/2.jpg');
+    --maskBG: rgba(100, 100, 130, 0.5);
+}
+
 
 body {
     font-size: 12px;
@@ -328,24 +300,17 @@ fieldset {
 
 .home-section {
     padding-top: 60px;
-    /* background-image: url('../images/bg/5.jpg'); */
-    background-image: url('../images/bg/2.jpg');
+    background-image: var(--homeBG);
     background-size: cover;
-    /* Масштабировать изображение, чтобы оно заполнило блок полностью */
     background-repeat: no-repeat;
-    /* Запретить повторение фонового изображения */
     background-attachment: fixed;
-    /* Зафиксировать фон при прокрутке страницы */
 }
 
 .job-exp {
-    background-image: url('../images/bg/7.jpg');
+    background-image: var(--jobExpBG);
     background-size: cover;
-    /* Масштабировать изображение, чтобы оно заполнило блок полностью */
     background-repeat: no-repeat;
-    /* Запретить повторение фонового изображения */
     background-attachment: fixed;
-    /* Зафиксировать фон при прокрутке страницы */
 }
 
 .table {
@@ -566,8 +531,12 @@ tr>td:nth-child(2) {
 /* About */
 
 .about {
-    background: #F9F9F9;
+    background-image: var(--aboutBG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 .about-me-text {
     padding: 50px;
@@ -737,9 +706,35 @@ tr>td:nth-child(2) {
 
 /* Portfolio */
 
+
+
+.portfolio {
+    background-image: var(--portfolioBG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(232, 232, 255);
+    position: relative; /* Обязательно добавьте позицию для правильного отображения псевдоэлемента */
+    z-index: 0; 
+
+}
+.portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--maskBG); /* Цвет с прозрачностью (здесь 0.5) */
+    z-index: -1; 
+}
+
+
 .portfolio-inner .mix {
     display: none;
     padding: 0px;
+    z-index: 2; 
+
 }
 
 ul.portfolio {
@@ -748,7 +743,9 @@ ul.portfolio {
     margin-top: 30px;
     margin-left: 8px;
     text-align: center;
+    border-radius: 4px;
     background-color: #4c9cef;
+    
 }
 
 ul.portfolio li {
@@ -759,9 +756,11 @@ ul.portfolio li {
     font-size: 14px;
     font-weight: 400;
     color: #ffffff;
+    font-weight: bold;
     border: none;
     cursor: pointer;
     font-size: 13px;
+    
 }
 
 ul.portfolio li:hover {
@@ -771,7 +770,7 @@ ul.portfolio li:hover {
 
 ul.portfolio li.active {
     color: #ffffff;
-    background-color: #f7639a;
+    background-color: #b8f012bd;
     padding: 5px 20px;
     border-radius: 20px;
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
@@ -809,7 +808,7 @@ ul.portfolio li.active {
     opacity: 0;
     left: 0%;
     right: 0%;
-    background-color: #f7639a;
+    background-color: #f77c63;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -842,12 +841,11 @@ ul.portfolio li.active {
 
 
 
+
 /* Testimonial */
 
 .testimonial-section {
-    /* background: #F9F9F9; */
-    background-image: url('../images/bg/1.jpg');
-
+    background-image: var(--sertificateBG);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -998,6 +996,11 @@ TpuModal {
 
 .services-section {
     background-color: #F9F9F9;
+    
+    background-image: var(--servicesBG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .services-section hr {
@@ -1178,8 +1181,10 @@ TpuModal {
 /* Footer */
 
 .footer-section {
-    background: url(../images/bg/footer-bg.png);
-    background-repeat: repeat;
+    background-image: var(--footerBG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 80px 0px;
     color: #f8f8f8;
 }
