@@ -538,9 +538,10 @@ tr>td:nth-child(2) {
 }
 
 
-.about-me-text {
+.color-window {
     padding: 50px;
-    background-color: #2405781f;
+    background-color: #240578a4;
+
     box-shadow: -2px 40px 34px -24px rgba(0, 0, 0, 0.2);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     border: solid 7px #4c9cef;
@@ -548,7 +549,13 @@ tr>td:nth-child(2) {
     border-right-color: #f7639a;
 }
 
-.about-me-text p:first-letter {
+.color-window.contacts-window {
+    background-color: #2405781f;
+
+    
+}
+
+.color-window p:first-letter {
     font-size: 35px;
     color: #ffffff;
     background: #f7639a;
