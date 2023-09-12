@@ -737,8 +737,6 @@ tr>td:nth-child(2) {
 
 /* Portfolio */
 
-.portfolio {}
-
 .portfolio-inner .mix {
     display: none;
     padding: 0px;
@@ -888,6 +886,17 @@ ul.portfolio li.active {
 
 .testimonial-word p {
     line-height: 25px;
+}
+
+.modal-dialog,
+spaceDevModal {
+    width: 60%;
+}
+
+.modal-dialog,
+TpuModal {
+    width: 60%;
+
 }
 
 .owl-navi {
