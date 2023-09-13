@@ -1906,3 +1906,6 @@ TpuModal {
 }
 
 /* CSS класс для начального скрытия блока */
+.hidding {
+    display: none;
+}
