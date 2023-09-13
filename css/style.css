@@ -201,15 +201,24 @@ fieldset {
 }
 
 .button-style {
-    border: 3px solid #fff;
-    color: #fff;
+    border: 3px solid darkgray;
+    border-radius: 12px;
+    color: gray;
+    padding: 12px;
 }
+
+/* CSS для центрирования кнопки по горизонтали */
+#toggleHiddingBlock {
+    display: block;
+    margin: 0 auto;
+}
+
 
 .button-style:hover,
 .button-style:active,
 .button-style:focus {
-    color: #ffffff;
-    background: #4c9cef;
+    color: #3c3b3b;
+    background: #2d9cf669;
 }
 
 .button-style-color-2:hover,
@@ -897,26 +906,37 @@ ul.portfolio li.active {
     padding: 30px;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.25);
     transition: all 0.3s ease-in-out;
+    width: 950px;
+    height: 520px;
 }
 
+@media (max-width: 1200px) {
+    .testimonial-carousel-list {
+        width: 750px;
+    }
+    .testimonial-word img {
+        margin: 0 auto;
+        max-width: 380px;
+    }
+}
+
+
+
 .testimonial-carousel-list:hover {
-    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+    box-shadow: 0px 16px 22px 10px rgba(90, 91, 95, 0.5);
     top: -5px;
 }
 
-.testimonial-word {
-    padding: 0px 100px;
-}
 
 .testimonial-word img {
     margin: 0 auto;
-    max-width: 140px;
+    max-width: 500px;
 }
 
-.testimonial-word h2 {
-    font-size: 12px;
+.testimonial-word h1 {
+    font-size: 28px;
     text-transform: uppercase;
     color: #4c9cef;
     font-weight: 700;
@@ -952,14 +972,6 @@ ul.portfolio li.active {
 }
 
 
-
-
-/* .modal-dialog,
-TpuModal {
-    width: 60%;
-    margin: auto;
-    margin-top: 20%;
-} */
 
 .owl-navi {
     color: #ffffff;
