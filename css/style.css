@@ -375,6 +375,7 @@ tr>td:nth-child(2) {
     padding-top: 28px;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    width: 300px;
 }
 
 .logo a {
@@ -431,7 +432,17 @@ tr>td:nth-child(2) {
 
 .navigation-background .logo a {
     color: #ffffff;
+    
 }
+.logo a {
+    width: 230px; 
+    max-height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .navigation-background .navigation-menu .navbar-nav li a {
     color: #fff;
