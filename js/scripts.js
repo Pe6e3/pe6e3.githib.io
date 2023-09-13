@@ -55,6 +55,24 @@
         });
 
 
+        /* Кнопка для скрывания/показа блока Опыт работы */
+        var toggleButton = $('#toggleHiddingBlock');
+        var hiddingBlock = $('.hidding');
+
+        toggleButton.click(function () {
+            if (hiddingBlock.hasClass('hidden')) {
+                hiddingBlock.removeClass('hidden').slideDown();
+            } else {
+                hiddingBlock.slideUp(function () {
+                    $(this).addClass('hidden');
+                });
+            }
+        });
+        /* Кнопка для скрывания/показа блока Опыт работы */
+
+
+
+
 
         /* Smooth Scroll */
 
