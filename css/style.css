@@ -919,19 +919,28 @@ ul.portfolio li.active {
     border-radius: 4px;
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.25);
     transition: all 0.3s ease-in-out;
-    width: 950px;
-    height: 520px;
+    width: 80%;
 }
 
-@media (max-width: 1200px) {
-    .testimonial-carousel-list {
-        width: 750px;
+.testimonial-word img {
+    margin: 0 auto;
+    height: 350px;
+    object-fit: contain;
+
+    @media (max-width: 1200px) {
+        height: 300px;
     }
-    .testimonial-word img {
-        margin: 0 auto;
-        max-width: 380px;
+    @media (max-width: 800px) {
+        height: 250px;
     }
 }
+
+.documents {
+    display: flex;
+    justify-content: center;
+}
+
+ 
 
 
 
@@ -941,10 +950,7 @@ ul.portfolio li.active {
 }
 
 
-.testimonial-word img {
-    margin: 0 auto;
-    max-width: 500px;
-}
+
 
 .testimonial-word h1 {
     font-size: 28px;
@@ -953,26 +959,23 @@ ul.portfolio li.active {
     font-weight: 700;
     letter-spacing: 4px;
     margin: 20px 0px;
-}
 
-.testimonial-word p {
-    line-height: 25px;
-}
+    @media (max-width: 1200px) {
+        font-size: 20px;
 
-.modal-dialog,
-.spaceDevModal {
-    width: 60%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-@media (max-width: 1200px) {
-
-    .modal-dialog,
-    .spaceDevModal {
-        margin-top: 20%;
     }
 }
+
+.testimonial-word h4 {
+    line-height: 140%;
+    font-size: 16px;
+
+    @media (max-width: 1200px) {
+        font-size: 13px;
+
+    }
+}
+
 
 @media (min-width: 1200px) and (max-width: 1620px) {
 
