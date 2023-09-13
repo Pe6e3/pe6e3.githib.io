@@ -35,16 +35,28 @@
 
     jQuery(document).ready(function () {
 
-        
-       /* Preloader */
-		
+        // Получаем ссылку на видеоплеер и модальное окно
+        var videoPlayer = document.getElementById('videoPlayer');
+        var modal = document.getElementById('portfolio-modal-1');
+
+        // Находим кнопку закрытия модального окна
+        var closeButton = modal.querySelector('.btn[data-dismiss="modal"]');
+
+        // Добавляем обработчик события click для кнопки закрытия
+        closeButton.addEventListener('click', function () {
+            // При нажатии на кнопку закрытия модального окна останавливаем воспроизведение видео
+            videoPlayer.pause();
+        });
+
+        /* Preloader */
+
         $(window).load(function () {
             $('.preloader').delay(800).fadeOut('slow');
         });
-		
-		
-		
-       /* Smooth Scroll */
+
+
+
+        /* Smooth Scroll */
 
         $('a.smoth-scroll').on("click", function (e) {
             var anchor = $(this);
@@ -53,12 +65,12 @@
             }, 1000);
             e.preventDefault();
         });
-		
 
 
-       
-       /* Scroll Naviagation Background Change with Sticky Navigation */
-		 
+
+
+        /* Scroll Naviagation Background Change with Sticky Navigation */
+
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 100) {
                 $('.header-top-area').addClass('navigation-background');
@@ -66,12 +78,12 @@
                 $('.header-top-area').removeClass('navigation-background');
             }
         });
-		
-		
-		
-		
-       /* Mobile Navigation Hide or Collapse on Click */
-		
+
+
+
+
+        /* Mobile Navigation Hide or Collapse on Click */
+
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
@@ -80,82 +92,83 @@
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
-        
-		 });
-		 
-		
-		
-		
-        /* Scroll To Top */
-		
-        $(window).scroll(function(){
-        if ($(this).scrollTop() >= 500) {
-            $('.scroll-to-top').fadeIn();
-         } else {
-            $('.scroll-to-top').fadeOut();
-         }
-	   });
-	
-	
-	    $('.scroll-to-top').click(function(){
-		  $('html, body').animate({scrollTop : 0},800);
-		  return false;
-	    });
-		
 
-        
+        });
+
+
+
+
+        /* Scroll To Top */
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 500) {
+                $('.scroll-to-top').fadeIn();
+            } else {
+                $('.scroll-to-top').fadeOut();
+            }
+        });
+
+
+        $('.scroll-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+
+
+
         /* Tooltip */
-         
-         $(function () {
-           $('[data-toggle="tooltip"]').tooltip()
-           })
-		   
-		 
-        
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+
+
         /* Ajaxchimp for Subscribe Form */
-		
-         $('#mc-form').ajaxChimp();
-		   
-		   
-  
-		
+
+        $('#mc-form').ajaxChimp();
+
+
+
+
         /* Portfolio Filtering */
 
         $('.portfolio-inner').mixItUp();
 
 
-       
+
         /* Magnific Popup */
 
         $('.portfolio-popup').magnificPopup({
             type: 'image',
-			
-            gallery: { enabled: true },
-			zoom: { enabled: true,
-			        duration: 500
-					
-          },
-		  
-		  
-         image:{
-               markup: '<div class="mfp-figure portfolio-pop-up">'+
-               '<div class="mfp-close"></div>'+
-               '<div class="mfp-img"></div>'+
-               '<div class="mfp-bottom-bar portfolio_title">'+
-               '<div class="mfp-title"></div>'+
-               '<div class="mfp-counter"></div>'+
-               '</div>'+
-               '</div>',
 
-               titleSrc:function(item){
-                return item.el.attr('title');
-              }
+            gallery: { enabled: true },
+            zoom: {
+                enabled: true,
+                duration: 500
+
+            },
+
+
+            image: {
+                markup: '<div class="mfp-figure portfolio-pop-up">' +
+                    '<div class="mfp-close"></div>' +
+                    '<div class="mfp-img"></div>' +
+                    '<div class="mfp-bottom-bar portfolio_title">' +
+                    '<div class="mfp-title"></div>' +
+                    '<div class="mfp-counter"></div>' +
+                    '</div>' +
+                    '</div>',
+
+                titleSrc: function (item) {
+                    return item.el.attr('title');
+                }
             }
-		  
-		  
-          });
-	   
-		 
+
+
+        });
+
+
         /* Testimonial Carousel/Slider */
 
         $(".testimonial-carousel-list").owlCarousel({
@@ -171,27 +184,29 @@
             itemsMobile: [479, 1],
             autoHeight: true,
             pagination: false,
-            transitionStyle : "fadeUp"
+            transitionStyle: "fadeUp"
         });
-		
-		
-		
-		
-        /* Statistics Counter */
-		
-        $('.statistics').appear(function() {
-           var counter = $(this).find('.statistics-count');
-           var toCount = counter.data('count');
-      
-           $(counter).countTo({
-           from: 0,
-           to: toCount,
-           speed: 5000,
-           refreshInterval: 50
-           })
-           });
-              
-		   
-            });
 
-   })(jQuery);
+
+
+
+        /* Statistics Counter */
+
+        $('.statistics').appear(function () {
+            var counter = $(this).find('.statistics-count');
+            var toCount = counter.data('count');
+
+            $(counter).countTo({
+                from: 0,
+                to: toCount,
+                speed: 5000,
+                refreshInterval: 50
+            })
+        });
+
+
+
+
+    });
+
+})(jQuery);
