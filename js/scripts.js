@@ -51,8 +51,8 @@
         });
 
         /* ↓ Кнопка для скрывания/показа блока Опыт работы  ↓*/
-        var toggleButton = $('#toggleHiddingBlock');
-        var hiddingBlock = $('.hidding');
+        var toggleButton = $('#toggleHiddingBlockExp');
+        var hiddingBlock = $('.hiddingExp');
         
         toggleButton.click(function () {
             hiddingBlock.slideToggle();
@@ -66,7 +66,21 @@
         
         /* ↑ Кнопка для скрывания/показа блока Опыт работы  ↑ */
 
-
+        /* ↓ Кнопка для скрывания/показа блока Обо мне  ↓*/
+        var toggleButton = $('#toggleHiddingBlockAbout');
+        var hiddingBlock = $('.hiddingAbout');
+        
+        toggleButton.click(function () {
+            hiddingBlock.slideToggle();
+            
+            if (toggleButton.text() === 'Скрыть информацию Обо мне') {
+                toggleButton.text('Показать информацию Обо мне');
+            } else {
+                toggleButton.text('Скрыть информацию Обо мне');
+            }
+        });
+        
+        /* ↑ Кнопка для скрывания/показа блока Обо мне  ↑ */
 
 
 

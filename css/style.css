@@ -221,20 +221,18 @@ fieldset {
     border-radius: 12px;
     color: gray;
     padding: 12px;
+    background: #2d9cf651;
+
 }
 
-/* CSS для центрирования кнопки по горизонтали */
-#toggleHiddingBlock {
-    display: block;
-    margin: 0 auto;
-}
+
 
 
 .button-style:hover,
 .button-style:active,
 .button-style:focus {
-    color: #3c3b3b;
-    background: #2d9cf669;
+    color: #fafaf0;
+    background: #2d9cf68b;
 }
 
 .button-style-color-2:hover,
@@ -1963,6 +1961,15 @@ ul.portfolio li.active {
 }
 
 /* CSS класс для начального скрытия блока */
-.hidding {
+.hiddingExp,
+.hiddingAbout {
     display: none;
+}
+
+/* CSS для центрирования кнопки по горизонтали */
+#toggleHiddingBlockExp,
+#toggleHiddingBlockAbout
+{
+display: block;
+margin: 0 auto;
 }
