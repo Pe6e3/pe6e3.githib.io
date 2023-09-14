@@ -51,32 +51,32 @@
         });
 
         /* ↓ Кнопка для скрывания/показа блока Опыт работы  ↓*/
-        var toggleButton = $('#toggleHiddingBlockExp');
-        var hiddingBlock = $('.hiddingExp');
+        var toggleButtonExp = $('#toggleHiddingBlockExp');
+        var hiddingBlockExp = $('.hiddingExp');
         
-        toggleButton.click(function () {
-            hiddingBlock.slideToggle();
+        toggleButtonExp.click(function () {
+            hiddingBlockExp.slideToggle();
             
-            if (toggleButton.text() === 'Скрыть опыт работы') {
-                toggleButton.text('Показать опыт работы');
+            if (toggleButtonExp.text() === 'Скрыть опыт работы') {
+                toggleButtonExp.text('Показать опыт работы');
             } else {
-                toggleButton.text('Скрыть опыт работы');
+                toggleButtonExp.text('Скрыть опыт работы');
             }
         });
         
         /* ↑ Кнопка для скрывания/показа блока Опыт работы  ↑ */
 
         /* ↓ Кнопка для скрывания/показа блока Обо мне  ↓*/
-        var toggleButton = $('#toggleHiddingBlockAbout');
-        var hiddingBlock = $('.hiddingAbout');
+        var toggleButtonAbout = $('#toggleHiddingBlockAbout');
+        var hiddingBlockAbout = $('.hiddingAbout');
         
-        toggleButton.click(function () {
-            hiddingBlock.slideToggle();
+        toggleButtonAbout.click(function () {
+            hiddingBlockAbout.slideToggle();
             
-            if (toggleButton.text() === 'Скрыть информацию Обо мне') {
-                toggleButton.text('Показать информацию Обо мне');
+            if (toggleButtonAbout.text() === 'Скрыть информацию Обо мне') {
+                toggleButtonAbout.text('Показать информацию Обо мне');
             } else {
-                toggleButton.text('Скрыть информацию Обо мне');
+                toggleButtonAbout.text('Скрыть информацию Обо мне');
             }
         });
         
