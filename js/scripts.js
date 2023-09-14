@@ -35,33 +35,36 @@
 
     jQuery(document).ready(function () {
 
-        // Получаем ссылку на видеоплеер и модальное окно
+        /*  ↓ Остановка видео при закрытии модального окна ↓ */
         var videoPlayer = document.getElementById('videoPlayer');
         var modal = document.getElementById('portfolio-modal-1');
-
-        // Находим кнопку закрытия модального окна
         var closeButton = modal.querySelector('.btn[data-dismiss="modal"]');
 
-        // Добавляем обработчик события click для кнопки закрытия
         closeButton.addEventListener('click', function () {
-            // При нажатии на кнопку закрытия модального окна останавливаем воспроизведение видео
             videoPlayer.pause();
         });
+        /*  ↑ Остановка видео при закрытии модального окна ↑ */
 
         /* Preloader */
-
         $(window).load(function () {
             $('.preloader').delay(800).fadeOut('slow');
         });
 
-        /* Кнопка для скрывания/показа блока Опыт работы */
+        /* ↓ Кнопка для скрывания/показа блока Опыт работы  ↓*/
         var toggleButton = $('#toggleHiddingBlock');
         var hiddingBlock = $('.hidding');
-
+        
         toggleButton.click(function () {
             hiddingBlock.slideToggle();
+            
+            if (toggleButton.text() === 'Скрыть опыт работы') {
+                toggleButton.text('Показать опыт работы');
+            } else {
+                toggleButton.text('Скрыть опыт работы');
+            }
         });
-        /* Кнопка для скрывания/показа блока Опыт работы */
+        
+        /* ↑ Кнопка для скрывания/показа блока Опыт работы  ↑ */
 
 
 
