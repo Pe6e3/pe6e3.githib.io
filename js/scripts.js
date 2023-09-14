@@ -36,13 +36,42 @@
     jQuery(document).ready(function () {
 
         /*  ↓↓↓ Остановка видео при закрытии модального окна ↓↓↓ */
-        var videoPlayer = document.getElementById('my-video');
-        var modal = document.getElementById('portfolio-modal');
-        var closeButton = modal.querySelector('.btn[data-dismiss="modal"]');
+        function stopVideoOnModalClose(videoId, modalId) {
+            var videoPlayer = document.getElementById(videoId);
+            var modal = document.getElementById(modalId);
+            
+            if (!videoPlayer || !modal) {
+                console.error("Video player or modal not found.");
+                return; // Выход из функции, если какой-то из элементов не найден
+            }
+        
+            // Получить все элементы с атрибутом data-dismiss="modal"
+            var elementsWithDismissModal = document.querySelectorAll('[data-dismiss="modal"]');
+        
+            // Проверить, были ли найдены элементы с атрибутом data-dismiss="modal"
+            if (elementsWithDismissModal.length === 0) {
+                console.warn("No elements with data-dismiss='modal' found.");
+                return; // Выход из функции, если элементы не были найдены
+            }
+        
+            // Добавить обработчик события клика к каждому найденному элементу
+            elementsWithDismissModal.forEach(function (element) {
+                element.addEventListener('click', function () {
+                    videoPlayer.pause();
+                });
+            });
+        }
 
-        closeButton.addEventListener('click', function () {
-            videoPlayer.pause();
-        });
+        stopVideoOnModalClose('my-video-1', 'portfolio-modal-1');
+        stopVideoOnModalClose('my-video-2', 'portfolio-modal-2');
+        stopVideoOnModalClose('my-video-3', 'portfolio-modal-3');
+        stopVideoOnModalClose('my-video-4', 'portfolio-modal-4');
+        stopVideoOnModalClose('my-video-5', 'portfolio-modal-5');
+        stopVideoOnModalClose('my-video-6', 'portfolio-modal-6');
+        stopVideoOnModalClose('my-video-7', 'portfolio-modal-7');
+        stopVideoOnModalClose('my-video-8', 'portfolio-modal-8');
+        stopVideoOnModalClose('my-video-9', 'portfolio-modal-9');
+
         /*  ↑↑↑ Остановка видео при закрытии модального окна ↑↑↑ */
 
 
