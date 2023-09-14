@@ -50,37 +50,24 @@
             $('.preloader').delay(800).fadeOut('slow');
         });
 
-        /* ↓ Кнопка для скрывания/показа блока Опыт работы  ↓*/
-        var toggleButtonExp = $('#toggleHiddingBlockExp');
-        var hiddingBlockExp = $('.hiddingExp');
+        function setupToggleButton(buttonId, blockId, showText, hideText) {
+            var toggleButton = $(buttonId);
+            var hiddingBlock = $(blockId);
         
-        toggleButtonExp.click(function () {
-            hiddingBlockExp.slideToggle();
-            
-            if (toggleButtonExp.text() === 'Скрыть опыт работы') {
-                toggleButtonExp.text('Показать опыт работы');
-            } else {
-                toggleButtonExp.text('Скрыть опыт работы');
-            }
-        });
+            toggleButton.click(function () {
+                hiddingBlock.slideToggle();
         
-        /* ↑ Кнопка для скрывания/показа блока Опыт работы  ↑ */
-
-        /* ↓ Кнопка для скрывания/показа блока Обо мне  ↓*/
-        var toggleButtonAbout = $('#toggleHiddingBlockAbout');
-        var hiddingBlockAbout = $('.hiddingAbout');
+                if (toggleButton.text() === hideText) {
+                    toggleButton.text(showText);
+                } else {
+                    toggleButton.text(hideText);
+                }
+            });
+        }
         
-        toggleButtonAbout.click(function () {
-            hiddingBlockAbout.slideToggle();
-            
-            if (toggleButtonAbout.text() === 'Скрыть информацию Обо мне') {
-                toggleButtonAbout.text('Показать информацию Обо мне');
-            } else {
-                toggleButtonAbout.text('Скрыть информацию Обо мне');
-            }
-        });
+        setupToggleButton('#toggleHiddingBlockExp', '.hiddingExp', 'Показать опыт работы', 'Скрыть опыт работы');
+        setupToggleButton('#toggleHiddingBlockAbout', '.hiddingAbout', 'Показать информацию Обо мне', 'Скрыть информацию Обо мне');
         
-        /* ↑ Кнопка для скрывания/показа блока Обо мне  ↑ */
 
 
 
