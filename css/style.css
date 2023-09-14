@@ -12,6 +12,7 @@
     --maskBG: rgba(100, 100, 130, 0.5);
     --maskAboutBG: rgba(20, 20, 30, 0.4);
     --subscribeModalBG: url('../images/bg/footer-bg.png');
+    --portfolioModalBG: url('../images/bg/12.png');
 }
 
 @font-face {
@@ -225,15 +226,42 @@ fieldset {
 
 }
 
-
-
-
 .button-style:hover,
 .button-style:active,
 .button-style:focus {
     color: #fafaf0;
     background: #2d9cf68b;
 }
+
+
+
+.button-my-style {
+    border: 3px solid rgb(90, 83, 83);
+    border-radius: 12px;
+    color: rgb(47, 45, 45);
+    padding: 0px 10px 0px 10px;
+    background: #7c7f8171;
+    box-shadow: 0px 6px 14px 0px rgba(90, 91, 95, 0.3);
+
+    @media(max-width:767px)
+    {
+       font-size: 12px;
+    }
+
+
+}
+
+.button-my-style:hover,
+.button-my-style:active,
+.button-my-style:focus {
+    color: #8d2506;
+    background: #a4e522ad;
+    border: 3px solid rgb(135, 3, 3);
+    box-shadow: 0px 0px 14px 7px rgba(229, 210, 6, 0.43);
+
+}
+
+
 
 .button-style-color-2:hover,
 .button-style-color-2:active,
@@ -658,6 +686,27 @@ tr>td:nth-child(2) {
     outline: 0;
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
     transition: all 0.3s ease-in-out;
+
+}
+.modal-dialog{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+
+}
+.modal-content{
+    width: 90%;
+    margin-left: 20px;
+
+    @media(max-width: 992px){
+    margin-top: 5%;
+    }
+}
+
+@media(max-width:992px){
+    .modal-content h2{
+        font-size: 18px;
+    }
 }
 
 .modal-body .btn:hover {
@@ -787,11 +836,17 @@ tr>td:nth-child(2) {
 
 /* Portfolio */
 
+.portfolio-block {
+    display: block;
+    justify-content: center;
+    text-align: center;
+
+}
+
 .portfolio-modal .modal-content {
-    background: var(--subscribeModalBG);
+    background: var(--portfolioModalBG);
     background-repeat: repeat;
     padding-bottom: 40px;
-    margin-top: 20%;
     font-size: 30px;
     line-height: 150%;
 }
@@ -1968,8 +2023,7 @@ ul.portfolio li.active {
 
 /* CSS для центрирования кнопки по горизонтали */
 #toggleHiddingBlockExp,
-#toggleHiddingBlockAbout
-{
-display: block;
-margin: 0 auto;
+#toggleHiddingBlockAbout {
+    display: block;
+    margin: 0 auto;
 }
