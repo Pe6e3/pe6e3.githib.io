@@ -970,7 +970,7 @@ ul.portfolio li.active {
 
 
 .testimonial-word h1 {
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
     color: #4c9cef;
     font-weight: 700;
@@ -978,8 +978,7 @@ ul.portfolio li.active {
     margin: 20px 0px;
 
     @media (max-width: 1200px) {
-        font-size: 20px;
-
+        font-size: 16px;
     }
 }
 
@@ -988,8 +987,7 @@ ul.portfolio li.active {
     font-size: 16px;
 
     @media (max-width: 1200px) {
-        font-size: 13px;
-
+        font-size: 12px;
     }
 }
 
