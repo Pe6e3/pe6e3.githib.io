@@ -1022,6 +1022,18 @@ ul.portfolio li.active {
 }
 
 
+.overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: rgba(30, 10, 50, 0.8); /* Цвет фона с прозрачностью */
+    border-radius: 5px;
+}
+
+.overlay h5 {
+    color: #fff; /* Цвет текста */
+    padding: 0 5px; /* Отступы текста внутри фона */
+}
 
 
 .mfp-image-holder .mfp-close,
