@@ -14,6 +14,11 @@
     --subscribeModalBG: url('../images/bg/footer-bg.png');
 }
 
+@font-face {
+	font-family: 'Tektur'; 
+	src: url('/fonts/Tektur-VariableFont_wdth,wght.ttf'); 
+}
+
 
 body {
     font-size: 13px;
@@ -21,7 +26,7 @@ body {
     line-height: 24px;
     letter-spacing: 1px;
     height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: 'Tektur', Geneva, Tahoma, sans-serif, sans-serif;
 }
 
 
@@ -46,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Tektur', sans-serif;
     font-weight: bold;
 }
 
@@ -60,6 +65,12 @@ img {
 
 a {
     color: #4c9cef;
+}
+
+.me-image>img{
+    height: 500px;
+    width: auto;
+    border-radius: 8px;
 }
 
 a:hover,
