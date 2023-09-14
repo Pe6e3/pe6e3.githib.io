@@ -709,6 +709,7 @@ tr>td:nth-child(2) {
 
 .modal-content h2 {
     padding: 5px 10%;
+
     @media(max-width:992px) {
         font-size: 18px;
     }
@@ -963,6 +964,17 @@ ul.portfolio li.active {
     transition: .3s;
 }
 
+.vjs-control-bar{
+    border-radius: 30px;
+    
+}
+.video-js {
+    width: 90%;
+    max-height: 350px;
+    border-radius: 15px;
+}
+
+
 .portfolio .item:hover a:before {
     top: 40%;
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
@@ -991,9 +1003,8 @@ ul.portfolio li.active {
     transition: all 400ms ease-in-out;
 }
 
-.portfolio .item a:hover:before {
-    opacity: 1;
-}
+
+
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {

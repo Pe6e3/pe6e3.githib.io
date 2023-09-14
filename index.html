@@ -31,6 +31,9 @@
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
 
+    <!-- Видеоплеер Video.js  -->
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -264,7 +267,7 @@
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix apps">
                             <div class="item">
-                                <a href="#"  data-toggle="modal" data-target="#portfolio-modal-1" title="My Skills">
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="My Skills">
                                     <img src="img/BAP.jpg">
                                 </a>
                             </div>
@@ -272,8 +275,7 @@
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix mockups">
                             <div class="item">
-                                <a href="#" data-toggle="modal" data-target="#portfolio-modal-1"
-                                    title="Project Title">
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="Project Title">
                                     <img src="img/japanese.jpg">
                                 </a>
                             </div>
@@ -281,8 +283,7 @@
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix wordpress">
                             <div class="item">
-                                <a href="#" data-toggle="modal" data-target="#portfolio-modal-1"
-                                    title="Project Title">
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="Project Title">
                                     <img src="img/swing.jpg">
                                 </a>
                             </div>
@@ -290,8 +291,7 @@
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix =">
                             <div class="item">
-                                <a href="#" data-toggle="modal" data-target="#portfolio-modal-1"
-                                    title="Project Title">
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="Project Title">
                                     <img src="img/gorelnik.jpg">
                                 </a>
                             </div>
@@ -299,20 +299,18 @@
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix">
                             <div class="item">
-                                <a href="#" data-toggle="modal" data-target="#portfolio-modal-1"
-                                    title="Project Title">
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="Project Title">
                                     <img src="img/swing.jpg">
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-6 col-xs-12 mix =" data-toggle="modal"
-                            data-target="#portfolio-modal-1" title="Project Title">
+                            data-target="#portfolio-modal" title="Project Title">
                             <div class="item">
-                                <a href="#" data-toggle="modal" data-target="#portfolio-modal-1"
-                                title="Project Title">
-                                <img src="img/pioneer.jpg">
-                            </a>
+                                <a href="#" data-toggle="modal" data-target="#portfolio-modal" title="Project Title">
+                                    <img src="img/pioneer.jpg">
+                                </a>
                             </div>
                         </div>
 
@@ -651,6 +649,8 @@
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>
 
+    <!-- Видеоплеер Video.js  -->
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
 
 </body>
 
@@ -814,7 +814,7 @@
 
 
 <!-- -- --  Модальное окно с Портфолио1 Start -->
-<div class="modal fade portfolio-modal padding-top-120" id="portfolio-modal-1" role="dialog">
+<div class="modal fade portfolio-modal padding-top-120" id="portfolio-modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
@@ -832,9 +832,15 @@
                     <div class="col portfolio-block">
                         <h2> Программа на WinForms для составления меню в детском саду</h1>
 
-                            <video id="videoPlayer" controls width="90%" style="max-height: 350px; border-radius: 20px;" preload="none">
-                                <source src="videos/Меню.mp4" type="video/mp4">
-                            </video>
+                            <div class="video-container" id="portfolio-modal">
+
+                                <video id="my-video" class="video-js" controls preload="auto" 
+                                    poster="/images/bg/14.jpg" data-setup="{}">
+                                    <source src="/videos/Меню.mp4" type="video/mp4" />
+                                </video>
+
+                            </div>
+
                             <button class="button button-my-style"> Скачать программу </button>
                             <button class="button button-my-style"> Ссылка на GitHub</button>
                     </div>

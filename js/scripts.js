@@ -35,15 +35,17 @@
 
     jQuery(document).ready(function () {
 
-        /*  ↓ Остановка видео при закрытии модального окна ↓ */
-        var videoPlayer = document.getElementById('videoPlayer');
-        var modal = document.getElementById('portfolio-modal-1');
+        /*  ↓↓↓ Остановка видео при закрытии модального окна ↓↓↓ */
+        var videoPlayer = document.getElementById('my-video');
+        var modal = document.getElementById('portfolio-modal');
         var closeButton = modal.querySelector('.btn[data-dismiss="modal"]');
 
         closeButton.addEventListener('click', function () {
             videoPlayer.pause();
         });
-        /*  ↑ Остановка видео при закрытии модального окна ↑ */
+        /*  ↑↑↑ Остановка видео при закрытии модального окна ↑↑↑ */
+
+
 
         /* Preloader */
         $(window).load(function () {
@@ -53,10 +55,10 @@
         function setupToggleButton(buttonId, blockId, showText, hideText) {
             var toggleButton = $(buttonId);
             var hiddingBlock = $(blockId);
-        
+
             toggleButton.click(function () {
                 hiddingBlock.slideToggle();
-        
+
                 if (toggleButton.text() === hideText) {
                     toggleButton.text(showText);
                 } else {
@@ -64,10 +66,10 @@
                 }
             });
         }
-        
+
         setupToggleButton('#toggleHiddingBlockExp', '.hiddingExp', 'Показать опыт работы', 'Скрыть опыт работы');
         setupToggleButton('#toggleHiddingBlockAbout', '.hiddingAbout', 'Показать информацию Обо мне', 'Скрыть информацию Обо мне');
-        
+
 
 
 
