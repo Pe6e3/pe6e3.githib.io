@@ -696,6 +696,8 @@ tr>td:nth-child(2) {
 
 }
 
+
+
 .modal-content {
     max-width: 90%;
     margin-left: 20px;
@@ -964,14 +966,30 @@ ul.portfolio li.active {
     transition: .3s;
 }
 
-.vjs-control-bar{
+.vjs-control-bar {
     border-radius: 30px;
-    
+
 }
+
 .video-js {
     width: 90%;
-    max-height: 350px;
+    max-height: 380px;
+    max-width: 90%;
     border-radius: 15px;
+
+    @media(max-width:1000px) {
+        max-height: 280px;
+    }
+    @media((min-width: 680px) and (max-width:1000px)) {
+        max-height: 260px;
+    }
+
+    @media((min-width: 505px) and (max-width:680px)) {
+        max-height: 180px;
+    }
+    @media((max-width: 505px)) {
+        max-height: 110px;
+    }
 }
 
 
