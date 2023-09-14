@@ -1024,10 +1024,11 @@ ul.portfolio li.active {
 
 .overlay {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 0%;
+    left: 0%;
     background-color: rgba(30, 10, 50, 0.8); /* Цвет фона с прозрачностью */
     border-radius: 5px;
+    margin:10px
 }
 
 .overlay h5 {
