@@ -36,28 +36,30 @@
     jQuery(document).ready(function () {
 
         /*  ↓↓↓ Запуск видео по кнопке в полноэкранном режиме ↓↓↓ */
+        // Находим все кнопки, которые запускают видео
+        var videoButtons = document.querySelectorAll('.play-video-button');
 
-        // Инициализируем видеоплеер
-        var player = videojs('my-video');
+        // Добавляем обработчик события click к каждой кнопке
+        videoButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Получаем src из связанного <source> элемента
+                var videoSource = button.getAttribute('data-video-source');
 
-        // Получаем кнопку для запуска видео на полный экран
-        var playFullscreenButton = document.getElementById('play-fullscreen-button');
+                // Запускаем видео с указанным src
+                playVideo(videoSource);
+            });
+        });
 
-        // Получаем контейнер видео
-        var videoContainer = document.getElementById('video-container');
+        function playVideo(source, videoId, containerId) {
+            var player = videojs(videoId);
 
-        // Добавляем обработчик события click к кнопке
-        playFullscreenButton.addEventListener('click', function () {
-            // Показываем контейнер видео
-            videoContainer.style.display = 'block';
+            // Устанавливаем новый источник видео
+            player.src(source);
 
-            // Проверяем, играет ли видео в данный момент
-            if (player.paused()) {
-                // Если видео на паузе, воспроизводим его
-                player.play();
-            }
+            // Воспроизводим видео
+            player.play();
 
-            // Переключаем видео в полноэкранный режим (раскрываем на весь экран)
+            // Открываем видео в полноэкранном режиме, если необходимо
             if (player.requestFullscreen) {
                 player.requestFullscreen();
             } else if (player.mozRequestFullScreen) {
@@ -65,6 +67,15 @@
             } else if (player.webkitRequestFullscreen) {
                 player.webkitRequestFullscreen();
             }
+        }
+
+        document.querySelectorAll('.play-video-button').forEach(function (button, index) {
+            button.addEventListener('click', function () {
+                var videoSource = button.getAttribute('data-video-source');
+                var videoId = 'my-video' + (index + 1);
+                var containerId = 'video-container' + (index + 1);
+                playVideo(videoSource, videoId, containerId);
+            });
         });
 
         // Добавляем обработчик события fullscreenchange, который срабатывает при изменении состояния полноэкранного режима

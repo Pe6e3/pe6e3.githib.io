@@ -849,63 +849,87 @@
                 <div class="row portfolio-window">
                     <div class="col portfolio-block">
 
-                        <!-- <div class="video-container margin-bottom-10">
-                                <video id="my-video-1" class="video-js" controls preload="auto"
-                                poster="/images/bg/14.jpg" data-setup="{}">
-                                <source src="/videos/Меню.mp4" type="video/mp4" />
-                            </video>
-                        </div> -->
                         <div class="myGrid">
                             <div class="grid-title">
                                 <h2> Программа на WinForms для составления меню в детском саду</h1>
                             </div>
                             <div class="grid-video-buttons">
-                                <button class="button button-my-style" src="/videos/Меню.mp4"> Короткое видео </button>
-                                <button class="button button-my-style"> Подробное видео </button>
+                                <!-- <button class="button button-my-style" id="play-fullscreen-button">
+                                    Короткое видео </button>
 
-                                <button class="button button-my-style" id="play-fullscreen-button">Запустить видео на
-                                    полный экран</button>
-                                <div class="video-container"  id="video-container">
-                                    <video id="my-video" class="video-js" preload="auto" controls poster="/images/myPhoto.jpeg"
-                                        data-setup="{}">
+                                <div class="video-container" id="video-container">
+                                    <video id="my-video" class="video-js" preload="auto" controls
+                                        poster="/images/myPhoto.jpeg" data-setup="{}">
+                                        <source src="/videos/Дрифт на Ленте на копейке.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+
+
+                                <button class="button button-my-style" id="play-fullscreen-button">
+                                    Подробное видео</button>
+
+                                <div class="video-container" id="video-container">
+                                    <video id="my-video" class="video-js" preload="auto" controls
+                                        poster="/images/myPhoto.jpeg" data-setup="{}">
                                         <source src="/videos/Меню.mp4" type="video/mp4" />
+                                    </video>
+                                </div> -->
+
+                                <button class="button button-my-style play-video-button"
+                                    data-video-source="/videos/Меню.mp4"> Короткое видео </button>
+
+                                <button class="button button-my-style play-video-button"
+                                    data-video-source="/videos/Дрифт на Ленте на копейке.mp4"> Подробное видео </button>
+
+                                <div class="video-container" id="video-container1">
+                                    <video id="my-video1" class="video-js" preload="auto" controls data-setup="{}">
+                                        <source type="video/mp4" />
+                                    </video>
+                                </div>
+
+                                <div class="video-container" id="video-container2">
+                                    <video id="my-video2" class="video-js" preload="auto" controls data-setup="{}">
+                                        <source type="video/mp4" />
                                     </video>
                                 </div>
 
                             </div>
 
 
-                            <div class="grid-desc">
-                                <p>
-                                    <img src="images/bg/1.jpg" alt="">
-                                    Логи, которые вы предоставили, упоминают файл с именем artifact.tar. Это архивный
-                                    файл, который, скорее всего, содержит какие-то данные или ресурсы вашего проекта. Он
-                                    может включать в себя различные файлы, включая видеофайлы, изображения, текстовые
-                                    файлы и другие ресурсы.
-
-                                    Из предоставленных логов нельзя точно определить размер файла artifact.tar, так как
-                                    логи указывают на процент загрузки и диапазоны байт, но не предоставляют общий
-                                    размер файла. Размер файла можно определить, имея доступ к файловой системе или с
-                                    помощью соответствующих команд в командной строке.
-
-                                    Если вам нужно определить размер файла artifact.tar, вы можете воспользоваться
-                                    командами в вашей операционной системе. Например, в командной строке в Windows вы
-                                    можете использовать команду dir или ls в командной строке в Linux/Mac для получения
-                                    информации о размере файла.
-                                </p>
-                            </div>
-                            <div class="grid-app-buttons">
-                                <button class="button button-my-style"> Скачать программу </button>
-                                <button class="button button-my-style"> Ссылка на GitHub</button>
-                            </div>
                         </div>
 
 
+                        <div class="grid-desc">
+                            <p>
+                                <img src="images/bg/1.jpg" alt="">
+                                Логи, которые вы предоставили, упоминают файл с именем artifact.tar. Это архивный
+                                файл, который, скорее всего, содержит какие-то данные или ресурсы вашего проекта. Он
+                                может включать в себя различные файлы, включая видеофайлы, изображения, текстовые
+                                файлы и другие ресурсы.
+
+                                Из предоставленных логов нельзя точно определить размер файла artifact.tar, так как
+                                логи указывают на процент загрузки и диапазоны байт, но не предоставляют общий
+                                размер файла. Размер файла можно определить, имея доступ к файловой системе или с
+                                помощью соответствующих команд в командной строке.
+
+                                Если вам нужно определить размер файла artifact.tar, вы можете воспользоваться
+                                командами в вашей операционной системе. Например, в командной строке в Windows вы
+                                можете использовать команду dir или ls в командной строке в Linux/Mac для получения
+                                информации о размере файла.
+                            </p>
+                        </div>
+                        <div class="grid-app-buttons">
+                            <button class="button button-my-style"> Скачать программу </button>
+                            <button class="button button-my-style"> Ссылка на GitHub</button>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <!--  Модальное окно с Портфолио-1  End -->
 
