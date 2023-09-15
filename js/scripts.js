@@ -36,70 +36,30 @@
     jQuery(document).ready(function () {
 
         /*  ↓↓↓ Запуск видео по кнопке в полноэкранном режиме ↓↓↓ */
-        // Глобальная переменная для видеоплеера
-        var player;
+        var openVideoButtons = document.querySelectorAll('.open-video-button');
 
-        // Находим все кнопки, которые запускают видео
-        var videoButtons = document.querySelectorAll('.play-video-button');
-
-        // Добавляем обработчик события click к каждой кнопке
-        videoButtons.forEach(function (button) {
+        openVideoButtons.forEach(function (button) {
             button.addEventListener('click', function () {
-                // Получаем src из связанного <source> элемента
                 var videoSource = button.getAttribute('data-video-source');
-
-                // Запускаем видео с указанным src
-                playVideo(videoSource);
+                openVideoInFullscreen(videoSource);
             });
         });
 
-        function playVideo(source, videoId, containerId) {
-            // Инициализируем видеоплеер, если он не был инициализирован ранее
-            if (!player) {
-                player = videojs(videoId);
-            }
-
-            // Устанавливаем новый источник видео
-            player.src(source);
-
-            // Воспроизводим видео
-            player.play();
-
-            // Открываем видео в полноэкранном режиме, если необходимо
-            if (player.requestFullscreen) {
-                player.requestFullscreen();
-            } else if (player.mozRequestFullScreen) {
-                player.mozRequestFullScreen();
-            } else if (player.webkitRequestFullscreen) {
-                player.webkitRequestFullscreen();
-            }
-        }
-
-        document.querySelectorAll('.play-video-button').forEach(function (button, index) {
-            button.addEventListener('click', function () {
-                var videoSource = button.getAttribute('data-video-source');
-                var videoId = 'my-video' + (index + 1);
-                var containerId = 'video-container' + (index + 1);
-                playVideo(videoSource, videoId, containerId);
-            });
-        });
-
-        // Добавляем обработчик события fullscreenchange, который срабатывает при изменении состояния полноэкранного режима
-        document.addEventListener('fullscreenchange', handleFullscreenChange);
-        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
-        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-
-        function handleFullscreenChange() {
-            if (!player) {
-                return;
-            }
-
-            if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
-                // Видео находится в полноэкранном режиме, ничего не делаем
-            } else {
-                // Видео вышло из полноэкранного режима, ставим его на паузу
-                player.pause();
-            }
+        function openVideoInFullscreen(videoSource) {
+            var newTab = window.open('', '_blank');
+            var videoHtml = `
+                <video width="100%" height="100%" controls autoplay>
+                    <source src="${videoSource}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+            newTab.document.write(videoHtml);
+            newTab.onbeforeunload = function () {
+                var video = newTab.document.querySelector('video');
+                if (video) {
+                    video.pause();
+                }
+            };
         }
         /*  ↑↑↑ Запуск видео по кнопке в полноэкранном режиме ↑↑↑ */
 
