@@ -35,43 +35,53 @@
 
     jQuery(document).ready(function () {
 
-        /*  ↓↓↓ Остановка видео при закрытии модального окна ↓↓↓ */
-        function stopVideoOnModalClose(modalId) {
-            var modal = document.getElementById(modalId);
+        /*  ↓↓↓ Запуск видео по кнопке в полноэкранном режиме ↓↓↓ */
 
-            if (!modal) {
-                return; // Выход из функции, если модальное окно не найдено
+        // Инициализируем видеоплеер
+        var player = videojs('my-video');
+
+        // Получаем кнопку для запуска видео на полный экран
+        var playFullscreenButton = document.getElementById('play-fullscreen-button');
+
+        // Получаем контейнер видео
+        var videoContainer = document.getElementById('video-container');
+
+        // Добавляем обработчик события click к кнопке
+        playFullscreenButton.addEventListener('click', function () {
+            // Показываем контейнер видео
+            videoContainer.style.display = 'block';
+
+            // Проверяем, играет ли видео в данный момент
+            if (player.paused()) {
+                // Если видео на паузе, воспроизводим его
+                player.play();
             }
 
-            // Получить элемент кнопки закрытия с атрибутом data-dismiss="modal" внутри модального окна
-            var closeButton = modal.querySelector('[data-dismiss="modal"]');
-
-            if (closeButton == null) {
-                return;
+            // Переключаем видео в полноэкранный режим (раскрываем на весь экран)
+            if (player.requestFullscreen) {
+                player.requestFullscreen();
+            } else if (player.mozRequestFullScreen) {
+                player.mozRequestFullScreen();
+            } else if (player.webkitRequestFullscreen) {
+                player.webkitRequestFullscreen();
             }
+        });
 
-            closeButton.addEventListener('click', function () {
-                // Найти экземпляр видеоплеера Video.js внутри модального окна
-                var videoPlayer = modal.querySelector('.video-js');
+        // Добавляем обработчик события fullscreenchange, который срабатывает при изменении состояния полноэкранного режима
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
-                // Остановить видео, если экземпляр найден
-                if (videoPlayer) {
-                    videojs(videoPlayer).pause();
-                }
-            });
+        function handleFullscreenChange() {
+            if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
+                // Видео находится в полноэкранном режиме, ничего не делаем
+            } else {
+                // Видео вышло из полноэкранного режима, ставим его на паузу
+                player.pause();
+            }
         }
 
-        // stopVideoOnModalClose('portfolio-modal-1');
-        // stopVideoOnModalClose('portfolio-modal-2');
-        // stopVideoOnModalClose('portfolio-modal-3');
-        // stopVideoOnModalClose('portfolio-modal-4');
-        // stopVideoOnModalClose('portfolio-modal-5');
-        // stopVideoOnModalClose('portfolio-modal-6');
-        // stopVideoOnModalClose('portfolio-modal-7');
-        // stopVideoOnModalClose('portfolio-modal-8');
-        // stopVideoOnModalClose('portfolio-modal-9');
-
-        /*  ↑↑↑ Остановка видео при закрытии модального окна ↑↑↑ */
+        /*  ↑↑↑ Запуск видео по кнопке в полноэкранном режиме ↑↑↑ */
 
 
 

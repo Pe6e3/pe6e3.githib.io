@@ -996,6 +996,9 @@ ul.portfolio li.active {
         max-height: 110px;
     }
 }
+#video-container {
+    display: none;
+  }
 
 
 .portfolio .item:hover a:before {

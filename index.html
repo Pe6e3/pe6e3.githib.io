@@ -281,9 +281,9 @@
                                 <a href="#" data-toggle="modal" data-target="#portfolio-modal-2" title="Project Title">
                                     <img src="img/japanese.jpg">
                                 </a>
-                            </div>
-                            <div class="overlay">
-                                <h5>Дрифт на Ленте</h5>
+                                <div class="overlay">
+                                    <h5>Дрифт на Ленте</h5>
+                                </div>
                             </div>
                         </div>
 
@@ -857,12 +857,21 @@
                         </div> -->
                         <div class="myGrid">
                             <div class="grid-title">
-
                                 <h2> Программа на WinForms для составления меню в детском саду</h1>
                             </div>
                             <div class="grid-video-buttons">
-                                <button class="button button-my-style"> Короткое видео </button>
+                                <button class="button button-my-style" src="/videos/Меню.mp4"> Короткое видео </button>
                                 <button class="button button-my-style"> Подробное видео </button>
+
+                                <button class="button button-my-style" id="play-fullscreen-button">Запустить видео на
+                                    полный экран</button>
+                                <div class="video-container"  id="video-container">
+                                    <video id="my-video" class="video-js" preload="auto" controls poster="/images/myPhoto.jpeg"
+                                        data-setup="{}">
+                                        <source src="/videos/Меню.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+
                             </div>
 
 
