@@ -242,6 +242,10 @@ fieldset {
     padding: 0px 10px 0px 10px;
     background: #7c7f8171;
     box-shadow: 0px 6px 14px 0px rgba(90, 91, 95, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    line-height: normal;
 
     @media(max-width:767px) {
         font-size: 12px;
@@ -848,15 +852,15 @@ tr>td:nth-child(2) {
     display: block;
     justify-content: center;
     text-align: center;
-    max-height: 500px;
 }
 
 .portfolio-modal .modal-content {
     background: var(--portfolioModalBG);
     background-repeat: repeat;
-    padding-bottom: 40px;
     font-size: 30px;
     line-height: 150%;
+    height: 100%;
+    padding: 0 30px;
 }
 
 .portfolio {
@@ -867,7 +871,6 @@ tr>td:nth-child(2) {
     color: rgb(250, 250, 255);
     position: relative;
     z-index: 0;
-
 }
 
 .portfolio::before {
@@ -980,6 +983,7 @@ ul.portfolio li.active {
     @media(max-width:1000px) {
         max-height: 280px;
     }
+
     @media((min-width: 680px) and (max-width:1000px)) {
         max-height: 260px;
     }
@@ -987,6 +991,7 @@ ul.portfolio li.active {
     @media((min-width: 505px) and (max-width:680px)) {
         max-height: 180px;
     }
+
     @media((max-width: 505px)) {
         max-height: 110px;
     }
@@ -1026,14 +1031,17 @@ ul.portfolio li.active {
     position: absolute;
     bottom: 0%;
     left: 0%;
-    background-color: rgba(30, 10, 50, 0.8); /* Цвет фона с прозрачностью */
+    background-color: rgba(30, 10, 50, 0.8);
+    /* Цвет фона с прозрачностью */
     border-radius: 5px;
-    margin:10px
+    margin: 10px
 }
 
 .overlay h5 {
-    color: #fff; /* Цвет текста */
-    padding: 0 5px; /* Отступы текста внутри фона */
+    color: #fff;
+    /* Цвет текста */
+    padding: 0 5px;
+    /* Отступы текста внутри фона */
 }
 
 
@@ -2094,4 +2102,129 @@ ul.portfolio li.active {
 #toggleHiddingBlockAbout {
     display: block;
     margin: 0 auto;
+}
+
+
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 60px 1fr 60px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+
+.grid-title {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.grid-video-buttons {
+    grid-area: 2 / 1 / 3 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-video-buttons button {
+    margin: 0 10px;
+}
+
+.grid-desc {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+
+.grid-app-buttons {
+    grid-area: 4 / 1 / 5 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.myGrid button {
+    margin: 0 10px;
+    max-height: 40px;
+    padding: 10px 5px;
+}
+
+.grid-desc p {
+    line-height: normal;
+    font-size: 18px;
+    text-align: start;
+
+    @media(max-width:700px) {
+        font-size: 12px;
+    }
+
+    @media(max-width:1000px) {
+        font-size: 14px;
+    }
+
+    @media(max-width:1400px) {
+        font-size: 16px;
+    }
+}
+
+.grid-desc img {
+    float: left;
+    min-width: 180px;
+    width: 40%;
+    margin: 0 15px 5px 0;
+    border-radius: 10px;
+    border: 3px rgba(128, 128, 128, 0.2) inset;
+    box-shadow: 0px 6px 14px 0px rgba(90, 91, 95, 0.3);
+
+}
+
+
+.grid-title h2 {
+    font-size: 30px;
+}
+
+@media(max-width:1400px) {
+    .grid-title h2 {
+        font-size: 25px;
+    }
+
+    .grid-desc p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:1000px) {
+    .grid-title h2 {
+        font-size: 22px;
+    }
+
+    .grid-desc p {
+        font-size: 12px;
+    }
+    .myGrid button {
+        font-size: 14px;
+        padding: 20px 5px;
+    }
+
+}
+
+@media(max-width:700px) {
+    .grid-title h2 {
+        font-size: 18px;
+    }
+
+    .grid-desc p {
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width:420px) {
+    .grid-title h2 {
+        font-size: 14px;
+    }
+
+    .grid-desc p {
+        font-size: 8px;
+    }
+    .myGrid button {
+        font-size: 10px;
+        height: 30px;
+    }
 }

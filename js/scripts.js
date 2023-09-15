@@ -61,12 +61,12 @@
             });
         }
 
-        stopVideoOnModalClose('portfolio-modal-1');
-        stopVideoOnModalClose('portfolio-modal-2');
-        stopVideoOnModalClose('portfolio-modal-3');
-        stopVideoOnModalClose('portfolio-modal-4');
-        stopVideoOnModalClose('portfolio-modal-5');
-        stopVideoOnModalClose('portfolio-modal-6');
+        // stopVideoOnModalClose('portfolio-modal-1');
+        // stopVideoOnModalClose('portfolio-modal-2');
+        // stopVideoOnModalClose('portfolio-modal-3');
+        // stopVideoOnModalClose('portfolio-modal-4');
+        // stopVideoOnModalClose('portfolio-modal-5');
+        // stopVideoOnModalClose('portfolio-modal-6');
         // stopVideoOnModalClose('portfolio-modal-7');
         // stopVideoOnModalClose('portfolio-modal-8');
         // stopVideoOnModalClose('portfolio-modal-9');
