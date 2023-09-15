@@ -36,6 +36,9 @@
     jQuery(document).ready(function () {
 
         /*  ↓↓↓ Запуск видео по кнопке в полноэкранном режиме ↓↓↓ */
+        // Глобальная переменная для видеоплеера
+        var player;
+
         // Находим все кнопки, которые запускают видео
         var videoButtons = document.querySelectorAll('.play-video-button');
 
@@ -51,7 +54,10 @@
         });
 
         function playVideo(source, videoId, containerId) {
-            var player = videojs(videoId);
+            // Инициализируем видеоплеер, если он не был инициализирован ранее
+            if (!player) {
+                player = videojs(videoId);
+            }
 
             // Устанавливаем новый источник видео
             player.src(source);
@@ -84,6 +90,10 @@
         document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
         function handleFullscreenChange() {
+            if (!player) {
+                return;
+            }
+
             if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
                 // Видео находится в полноэкранном режиме, ничего не делаем
             } else {
@@ -91,8 +101,8 @@
                 player.pause();
             }
         }
-
         /*  ↑↑↑ Запуск видео по кнопке в полноэкранном режиме ↑↑↑ */
+
 
 
 
