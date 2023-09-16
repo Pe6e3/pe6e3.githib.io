@@ -2264,3 +2264,28 @@ ul.portfolio li.active {
     max-height: 80%;
     border-radius: 8px;
 }
+
+
+.project-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-icon img {
+    width: 44px !important;
+    height: 44px;
+    padding: 4px;
+    border-radius: 6px !important;
+    object-fit: cover;
+    background-color: #d2d0d05f;
+    margin: 2px;
+    border: 2px outset rgba(175, 175, 175, 0.3);
+
+    @media(max-width:767px){
+        width: 34px !important;
+        height: 34px;
+    }
+}
