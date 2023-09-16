@@ -2275,17 +2275,23 @@ ul.portfolio li.active {
 }
 
 .project-icon img {
-    width: 44px !important;
-    height: 44px;
+    width: 43px !important;
+    height: 43px;
     padding: 4px;
     border-radius: 6px !important;
     object-fit: cover;
     background-color: #d2d0d05f;
     margin: 2px;
     border: 2px outset rgba(175, 175, 175, 0.3);
+    transition: 1s;
 
     @media(max-width:767px){
         width: 34px !important;
         height: 34px;
     }
+}
+.project-icon img:hover {
+transform: scale(1.05);
+background-color: #d2d0d07f;
+transition: 0.2s;
 }
