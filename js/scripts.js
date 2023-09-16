@@ -37,30 +37,28 @@
 
         /*  ↓↓↓ Запуск видео по кнопке в полноэкранном режиме ↓↓↓ */
         var openVideoButtons = document.querySelectorAll('.open-video-button');
+        var videoModal = document.getElementById('video-modal');
+        var modalVideo = document.getElementById('modal-video');
 
         openVideoButtons.forEach(function (button) {
             button.addEventListener('click', function () {
                 var videoSource = button.getAttribute('data-video-source');
-                openVideoInFullscreen(videoSource);
+                openVideoInModal(videoSource);
             });
         });
 
-        function openVideoInFullscreen(videoSource) {
-            var newTab = window.open('', '_blank');
-            var videoHtml = `
-                <video width="100%" height="100%" controls autoplay>
-                    <source src="${videoSource}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            `;
-            newTab.document.write(videoHtml);
-            newTab.onbeforeunload = function () {
-                var video = newTab.document.querySelector('video');
-                if (video) {
-                    video.pause();
-                }
-            };
+        function openVideoInModal(videoSource) {
+            modalVideo.src = videoSource;
+            videoModal.style.display = 'block';
         }
+
+        // Закрыть модальное окно, если пользователь кликнул вне видео
+        window.addEventListener('click', function (event) {
+            if (event.target == videoModal) {
+                modalVideo.pause();
+                videoModal.style.display = 'none';
+            }
+        });
         /*  ↑↑↑ Запуск видео по кнопке в полноэкранном режиме ↑↑↑ */
 
 

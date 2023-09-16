@@ -2231,3 +2231,18 @@ ul.portfolio li.active {
         height: 30px;
     }
 }
+
+ 
+
+/* Отображение видео внутри модального окна */
+.modal-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+ 
