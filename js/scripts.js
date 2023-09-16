@@ -69,6 +69,10 @@
             $('.preloader').delay(800).fadeOut('slow');
         });
 
+        /*  ↓↓↓ Кнопка для скрытия/раскрытия контента ↓↓↓ */
+        setupToggleButton('#toggleHiddingBlockExp', '.hiddingExp', 'Показать опыт работы', 'Скрыть опыт работы');
+        setupToggleButton('#toggleHiddingBlockAbout', '.hiddingAbout', 'Показать информацию Обо мне', 'Скрыть информацию Обо мне');
+
         function setupToggleButton(buttonId, blockId, showText, hideText) {
             var toggleButton = $(buttonId);
             var hiddingBlock = $(blockId);
@@ -83,9 +87,7 @@
                 }
             });
         }
-
-        setupToggleButton('#toggleHiddingBlockExp', '.hiddingExp', 'Показать опыт работы', 'Скрыть опыт работы');
-        setupToggleButton('#toggleHiddingBlockAbout', '.hiddingAbout', 'Показать информацию Обо мне', 'Скрыть информацию Обо мне');
+        /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
 
 
 
