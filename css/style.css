@@ -717,15 +717,12 @@ tr>td:nth-child(2) {
     max-width: 90%;
     margin-left: 20px;
     margin: 0;
-    padding: 0;
+    padding: 0 10%;
 
     @media(max-width: 992px) {
         margin-top: 5%;
         width: 100%;
-
     }
-
-
 }
 
 
@@ -746,12 +743,30 @@ tr>td:nth-child(2) {
     width: 30px;
     height: 30px;
     margin: 3px 10px 3px 40px;
+    border-radius: 30%;
+
+    border: 2px outset rgba(175, 175, 175, 0.3);
+    transition: 1s;
+
+    box-shadow: 0px 0px 30px 0px #dde5033f;
 
     @media(max-width: 440px) {
         width: 20px;
         height: 20px;
     }
 }
+
+
+
+
+.social-ico-modal :hover {
+    transform: scale(1.2);
+    background-color: #d2d0d07f;
+    transition: 0.2s;
+    box-shadow: 0px 0px 20px 5px #dde503a3;
+}
+
+
 
 /* Subscribe */
 
@@ -1439,17 +1454,20 @@ ul.portfolio li.active {
     height: 55px;
     line-height: 66px;
     text-align: center;
-    background-color: transparent;
     border-radius: 30%;
     font-size: 27px;
     box-shadow: 0px 0px 30px 0px #dde5033f;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s;
+
+    background-color: #d2d0d05f;
+    margin: 2px;
+    border: 2px outset rgba(175, 175, 175, 0.3);
 }
 
 .social-icon img:hover {
     box-shadow: 0px 0px 20px 10px #dde503a3;
-    margin-left: 4px;
-    margin-right: 4px;
+    transition: all 0.2s;
+
     transform: scale(1.15);
 
     /* При необходимости, установите нужный вам размер шрифта */
@@ -1721,7 +1739,6 @@ ul.portfolio li.active {
     .experience-content {
         padding: 10px 15px;
         margin-left: 0px;
-        text-align: center;
     }
 
     .experience-content:after,
@@ -2285,13 +2302,14 @@ ul.portfolio li.active {
     border: 2px outset rgba(175, 175, 175, 0.3);
     transition: 1s;
 
-    @media(max-width:767px){
+    @media(max-width:767px) {
         width: 34px !important;
         height: 34px;
     }
 }
+
 .project-icon img:hover {
-transform: scale(1.05);
-background-color: #d2d0d07f;
-transition: 0.2s;
+    transform: scale(1.05);
+    background-color: #d2d0d07f;
+    transition: 0.2s;
 }
