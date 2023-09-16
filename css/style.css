@@ -885,6 +885,10 @@ tr>td:nth-child(2) {
     text-align: center;
 }
 
+.portfolio-block p {
+    line-height: 150% !important;
+}
+
 .portfolio-modal .modal-content {
     background: var(--portfolioModalBG);
     background-repeat: repeat;
@@ -978,6 +982,7 @@ ul.portfolio li.active {
     max-height: 180px;
     max-width: 320px;
     box-shadow: 1px 4px 4px 4px rgba(57, 58, 60, 0.874);
+
 }
 
 .portfolio .item:hover {
@@ -2177,7 +2182,8 @@ ul.portfolio li.active {
     justify-content: center;
 }
 
-.myGrid button {
+.myGrid button,
+.button {
     margin: 0 10px;
     max-height: 40px;
     padding: 10px 5px;
@@ -2202,7 +2208,7 @@ ul.portfolio li.active {
 }
 
 .grid-desc img {
-    float: left;
+    float: right;
     min-width: 180px;
     width: 40%;
     margin: 0 15px 5px 0;
@@ -2310,6 +2316,6 @@ ul.portfolio li.active {
 
 .project-icon img:hover {
     transform: scale(1.05);
-    background-color: #d2d0d07f;
+    background-color: #f4efefb5;
     transition: 0.2s;
 }
