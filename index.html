@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+<div id="head-partial"></div>
 
-<div id="header-partial"></div>
+<body>
+<div id="menu-partial"></div>
 <div id="content-partial"></div>
+</body>
+
 
 
 
@@ -13,10 +17,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(function () {
-        $("#header-partial").load("header.html");
-        $("#content-partial").load("content.html");
-        $("#footer-partial").load("footer.html");
-        $("#modals-partial").load("modals.html");
+        $("#head-partial").load("PartialViews/head.html");
+        $("#menu-partial").load("PartialViews/Menu.html");
+        $("#content-partial").load("PartialViews/content.html");
+        $("#footer-partial").load("PartialViews/footer.html");
+        $("#modals-partial").load("PartialViews/modals.html");
     });
 </script>
 
