@@ -7,6 +7,9 @@
     --linkFont: 'Lineyka';
     --buttonFont: 'Lineyka';
 
+    --titleColor: wheat;
+    --textColor: antiquewhite;
+    --textColorDark: rgb(6, 3, 30);
 
 
     --aboutBG: url('../images/bg/13.jpg');
@@ -50,26 +53,32 @@
     font-family: 'DisneyPark';
     src: url('/fonts/myFonts/DisneyPark.ttf');
 }
+
 @font-face {
     font-family: 'Geologica';
     src: url('/fonts/myFonts/Geologica.ttf');
 }
+
 @font-face {
     font-family: 'Lineyka';
     src: url('/fonts/myFonts/Lineyka.ttf');
 }
+
 @font-face {
     font-family: 'Montserrat';
     src: url('/fonts/myFonts/Montserrat.ttf');
 }
+
 @font-face {
     font-family: 'Montserrat A';
     src: url('/fonts/myFonts/Montserrat Alternates.ttf');
 }
+
 @font-face {
     font-family: 'Unutterable';
     src: url('/fonts/myFonts/Unutterable.ttf');
 }
+
 @font-face {
     font-family: 'Woodstick';
     src: url('/fonts/myFonts/Woodstick.ttf');
@@ -108,6 +117,8 @@ h5,
 h6 {
     font-family: var(--boldFont), sans-serif;
     font-weight: bold;
+    color: var(--titleColor);
+
 }
 
 a {
@@ -128,9 +139,13 @@ a {
 }
 
 .me-image>img {
-    height: 500px;
+    max-height: 500px;
     width: auto;
     border-radius: 8px;
+
+    @media(max-width:400px) {
+        width: 90%;
+    }
 }
 
 a:hover,
@@ -427,15 +442,24 @@ fieldset {
 
 .table {
     margin-bottom: 0px;
+    border-collapse: separate;
+    border-spacing: 3px;
 }
 
 .table a {
-    color: #ffffff;
+    color: var(--titleColor);
 }
 
 .table>tbody>tr>td {
-    padding: 15px;
-    border: 3px solid #e4e4e4;
+    padding: 10px;
+    border: 3px inset #45444a1e;
+    font-size: calc(7px + 0.4vw);
+    border-radius: 4px;
+
+    @media(max-width:400px) {
+        padding: 2px;
+        border-radius: 2px;
+    }
 }
 
 .table tr>td {
@@ -447,17 +471,16 @@ tr:nth-child(1)>td {
 }
 
 tr>td:nth-child(1) {
-    background-color: #ffffff;
+    background-color: #2c1be41d;
     font-weight: 500;
     font-size: 13px;
     color: #888888;
-    width: 140px;
 }
 
 tr>td:nth-child(2) {
     font-weight: 500;
-    color: #ffffff;
-    background: #4c9cef;
+    color: var(--textColor);
+    background: #4c9bef69;
 }
 
 .header-top-area {
@@ -958,20 +981,8 @@ tr>td:nth-child(2) {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: rgb(250, 250, 255);
-    position: relative;
-    z-index: 0;
 }
 
-.portfolio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--maskBG);
-    z-index: -1;
-}
 
 .portfolio-inner {
     display: inherit;
@@ -1170,7 +1181,7 @@ ul.portfolio li.active {
 
 .testimonial-carousel-list {
     padding: 30px;
-    background-color: #fff;
+    background-color: #0f00443b;
     border-radius: 4px;
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.25);
     transition: all 0.3s ease-in-out;
@@ -1180,16 +1191,41 @@ ul.portfolio li.active {
 .testimonial-word img {
     margin: 0 auto;
     height: 350px;
-    object-fit: contain;
+    width: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
 
-    @media (max-width: 1200px) {
+.testimonial-word::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 50, 0.5);
+    /* Цвет затемнения и его прозрачность */
+    border-radius: 10px;
+    z-index: 1;
+
+}
+
+@media (max-width: 1200px) {
+    .testimonial-word img {
         height: 300px;
-    }
-
-    @media (max-width: 800px) {
-        height: 250px;
+        width: 70%;
     }
 }
+
+@media (max-width: 800px) {
+    .testimonial-word img {
+        height: 200px;
+        width: 70%;
+    }
+}
+
+
 
 .documents {
     display: flex;
@@ -1339,7 +1375,7 @@ ul.portfolio li.active {
 /* Services */
 
 .services-section {
-    background-color: #F9F9F9;
+    background-color: #710505;
 
     background-image: var(--servicesBG);
     background-size: cover;
@@ -1363,7 +1399,7 @@ ul.portfolio li.active {
 
 .services-section .services-detail {
     border-radius: 100%;
-    background-color: #ffffff;
+    background-color: #9799fb6b;
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -1389,6 +1425,7 @@ ul.portfolio li.active {
 
 .services-detail>h3 {
     font-size: 18px;
+    color: var(--textColorDark);
 }
 
 
