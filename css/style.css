@@ -1,6 +1,14 @@
 /* Global Style */
 
 :root {
+    --titleFont: 'Woodstick';
+    --textFont: 'Woodstick';
+    --boldFont: 'Woodstick';
+    --linkFont: 'Lineyka';
+    --buttonFont: 'Lineyka';
+
+
+
     --aboutBG: url('../images/bg/13.jpg');
     --servicesBG: url('../images/bg/1.jpg');
     --contactsBG: url('../images/bg/call-to-action.png');
@@ -17,9 +25,55 @@
 
 @font-face {
     font-family: 'Tektur';
-    src: url('/fonts/Tektur-VariableFont_wdth,wght.ttf');
+    src: url('/fonts/myFonts/Tektur-VariableFont_wdth,wght.ttf');
 }
 
+@font-face {
+    font-family: 'Pobeda Bold';
+    src: url('/fonts/myFonts/Pobeda/pobeda-bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Pobeda Regular';
+    src: url('/fonts/myFonts/Pobeda/pobeda-regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Source';
+    src: url('/fonts/myFonts/SourceSans3-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+    font-family: 'DisneyPark';
+    src: url('/fonts/myFonts/DisneyPark.ttf');
+}
+@font-face {
+    font-family: 'Geologica';
+    src: url('/fonts/myFonts/Geologica.ttf');
+}
+@font-face {
+    font-family: 'Lineyka';
+    src: url('/fonts/myFonts/Lineyka.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/myFonts/Montserrat.ttf');
+}
+@font-face {
+    font-family: 'Montserrat A';
+    src: url('/fonts/myFonts/Montserrat Alternates.ttf');
+}
+@font-face {
+    font-family: 'Unutterable';
+    src: url('/fonts/myFonts/Unutterable.ttf');
+}
+@font-face {
+    font-family: 'Woodstick';
+    src: url('/fonts/myFonts/Woodstick.ttf');
+}
 
 body {
     font-size: 13px;
@@ -27,7 +81,7 @@ body {
     line-height: 24px;
     letter-spacing: 1px;
     height: 100%;
-    font-family: 'Tektur', Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: var(--textFont), Geneva, Tahoma, sans-serif, sans-serif;
 }
 
 
@@ -52,7 +106,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Tektur', sans-serif;
+    font-family: var(--boldFont), sans-serif;
     font-weight: bold;
 }
 
@@ -191,7 +245,7 @@ fieldset {
 .button {
     border: none;
     border-radius: 5px;
-    font-family: inherit;
+    font-family: var(--buttonFont);
     font-size: 17px;
     color: inherit;
     background: none;
@@ -1047,7 +1101,7 @@ ul.portfolio li.active {
 
 .portfolio .item a:before {
     content: "\f06e";
-    font-family: "FontAwesome";
+    font-family: var(--linkFont);
     text-align: center;
     color: #ffffff;
     position: absolute;
