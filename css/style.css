@@ -506,7 +506,6 @@ tr>td:nth-child(2) {
     letter-spacing: 6px;
     font-weight: 600;
     font-size: 14px;
-    border-bottom: 4px solid #f7639a;
     width: 92px;
 }
 
@@ -543,7 +542,7 @@ tr>td:nth-child(2) {
 .navigation-background {
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    background: #4c9cef;
+    background: #051059;
 }
 
 .navigation-background .logo {
@@ -1400,7 +1399,7 @@ ul.portfolio li.active {
 .services-section .services-detail {
     border-radius: 100%;
     background-color: #9799fb6b;
-    box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+    box-shadow: 0px 0px 4px 2px rgba(166, 220, 6, 0.14);
     transition: all 0.3s ease-in-out;
     position: relative;
     width: 200px;
@@ -1408,12 +1407,14 @@ ul.portfolio li.active {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 30px;
+    transition: 1s;
 }
 
 .services-section .services-detail:hover {
     border-bottom-right-radius: 4px;
-    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+    box-shadow: 0px 0px 40px 15px rgba(191, 255, 0, 0.15);
     top: -5px;
+    transition: 0.3s;
 }
 
 .services-section .services-detail i {
@@ -1711,50 +1712,63 @@ ul.portfolio li.active {
     }
 
     .navbar-collapse {
-        background: #4c9cef;
+        background: #0a2a4d;
+        width: 250px;
+        position: absolute;
+        right: 0;
     }
 
-    .navigation-background .navbar-collapse {
-        background: #4c9cef;
+    .nav li {
+        transition: 0.3s;
     }
+}
 
-    .section-title h2 {
-        font-size: 22px;
-    }
+.nav li:hover {
+    background-color: rgba(255, 255, 0, 0.15);
+    transition: 0.5s;
+}
 
-    .testimonial-word {
-        padding: 0;
-    }
+.navigation-background .navbar-collapse {
+    background: #0a2a4d;
+}
 
-    .testimonial-carousel-list {
-        margin-top: 0px;
-    }
+.section-title h2 {
+    font-size: 22px;
+}
 
-    .call-to-action h2 {
-        font-size: 18px;
-        line-height: 35px;
-    }
+.testimonial-word {
+    padding: 0;
+}
 
-    .contact-us-detail {
-        left: 39%;
-    }
+.testimonial-carousel-list {
+    margin-top: 0px;
+}
 
-    .owl-prev {
-        left: 5px;
-    }
+.call-to-action h2 {
+    font-size: 18px;
+    line-height: 35px;
+}
 
-    .owl-next {
-        right: 5px;
-    }
+.contact-us-detail {
+    left: 39%;
+}
 
-    .scroll-to-top {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 20px !important;
-        line-height: 52px !important;
-        right: 8px !important;
-        bottom: 15px !important;
-    }
+.owl-prev {
+    left: 5px;
+}
+
+.owl-next {
+    right: 5px;
+}
+
+.scroll-to-top {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+    line-height: 52px !important;
+    right: 8px !important;
+    bottom: 15px !important;
+}
 }
 
 
