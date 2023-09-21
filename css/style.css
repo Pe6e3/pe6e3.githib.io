@@ -10,6 +10,8 @@
     --titleColor: wheat;
     --textColor: antiquewhite;
     --textColorDark: rgb(6, 3, 30);
+    --navTextDark: rgb(160, 160, 160);
+    --navTextLight: rgb(92, 157, 255);
 
 
     --aboutBG: url('../images/bg/13.jpg');
@@ -510,7 +512,7 @@ tr>td:nth-child(2) {
 }
 
 .navigation-menu .navbar-nav li a {
-    color: #333333;
+    color: var(--navTextDark);
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
@@ -567,14 +569,15 @@ tr>td:nth-child(2) {
 
 
 .navigation-background .navigation-menu .navbar-nav li a {
-    color: #fff;
+    color: var(--navTextLight);
+
     padding: 20px 15px;
     -webkit-transition: .3s;
     transition: .3s;
 }
 
 .navigation-background .navigation-menu .navbar-nav li a:hover {
-    color: #fff;
+    color: rgb(166, 196, 247);
 }
 
 
@@ -1725,12 +1728,11 @@ ul.portfolio li.active {
 
 .nav li:hover {
     background-color: rgba(255, 255, 0, 0.15);
+    border-radius: 4px;
     transition: 0.5s;
 }
 
-.navigation-background .navbar-collapse {
-    background: #0a2a4d;
-}
+
 
 .section-title h2 {
     font-size: 22px;
