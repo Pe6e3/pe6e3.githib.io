@@ -2,13 +2,21 @@
 
 :root {
     --titleFont: 'Woodstick';
-    --textFont: 'Woodstick';
-    --boldFont: 'Woodstick';
-    --linkFont: 'Lineyka';
-    --buttonFont: 'Lineyka';
+    --textFont: 'Source';
+    --textFont2: 'Pobeda Bold';
+    --textFont3: 'Geologica';
+    --textFont4: 'Montserrat';
+    --textFont5: 'Montserrat A';
 
+
+    --boldFont: 'Woodstick';
+    --buttonFont: 'Woodstick';
+    
+    --linkFont: 'Lineyka';
+    
     --titleColor: wheat;
     --textColor: antiquewhite;
+    --textColor2: rgb(192, 182, 167);
     --textColorDark: rgb(6, 3, 30);
     --navTextDark: rgb(160, 160, 160);
     --navTextLight: rgb(92, 157, 255);
@@ -92,7 +100,7 @@ body {
     line-height: 24px;
     letter-spacing: 1px;
     height: 100%;
-    font-family: var(--textFont), Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: var(--textFont4), Geneva, Tahoma, sans-serif, sans-serif;
 }
 
 
@@ -651,8 +659,8 @@ tr>td:nth-child(2) {
     border-radius: 100%;
     position: absolute;
     left: -60px;
-    color: #fff;
-    background: #4c9cef;
+    color: var(--titleColor);
+    background: #0c4480;
     padding-top: 25px;
     box-shadow: -5px 6px 4px 0px rgba(90, 91, 95, 0.3);
 }
@@ -675,8 +683,8 @@ tr>td:nth-child(2) {
 .experience-content {
     margin-left: 80px;
     position: relative;
-    background: #fff;
-    border: 2px solid #f7639a;
+    background: #0000002d;
+    border: 2px inset #2c1f4a4a;
     border-radius: 6px;
     padding: 20px 25px;
 }
@@ -690,17 +698,7 @@ tr>td:nth-child(2) {
     line-height: 30px;
 }
 
-.experience-content:after,
-.experience-content:before {
-    right: 100%;
-    top: 35%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
+ 
 
 .experience-content:after {
     border-color: rgba(255, 255, 255, 0);
@@ -717,16 +715,11 @@ tr>td:nth-child(2) {
 }
 
 .experience-content p {
-    color: #696969;
+    color: var(--textColor2);
+    font-family: var(--textFont3);
 }
 
-.experience-color-blue {
-    border: 2px solid #4c9cef !important;
-}
-
-.experience-color-blue:before {
-    border-right-color: #4c9cef !important;
-}
+ 
 
 
 
@@ -896,6 +889,7 @@ tr>td:nth-child(2) {
 /* Subscribe */
 
 .subscribe .modal-content {
+    color: var(--titleColor);
     background: var(--subscribeModalBG);
     background-repeat: repeat;
     padding-left: 10%;
@@ -2472,6 +2466,7 @@ ul.portfolio li.active {
 }
 
 .buttonx {
+    font-family: var(--buttonFont);
     width: auto;
     height: auto;
     color: var(--titleColor);
