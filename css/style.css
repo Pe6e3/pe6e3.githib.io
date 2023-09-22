@@ -132,7 +132,7 @@ img {
 }
 
 a {
-    color: #4c9cef;
+    color: var(--titleColor);
 }
 
 .me-image {
@@ -840,7 +840,6 @@ tr>td:nth-child(2) {
 
 
 .modal-content {
-    max-width: 90%;
     margin-left: 20px;
     margin: 0;
     padding: 0 10%;
@@ -2341,7 +2340,7 @@ ul.portfolio li.active {
     justify-content: center;
 }
 
- 
+
 
 .grid-desc p {
     line-height: normal;
@@ -2423,7 +2422,7 @@ ul.portfolio li.active {
     }
 
     .myGrid button {
-        font-size: 10px     !important;
+        font-size: 10px !important;
     }
 }
 
@@ -2485,7 +2484,8 @@ ul.portfolio li.active {
     border: 4px inline gray;
     transition: 1s;
 }
-.buttonx:hover{
+
+.buttonx:hover {
     transition: 0.3s;
     transform: scale(1.1);
 }
@@ -2495,7 +2495,7 @@ ul.portfolio li.active {
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -2530,7 +2530,34 @@ ul.portfolio li.active {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-close {
+    color: #801a35;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 15px;
+    z-index: 1000;
+
+    @media(max-width: 400px) {
+        font-size: 16px;
+        padding: 7px 10px;
+
+    }
 }
