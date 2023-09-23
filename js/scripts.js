@@ -225,8 +225,23 @@
         });
 
 
+        // Карусель без кнопок
+
+        var imageElements = document.querySelectorAll(".image-switcher");
+        imageElements.forEach(function (imageElement) {
+            var currentImageIndex = 0;
+            var imagesData = imageElement.getAttribute("data-images");
+            var images = JSON.parse(imagesData);
+
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                imageElement.src = images[currentImageIndex];
+            }
+            setInterval(changeImage, 2000);
+        });
 
 
+        
         /* Statistics Counter */
 
         $('.statistics').appear(function () {
