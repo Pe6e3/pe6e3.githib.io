@@ -1614,7 +1614,7 @@ ul.portfolio li.active {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 80px 0px;
+    padding: 30px 0px;
     color: #f8f8f8;
 }
 
@@ -2551,4 +2551,9 @@ ul.portfolio li.active {
     display: flex;
     justify-content: end;
     height: 350px;
+}
+
+.counter{
+    text-align: end;
+    color: darkslategray;
 }
