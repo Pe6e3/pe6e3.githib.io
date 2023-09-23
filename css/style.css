@@ -11,9 +11,9 @@
 
     --boldFont: 'Woodstick';
     --buttonFont: 'Woodstick';
-    
+
     --linkFont: 'Lineyka';
-    
+
     --titleColor: wheat;
     --textColor: antiquewhite;
     --textColor2: rgb(192, 182, 167);
@@ -682,7 +682,7 @@ tr>td:nth-child(2) {
     line-height: 30px;
 }
 
- 
+
 
 .experience-content:after {
     border-color: rgba(255, 255, 255, 0);
@@ -703,7 +703,7 @@ tr>td:nth-child(2) {
     font-family: var(--textFont3);
 }
 
- 
+
 
 
 
@@ -2303,7 +2303,8 @@ ul.portfolio li.active {
     justify-content: center;
 }
 
-.grid-video-buttons button {
+.grid-video-buttons button,
+.grid-video-buttons a {
     margin: 0 10px;
 }
 
@@ -2316,6 +2317,11 @@ ul.portfolio li.active {
     grid-area: 4 / 1 / 5 / 3;
     display: flex;
     justify-content: center;
+}
+
+.grid-app-buttons button,
+.grid-app-buttons a {
+    margin: 0 15px;
 }
 
 
@@ -2541,7 +2547,7 @@ ul.portfolio li.active {
     }
 }
 
-.home-table{
+.home-table {
     display: flex;
     justify-content: end;
     height: 350px;
