@@ -452,30 +452,14 @@ fieldset {
 
 .home-section video {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
-
-    @media(max-width:1200px) {
-        margin-right: -200px;
-        position: fixed;
-        width: auto;
-        height: auto;
-    }
-
-    @media(max-width:400px) {
-        margin-top: -130px;
-        margin-right: -180px;
-        position: fixed;
-
-        width: auto;
-        height: auto;
-    }
 }
-
 
 
 .job-exp {
@@ -2555,4 +2539,10 @@ ul.portfolio li.active {
         padding: 7px 10px;
 
     }
+}
+
+.home-table{
+    display: flex;
+    justify-content: end;
+    height: 350px;
 }
