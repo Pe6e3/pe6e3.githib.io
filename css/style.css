@@ -203,6 +203,7 @@ fieldset {
 
 .section-title {
     text-align: center;
+    margin-left: 50px;
 }
 
 .section-title h2 {
@@ -987,6 +988,7 @@ tr>td:nth-child(2) {
 
 /* Portfolio */
 
+
 .portfolio-block {
     display: block;
     justify-content: center;
@@ -1033,9 +1035,8 @@ tr>td:nth-child(2) {
 }
 
 ul.portfolio {
-    padding: 30px 10px;
+    padding: 0px 10px;
     list-style: none;
-    margin-top: 30px;
     margin-left: 8px;
     text-align: center;
     border-radius: 4px;
@@ -1059,7 +1060,7 @@ ul.portfolio li {
 }
 
 ul.portfolio li:hover {
-    color: #000;
+    color: #656464;
     border: none;
 }
 
@@ -1071,15 +1072,15 @@ ul.portfolio li.active {
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
 }
 
+
 .portfolio .item {
     position: relative;
-    margin: 7px;
+    margin: 15px;
     border-radius: 12px;
     border: 2px outset gray;
-    max-height: 180px;
-    max-width: 320px;
+    height: 300px;
+    max-width: 380px;
     box-shadow: 1px 4px 4px 4px rgba(57, 58, 60, 0.874);
-
 }
 
 .portfolio .item:hover {
@@ -1088,14 +1089,40 @@ ul.portfolio li.active {
 
 }
 
-.portfolio .item img {
-    border-radius: 10px;
-    width: 100%;
-    max-height: 180px;
-    max-width: 320px;
+.portfolio .item {
+    margin: 50px !important;
+    height: 300px;
+    width: 450px;
     object-fit: cover;
+    border: 10px solid rgb(158, 158, 158);
+    display: flex;
+    flex-direction: column; 
 }
 
+.portfolio-image {
+    height: 220px;
+    width: 100%;
+    border: 3px solid yellow;
+    object-fit: cover !important;
+    overflow: hidden; /* Добавляем скрытие элементов, выходящих за границы */
+}
+
+
+.portfolio-image img {
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    object-fit: cover !important;
+
+}
+
+
+.portfolio-title {
+    background-color: rgb(15, 15, 81);
+    height: 80px;
+    width: 100%;
+    border: 3px solid red;
+}
 
 .item {
     -webkit-transition: .3s;
@@ -1109,7 +1136,7 @@ ul.portfolio li.active {
 
 .video-js {
     width: 90%;
-    max-height: 380px;
+    max-height: 300px;
     max-width: 90%;
     border-radius: 15px;
 
@@ -1164,22 +1191,7 @@ ul.portfolio li.active {
 }
 
 
-.overlay {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    background-color: rgba(30, 10, 50, 0.8);
-    /* Цвет фона с прозрачностью */
-    border-radius: 5px;
-    margin: 10px
-}
 
-.overlay h5 {
-    color: #fff;
-    /* Цвет текста */
-    padding: 0 5px;
-    /* Отступы текста внутри фона */
-}
 
 
 .mfp-image-holder .mfp-close,
@@ -1406,24 +1418,29 @@ ul.portfolio li.active {
 
 /* Services */
 
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.services .services-detail {
+    margin: 20px;
+}
+
 .services-section {
     background-color: #710505;
-
     background-image: var(--servicesBG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.services-section hr {
-    border-bottom: 2px solid #4c9cef;
-    width: 42px;
-    margin: 0 auto;
-}
 
 .services-detail>img {
     width: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -1435,12 +1452,11 @@ ul.portfolio li.active {
     box-shadow: 0px 0px 20px 0px rgba(191, 255, 0, 0.08);
     transition: all 0.3s ease-in-out;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
     transition: 1s;
+    /* transform: scale(0.6); */
 }
 
 
@@ -1452,18 +1468,18 @@ ul.portfolio li.active {
     background-color: #bdbefea0;
     transform: scale(1.1);
     transition: 0.3s;
-
 }
 
 .services-section .services-detail i {
-    font-size: 42px;
+    /* font-size: 42px; */
     margin-top: 88px;
     display: inline-block;
     vertical-align: middle;
 }
 
 .services-detail>h3 {
-    font-size: 18px;
+    font-size: 12px;
+    margin: 10px 0;
     color: var(--textColorDark);
 }
 
@@ -2429,8 +2445,12 @@ body {
     position: absolute;
     top: 2%;
     right: 2%;
+    /* display: flex;
+    flex-direction: row; */
+
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
 }
 
 .project-icon img {
@@ -2560,7 +2580,7 @@ body {
 }
 
 .titleBlock {
-    margin: 20px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: start;
 }
