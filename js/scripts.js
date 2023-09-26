@@ -69,44 +69,41 @@
             $('.preloader').delay(800).fadeOut('slow');
         });
 
-        /*  ↓↓↓ Кнопка для скрытия/раскрытия контента ↓↓↓ */
-        slideToggleBlock('#toggleHiddingBlockExp', '.hiddingExp');
-        slideToggleBlock('#toggleHiddingBlockAbout', '.hiddingAbout');
 
-        function closeAll() {
-            var allButtons = document.querySelectorAll('[id*="toggleHiddingBlock"]');
-            var allBlocks = document.querySelectorAll('[class*="hidding"]');
-            allButtons.forEach(button => {
-                if (button.textContent.includes("Скрыть")) {
-                    button.textContent = button.textContent.replace("Скрыть", "Показать");
-                }
-            });
-            allBlocks.forEach(block => {
-                $(block).slideUp();
-            })
-        }
 
-        function slideToggleBlock(buttonId, blockId) {
-            var toggleButton = $(buttonId);
-            var hiddingBlock = $(blockId);
-        
-            toggleButton.click(function () {
-                var buttonTextBefore = toggleButton.text().toLowerCase();
-                closeAll();
-                if (buttonTextBefore.includes("показать")) {
-                    toggleButton.text(toggleButton.text().toLowerCase());
-                    toggleButton.text(toggleButton.text().replace("показать", "Скрыть"));
-                    hiddingBlock.slideDown();
-        
-                    // Опускаем/поднимаем страницу к кнопке
-                    $('html, body').animate({
-                        scrollTop: toggleButton.offset().top - 60
-                    }, 1000);  
-                    
-                }
+        $('.button-toggle').click(function () {
+            var button = $(this);
+            var target = $(button.data('target'));
+
+            // Скрываем все блоки
+            $('[class*="hidding"]').slideUp();
+
+            // Меняем текст всех кнопок на "Показать"
+            $('.button-toggle').text(function () {
+                return $(this).text().replace("Скрыть", "Показать");
             });
-        }
-        
+
+            if (button.text().includes("Показать")) {
+                button.text(button.text().replace("Показать", "Скрыть"));
+            }
+
+            // Открываем выбранный блок
+            if (!target.is(':visible')) {
+                target.slideDown();
+                $('html, body').animate({
+                    scrollTop: button.offset().top - 60
+                }, 1000);
+            } else {
+                button.text(button.text().replace("Скрыть", "Показать"));
+                $('html, body').animate({
+                    scrollTop: button.offset().top - 400
+                }, 1000);
+            }
+        });
+
+
+
+
 
         /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
 

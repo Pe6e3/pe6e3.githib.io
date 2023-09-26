@@ -2272,7 +2272,8 @@ ul.portfolio li.active {
 
 /* CSS класс для начального скрытия блока */
 .hiddingExp,
-.hiddingAbout {
+.hiddingAbout,
+.hiddingTestimonal {
     display: none;
 }
 

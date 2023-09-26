@@ -51,7 +51,7 @@
             webvisor: true
         });
     </script>
-  
+
     <!-- /Yandex.Metrika counter -->
 
 
@@ -439,34 +439,45 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col documents">
-                    <div class="testimonial-carousel-list margin-top-20">
 
-                        <div class="testimonial-word text-center">
-                            <a href="#" data-toggle="modal" data-target="#SpacDevModal" title="Сертификат SpaceDev">
-                                <img src="images/testimonial/Сертификат.jpg" class="img-responsive">
-                            </a>
-                            <h1>SpaceDev: Разработчик C#</h1>
-                            <h4>Оффлайн курсы в школе программировния SpaceDev. 9 месяцев, 270 часов</h4>
+
+              
+                <button class="buttonx button-toggle" data-target=".hiddingTestimonal">Показать документы об
+                    образоваании</button>
+                
+
+
+            <div class="row hiddingTestimonal">
+
+                <div class="row">
+                    <div class="col documents">
+                        <div class="testimonial-carousel-list margin-top-20">
+
+                            <div class="testimonial-word text-center">
+                                <a href="#" data-toggle="modal" data-target="#SpacDevModal" title="Сертификат SpaceDev">
+                                    <img src="images/testimonial/Сертификат.jpg" class="img-responsive">
+                                </a>
+                                <h1>SpaceDev: Разработчик C#</h1>
+                                <h4>Оффлайн курсы в школе программировния SpaceDev. 9 месяцев, 270 часов</h4>
+                            </div>
+
+
+
+                            <div class="testimonial-word text-center">
+                                <a href="#" data-toggle="modal" data-target="#TpuModal"
+                                    title="Диплом Бакалавра. Пока не могу сделать скан">
+                                    <img src="images/testimonial/diploma.jpg" class="img-responsive">
+                                </a>
+                                <h1>ТПУ: менеджмент</h1>
+                                <h4>Томский Политехнический Университет, ИСГТ,
+                                    менеджмент, бакалавр ('08-'14)</h4>
+                            </div>
+
+
                         </div>
-
-
-
-                        <div class="testimonial-word text-center">
-                            <a href="#" data-toggle="modal" data-target="#TpuModal"
-                                title="Диплом Бакалавра. Пока не могу сделать скан">
-                                <img src="images/testimonial/diploma.jpg" class="img-responsive">
-                            </a>
-                            <h1>ТПУ: менеджмент</h1>
-                            <h4>Томский Политехнический Университет, ИСГТ,
-                                менеджмент, бакалавр ('08-'14)</h4>
-                        </div>
-
-
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </section><!-- Сертификаты End -->
@@ -489,8 +500,7 @@
                 </div>
             </div>
 
-            <button class="buttonx smoth-scroll" id="toggleHiddingBlockExp">Показать опыт работы</button>
-
+            <button class="buttonx button-toggle" data-target=".hiddingExp">Показать опыт работы</button>
             <div class="row hiddingExp">
 
                 <div class=" col-md-6">
@@ -650,9 +660,9 @@
             <!-- Кнопка для скрытия блока hiddingAbout -->
 
 
-            <button class="buttonx smoth-scroll" id="toggleHiddingBlockAbout">
-                Показать информацию Обо мне
-            </button>
+
+            <button class="buttonx button-toggle" data-target=".hiddingAbout">Показать информацию Обо мне</button>
+
 
             <div class="row hiddingAbout">
                 <div class="col-md-12">
@@ -738,7 +748,8 @@
             <div class="row">
 
                 <noscript>
-                    <div><img src="https://mc.yandex.ru/watch/95038714" style="position:absolute; left:-9999px;" alt="" /></div>
+                    <div><img src="https://mc.yandex.ru/watch/95038714" style="position:absolute; left:-9999px;"
+                            alt="" /></div>
                 </noscript>
 
 
