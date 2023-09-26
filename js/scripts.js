@@ -70,6 +70,10 @@
         });
 
 
+        $(document).ready(function () {
+            // Скрываем все блоки при загрузке страницы
+            $('[class*="hidding"]').slideUp();
+        })
 
         $('.button-toggle').click(function () {
             var button = $(this);

@@ -2271,11 +2271,11 @@ ul.portfolio li.active {
 }
 
 /* CSS класс для начального скрытия блока */
-.hiddingExp,
+/* .hiddingExp,
 .hiddingAbout,
 .hiddingTestimonal {
     display: none;
-}
+} */
 
 /* CSS для центрирования кнопки по горизонтали */
 #toggleHiddingBlockExp,
