@@ -190,7 +190,7 @@
 
         /* Portfolio Filtering */
 
-        $('.portfolio-inner').mixItUp();
+        // $('.portfolio-inner').mixItUp();
 
 
 
