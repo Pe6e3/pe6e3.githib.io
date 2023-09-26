@@ -70,26 +70,45 @@
         });
 
         /*  ↓↓↓ Кнопка для скрытия/раскрытия контента ↓↓↓ */
-        setupToggleButton('#toggleHiddingBlockExp', '.hiddingExp', 'Показать опыт работы', 'Скрыть опыт работы');
-        setupToggleButton('#toggleHiddingBlockAbout', '.hiddingAbout', 'Показать информацию Обо мне', 'Скрыть информацию Обо мне');
+        slideToggleBlock('#toggleHiddingBlockExp', '.hiddingExp');
+        slideToggleBlock('#toggleHiddingBlockAbout', '.hiddingAbout');
 
-        function setupToggleButton(buttonId, blockId, showText, hideText) {
+        function closeAll() {
+            var allButtons = document.querySelectorAll('[id*="toggleHiddingBlock"]');
+            var allBlocks = document.querySelectorAll('[class*="hidding"]');
+            allButtons.forEach(button => {
+                if (button.textContent.includes("Скрыть")) {
+                    button.textContent = button.textContent.replace("Скрыть", "Показать");
+                }
+            });
+            allBlocks.forEach(block => {
+                $(block).slideUp();
+            })
+        }
+
+        function slideToggleBlock(buttonId, blockId) {
             var toggleButton = $(buttonId);
             var hiddingBlock = $(blockId);
-
+        
             toggleButton.click(function () {
-                hiddingBlock.slideToggle();
-
-                if (toggleButton.text() === hideText) {
-                    toggleButton.text(showText);
-                } else {
-                    toggleButton.text(hideText);
+                var buttonTextBefore = toggleButton.text().toLowerCase();
+                closeAll();
+                if (buttonTextBefore.includes("показать")) {
+                    toggleButton.text(toggleButton.text().toLowerCase());
+                    toggleButton.text(toggleButton.text().replace("показать", "Скрыть"));
+                    hiddingBlock.slideDown();
+        
+                    // Опускаем/поднимаем страницу к кнопке
+                    $('html, body').animate({
+                        scrollTop: toggleButton.offset().top - 60
+                    }, 1000);  
+                    
                 }
             });
         }
+        
+
         /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
-
-
 
 
 
@@ -241,7 +260,7 @@
         });
 
 
-        
+
         /* Statistics Counter */
 
         $('.statistics').appear(function () {
