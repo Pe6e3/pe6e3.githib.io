@@ -624,13 +624,17 @@ tr>td:nth-child(2) {
 /* Qualification and Experience */
 
 .experience {
-    margin-left: 70px;
-    padding: 10px 0px;
+    margin-left: 20px;
+    padding: 10px 20px;
+
+    @media (max-width:820px) {
+        margin-left: 60px;
+    }
 }
 
 .experience-item {
     position: relative;
-    margin: 40px 0px;
+    margin: 0 0 40px 0;
     transition: 0.3s;
 }
 
@@ -647,6 +651,7 @@ tr>td:nth-child(2) {
     background: #0c4480;
     padding-top: 25px;
     box-shadow: -5px 6px 4px 0px rgba(90, 91, 95, 0.3);
+    transform: scale(0.8);
 }
 
 .experience-circle i {
@@ -1609,16 +1614,17 @@ ul.portfolio li.active {
 
 /* Footer */
 
-body{
+body {
     background-image: var(--footerBG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .footer-section {
     padding: 15px 0px;
     color: #f8f8f8;
-    height: 100px; 
+    height: 100px;
     position: relative;
 }
 
@@ -2276,7 +2282,7 @@ body{
 }
 
 
- 
+
 
 
 .myGrid {
@@ -2452,7 +2458,7 @@ body{
 
 .buttonx {
 
-    
+
     font-family: var(--buttonFont);
     width: auto;
     height: auto;
@@ -2468,7 +2474,7 @@ body{
 
 
 
-    
+
 }
 
 .buttonx:hover {
@@ -2553,21 +2559,31 @@ body{
     justify-content: end;
 }
 
-.titleBlock{
+.titleBlock {
     margin: 20px 0px 20px 0px;
     display: flex;
     justify-content: start;
 }
-.titleBlock button{
+
+.titleBlock button {
     font-size: 22px;
+    margin: 0 30px 0 30px;
     padding: 15px;
-}
-.subTitle{
-    text-align: center;
-    margin:0 0 40px 0;
+    text-align: start;
+
+    @media(max-width:600px) {
+        font-size: 14px;
+        padding: 7px;
+    }
 }
 
-.container{
+.subTitle {
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0 20px 10px 20px;
+}
+
+.container {
     padding: 5px 0 15px 0;
 }
 
@@ -2575,10 +2591,12 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px; /* Расстояние между иконкой и текстом */
+    gap: 20px;
+    /* Расстояние между иконкой и текстом */
 }
 
 .social-ico-modal img {
-    width: 24px; /* Размер иконки */
+    width: 24px;
+    /* Размер иконки */
     height: 24px;
 }
