@@ -5,17 +5,18 @@
     --textFont: 'Source';
     --textFont2: 'Pobeda Bold';
     --textFont3: 'Geologica';
-    --textFont4: 'Montserrat';
+    --textFont4: 'Tektur';
     --textFont5: 'Montserrat A';
 
 
-    --boldFont: 'Woodstick';
-    --buttonFont: 'Woodstick';
+    --boldFont: 'Montserrat';
+    --buttonFont: 'Montserrat';
 
     --linkFont: 'Lineyka';
 
     --titleColor: wheat;
     --textColor: antiquewhite;
+    --tableColor: rgb(178, 159, 241);
     --textColor2: rgb(192, 182, 167);
     --textColorDark: rgb(6, 3, 30);
     --navTextDark: rgb(160, 160, 160);
@@ -436,7 +437,6 @@ fieldset {
 /* Home Section and Navigation Menu */
 
 .home-section {
-    padding-top: 60px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -453,7 +453,7 @@ fieldset {
     bottom: -0;
     left: 0;
     width: auto;
-    height: 300px;
+    height: 250px;
     z-index: -1;
 }
 
@@ -514,7 +514,7 @@ tr>td:nth-child(1) {
 
 tr>td:nth-child(2) {
     font-weight: 500;
-    color: var(--textColor);
+    color: var(--tableColor);
     background: #2f6fb4be;
 }
 
@@ -1609,14 +1609,19 @@ ul.portfolio li.active {
 
 /* Footer */
 
-.footer-section {
+body{
     background-image: var(--footerBG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.footer-section {
     padding: 15px 0px;
     color: #f8f8f8;
+    height: 100px; 
+    position: relative;
 }
+
 
 .footer-section p {
     font-size: 14px;
@@ -2446,6 +2451,8 @@ ul.portfolio li.active {
 }
 
 .buttonx {
+
+    
     font-family: var(--buttonFont);
     width: auto;
     height: auto;
@@ -2458,6 +2465,10 @@ ul.portfolio li.active {
     border-radius: 10px;
     border: 4px inline gray;
     transition: 1s;
+
+
+
+    
 }
 
 .buttonx:hover {
@@ -2549,7 +2560,7 @@ ul.portfolio li.active {
 }
 .titleBlock button{
     font-size: 22px;
-    padding: 20px;
+    padding: 15px;
 }
 .subTitle{
     text-align: center;
