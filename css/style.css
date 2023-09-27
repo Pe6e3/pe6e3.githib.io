@@ -168,7 +168,7 @@ a:focus {
 }
 
 p {
-    line-height: 28px;
+    line-height: 140%;
 }
 
 b {
@@ -204,7 +204,8 @@ fieldset {
 .section-title {
     text-align: center;
     margin-left: 50px;
-    @media (max-width:800px){
+
+    @media (max-width:800px) {
         margin-left: 0;
     }
 }
@@ -444,11 +445,20 @@ fieldset {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 300px;
 
     position: relative;
     overflow: hidden;
     background-color: #000;
     z-index: -2;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 10px 30px 10px 10px;
+    @media (max-width:550px){
+    padding: 10px 10px 10px 10px;
+
+    }
 }
 
 
@@ -457,7 +467,7 @@ fieldset {
     bottom: -0;
     left: 0;
     width: auto;
-    height: 250px;
+    height: 300px;
     z-index: -1;
 }
 
@@ -1020,6 +1030,7 @@ tr>td:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 8%;
 
     @media(max-width: 767px) {
         display: grid;
@@ -1111,10 +1122,16 @@ ul.portfolio li.active {
     height: 80px;
     width: 100%;
     border-radius: 0 0 10px 10px;
-    padding: 5px 10px;
+    padding: 10px;
     font-size: 18px;
     color: var(--titleColor);
     font-weight: bold;
+    line-height: 130% !important;
+
+    @media(max-width: 500px) {
+        font-size: 14px;
+        line-height: 130%;
+    }
 
 }
 
@@ -1423,7 +1440,8 @@ ul.portfolio li.active {
 
 .services .services-detail {
     margin: 20px;
-    position: relative; /* Обязательно добавьте это, чтобы псевдоэлементы имели базовый элемент для относительного позиционирования */
+    position: relative;
+    /* Обязательно добавьте это, чтобы псевдоэлементы имели базовый элемент для относительного позиционирования */
 }
 
 .services .services-detail::before {
@@ -1485,10 +1503,12 @@ ul.portfolio li.active {
         width: 90px !important;
         height: 90px !important;
     }
+
     .services-detail>img {
         width: 30px;
         margin-top: 15px;
     }
+
     .services-detail>h3 {
         font-size: 8px !important;
         margin: 0;
@@ -2606,13 +2626,14 @@ body {
 .home-table {
     display: flex;
     justify-content: end;
+    width: 100%;
 }
 
 .titleBlock {
     padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: start;
-  
+
 }
 
 .titleBlock button {
