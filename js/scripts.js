@@ -1,35 +1,3 @@
-/*
-   
-    Template Name : WebRes - Personal Resume Template
-    Author : UiPasta Team
-    Website : http://www.uipasta.com/
-    Support : http://www.uipasta.com/support/
-	
-	
-*/
-
-
-
-/*
-   
-   Table Of Content
-   
-   1. Preloader
-   2. Smooth Scroll
-   3. Scroll Naviagation Background Change with Sticky Navigation
-   4. Mobile Navigation Hide or Collapse on Click
-   5. Scroll To Top
-   6. Tooltip
-   7. Ajaxchimp for Subscribe Form
-   8. Portfolio Filtering
-   9. Magnific Popup
-  10. Testimonial Carousel/Slider
-  11. Statistics Counter
- 
-
-*/
-
-
 (function ($) {
     'use strict';
 
@@ -65,10 +33,9 @@
 
 
         /* Preloader */
-        $(window).load(function () {
+        $(document).ready(function () {
             $('.preloader').delay(800).fadeOut('slow');
         });
-
 
         $(document).ready(function () {
             // Скрываем все блоки при загрузке страницы
@@ -105,10 +72,6 @@
             }
         });
 
-
-
-
-
         /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
 
 
@@ -123,34 +86,6 @@
             e.preventDefault();
         });
 
-
-
-
-        /* Scroll Naviagation Background Change with Sticky Navigation */
-
-        $(window).on('scroll', function () {
-            if ($(window).scrollTop() > 100) {
-                $('.header-top-area').addClass('navigation-background');
-            } else {
-                $('.header-top-area').removeClass('navigation-background');
-            }
-        });
-
-
-
-
-        /* Mobile Navigation Hide or Collapse on Click */
-
-        $(document).on('click', '.navbar-collapse.in', function (e) {
-            if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
-                $(this).collapse('hide');
-            }
-        });
-        $('body').scrollspy({
-            target: '.navbar-collapse',
-            offset: 195
-
-        });
 
 
 
@@ -171,59 +106,6 @@
             return false;
         });
 
-
-
-        /* Tooltip */
-
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-
-
-
-        /* Ajaxchimp for Subscribe Form */
-
-        $('#mc-form').ajaxChimp();
-
-
-
-
-        /* Portfolio Filtering */
-
-        // $('.portfolio-inner').mixItUp();
-
-
-
-        /* Magnific Popup */
-
-        $('.portfolio-popup').magnificPopup({
-            type: 'image',
-
-            gallery: { enabled: true },
-            zoom: {
-                enabled: true,
-                duration: 500
-
-            },
-
-
-            image: {
-                markup: '<div class="mfp-figure portfolio-pop-up">' +
-                    '<div class="mfp-close"></div>' +
-                    '<div class="mfp-img"></div>' +
-                    '<div class="mfp-bottom-bar portfolio_title">' +
-                    '<div class="mfp-title"></div>' +
-                    '<div class="mfp-counter"></div>' +
-                    '</div>' +
-                    '</div>',
-
-                titleSrc: function (item) {
-                    return item.el.attr('title');
-                }
-            }
-
-
-        });
 
 
         /* Testimonial Carousel/Slider */
@@ -277,7 +159,37 @@
         });
 
     });
-    
+
+    // Проверка, если страница открыта с мобильного устройства
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Обработчик для звука при наведении (с проверкой на мобильное устройство)
+    document.body.addEventListener('mouseover', (event) => {
+        const target = event.target;
+        // Проверяем, если это не мобильное устройство
+        if (!isMobileDevice() && target.matches('a, button')) {
+            const hoverSound = new Audio("/sounds/hover2.mp3");
+            hoverSound.volume = 0.3;
+            hoverSound.play();
+        }
+    });
+
+    // Обработчик для звука при нажатии
+    document.body.addEventListener('mousedown', (event) => {
+        const target = event.target;
+        if (target.matches('a, button') && event.button === 0) {
+            const clickSound = new Audio("/sounds/click.mp3");
+            clickSound.volume = 0.2;
+            clickSound.play();
+        }
+    });
+
+
+
+
+
 
 })(jQuery);
 
