@@ -1236,6 +1236,7 @@ ul.portfolio li.active {
 
 .testimonial-carousel-list {
     padding: 30px;
+    margin-bottom: 30px;
     background-color: #0f00443b;
     border-radius: 4px;
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.25);
@@ -1292,8 +1293,7 @@ ul.portfolio li.active {
 
 
 .testimonial-carousel-list:hover {
-    box-shadow: 0px 16px 22px 10px rgba(90, 91, 95, 0.5);
-    top: -5px;
+    box-shadow: 0px 0px 22px 10px rgba(90, 91, 95, 0.5);
 }
 
 
