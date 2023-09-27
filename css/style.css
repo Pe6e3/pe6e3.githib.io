@@ -450,14 +450,14 @@ fieldset {
     position: relative;
     overflow: hidden;
     background-color: #000;
-    z-index: -2;
+    z-index: 0;
     display: flex;
     align-items: end;
     justify-content: end;
     padding: 10px 30px 10px 10px;
-    @media (max-width:550px){
-    padding: 10px 10px 10px 10px;
 
+    @media (max-width:550px) {
+        padding: 10px 10px 10px 10px;
     }
 }
 
@@ -2670,4 +2670,36 @@ body {
     width: 24px;
     /* Размер иконки */
     height: 24px;
+}
+
+
+.hoverme {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.hoverme .hovertext {
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+    background-color: #f27718;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    transition: 1s;
+
+    opacity: 0;
+}
+
+.hoverme:hover .hovertext {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.4s;
 }
