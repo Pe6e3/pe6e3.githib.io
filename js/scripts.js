@@ -33,9 +33,21 @@
 
 
         /* Preloader */
-        $(document).ready(function () {
+        // $(window).load(function () {
+        //     $('.preloader').delay(800).fadeOut('slow');
+        // });
+
+        // $(document).ready(function () {
+        //     $('.preloader').delay(800).fadeOut('slow');
+        // });
+
+
+        window.onload = function () {
             $('.preloader').delay(800).fadeOut('slow');
-        });
+        };
+
+
+
 
         $(document).ready(function () {
             // Скрываем все блоки при загрузке страницы
