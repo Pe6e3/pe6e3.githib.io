@@ -1423,6 +1423,29 @@ ul.portfolio li.active {
 
 .services .services-detail {
     margin: 20px;
+    position: relative; /* Обязательно добавьте это, чтобы псевдоэлементы имели базовый элемент для относительного позиционирования */
+}
+
+.services .services-detail::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px inset rgba(40, 4, 244, 0.6);
+    border-radius: 50%;
+}
+
+.services .services-detail::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    border: 3px outset rgba(2, 154, 255, 0.8);
 }
 
 .services-section {
@@ -1474,12 +1497,11 @@ ul.portfolio li.active {
 
 
 .services-section .services-detail:hover {
-    border-bottom-right-radius: 4px;
     box-shadow: 0px 0px 40px 10px rgba(191, 255, 0, 0.464);
-    top: -5px;
     background-color: #bdbefea0;
     transform: scale(1.1);
     transition: 0.3s;
+    border: 3px outset rgba(101, 193, 255, 0.9);
 }
 
 
