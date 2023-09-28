@@ -14,8 +14,10 @@
 
     --linkFont: 'Lineyka';
 
-    --titleColor: wheat;
-    --textColor: antiquewhite;
+    --buttonColor: wheat;
+    --titleColorDark: #96361c;
+    --titleColorLight: wheat;
+    --textColor: #9d121e;
     --tableColor: rgb(178, 159, 241);
     --textColor2: rgb(192, 182, 167);
     --textColorDark: rgb(6, 3, 30);
@@ -23,18 +25,18 @@
     --navTextLight: rgb(92, 157, 255);
 
 
-    --homeBG: url('../images/bg/2.jpg');
-    --aboutBG: url('../images/bg/13.jpg');
-    --servicesBG: url('../images/bg/1.jpg');
-    --contactsBG: url('../images/bg/call-to-action.png');
-    --portfolioBG: url('../images/bg/15.jpg');
-    --sertificateBG: url('../images/bg/1.jpg');
-    --jobExpBG: url('../images/bg/5.jpg');
-    --footerBG: url('../images/bg/111.bmp');
-    --maskBG: rgba(100, 100, 130, 0.5);
-    --maskAboutBG: rgba(20, 20, 30, 0.4);
-    --subscribeModalBG: url('../images/bg/footer-bg.png');
-    --portfolioModalBG: url('../images/bg/8.png');
+    /* --servicesBG: url('../images/bg/1-9.jpg'); */
+    /* --portfolioBG:url('../images/bg/1-4.jpg'); */
+    --sertificateBG: url('../images/bg/1-9.jpg');
+    --jobExpBG:  url('../images/bg/1.jpg');
+    --aboutBG:  url('../images/bg/1-9.jpg');
+    --contactsBG: url('../images/bg/1-4.jpg');
+    --footerBG:  url('../images/bg/1-2.jpg');
+
+    --titleBG: url('../images/bg/2-2.jpg');
+
+    --subscribeModalBG: url('../images/bg/1-10.jpg');
+    --portfolioModalBG:url('../images/bg/1-10.jpg');
 }
 
 @font-face {
@@ -128,7 +130,7 @@ h5,
 h6 {
     font-family: var(--boldFont), sans-serif;
     font-weight: bold;
-    color: var(--titleColor);
+    color: var(--titleColorDark);
 
 }
 
@@ -141,7 +143,7 @@ img {
 }
 
 a {
-    color: var(--titleColor);
+    color: var(--titleColorDark);
 }
 
 .me-image {
@@ -202,8 +204,10 @@ fieldset {
 
 
 .section-title {
+    background-image: var(--titleBG);
+    
     text-align: center;
-    margin-left: 50px;
+    padding-left: 50px;
 
     @media (max-width:800px) {
         margin-left: 0;
@@ -236,11 +240,12 @@ fieldset {
 }
 
 .divider>i {
-    color: #f7639a;
+    color: orangered;
     font-size: 21px;
 }
 
 .divider {
+    padding: 2px;
     position: relative;
     width: 126px;
     margin: 0 auto;
@@ -268,7 +273,7 @@ fieldset {
 
 .divider.dark:after,
 .divider.dark:before {
-    border-color: #b2b2b2;
+    border-color: orangered;
 }
 
 .button {
@@ -474,7 +479,9 @@ fieldset {
 
 
 .job-exp {
-    background-image: var(--jobExpBG);
+    /* background-image: var(--jobExpBG); */
+    background-color: rgb(255, 248, 236);
+
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -490,7 +497,7 @@ fieldset {
 }
 
 .table a {
-    color: var(--titleColor);
+    color: var(--titleColorDark);
 }
 
 .table>tbody>tr>td {
@@ -638,7 +645,7 @@ tr>td:nth-child(2) {
 /* Qualification and Experience */
 
 .experience {
-    padding: 0 50px 0 80px;
+    padding: 0 50px 10px 80px;
 
     @media (max-width:820px) {
         margin-left: 60px;
@@ -660,7 +667,7 @@ tr>td:nth-child(2) {
     border-radius: 100%;
     position: absolute;
     left: -60px;
-    color: var(--titleColor);
+    color: var(--titleColorDark);
     background: #0c4480;
     padding-top: 25px;
     box-shadow: -5px 6px 4px 0px rgba(90, 91, 95, 0.3);
@@ -724,7 +731,9 @@ tr>td:nth-child(2) {
 /* About */
 
 .about {
-    background-image: var(--aboutBG);
+    /* background-image: var(--aboutBG); */
+    background-color: rgb(255, 248, 236);
+
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -887,7 +896,7 @@ tr>td:nth-child(2) {
 /* Subscribe */
 
 .subscribe .modal-content {
-    color: var(--titleColor);
+    color: var(--titleColorDark);
     background: var(--subscribeModalBG);
     background-repeat: repeat;
     padding-left: 10%;
@@ -1001,7 +1010,7 @@ tr>td:nth-child(2) {
     display: block;
     justify-content: center;
     text-align: center;
-    color: var(--titleColor);
+    color: var(--titleColorDark);
 }
 
 .portfolio-block p {
@@ -1018,7 +1027,9 @@ tr>td:nth-child(2) {
 }
 
 .portfolio {
-    background-image: var(--portfolioBG);
+    /* background-image: var(--portfolioBG); */
+    background-color: rgb(255, 248, 236);
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1124,7 +1135,7 @@ ul.portfolio li.active {
     border-radius: 0 0 10px 10px;
     padding: 10px;
     font-size: 18px;
-    color: var(--titleColor);
+    color: var(--titleColorLight);
     font-weight: bold;
     line-height: 130% !important;
 
@@ -1228,7 +1239,8 @@ ul.portfolio li.active {
 /* Testimonial */
 
 .testimonial-section {
-    background-image: var(--sertificateBG);
+    /* background-image: var(--sertificateBG); */
+    background-color: rgb(255, 248, 236);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -1451,7 +1463,7 @@ ul.portfolio li.active {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    border: 2px inset rgba(40, 4, 244, 0.6);
+    border: 2px inset rgba(244, 100, 4, 0.6);
     border-radius: 50%;
 }
 
@@ -1463,12 +1475,14 @@ ul.portfolio li.active {
     right: -2px;
     bottom: -2px;
     border-radius: 50%;
-    border: 3px outset rgba(2, 154, 255, 0.8);
+    border: 3px outset rgba(255, 154, 2, 0.8);
 }
 
 .services-section {
     background-color: #710505;
-    background-image: var(--servicesBG);
+    /* background-image: var(--servicesBG); */
+    background-color: rgb(255, 248, 236);
+
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1485,7 +1499,7 @@ ul.portfolio li.active {
 
 .services-section .services-detail {
     border-radius: 100%;
-    background-color: #9799fb6b;
+    background: linear-gradient(135deg, #eca0096b, #eca009);
     box-shadow: 0px 0px 20px 0px rgba(191, 255, 0, 0.08);
     transition: all 0.3s ease-in-out;
     position: relative;
@@ -1518,10 +1532,10 @@ ul.portfolio li.active {
 
 .services-section .services-detail:hover {
     box-shadow: 0px 0px 40px 10px rgba(191, 255, 0, 0.464);
-    background-color: #bdbefea0;
+    background-color: #f6da07a0;
     transform: scale(1.1);
     transition: 0.3s;
-    border: 3px outset rgba(101, 193, 255, 0.9);
+    border: 3px outset rgba(240, 236, 2, 0.9);
 }
 
 
@@ -1538,8 +1552,9 @@ ul.portfolio li.active {
 
 .call-to-action {
     background: var(--contactsBG);
-    background-attachment: fixed;
-    background-repeat: repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .call-to-action h2 {
@@ -1682,15 +1697,18 @@ ul.portfolio li.active {
 
 body {
     background-image: var(--footerBG);
+    background-color: rgb(255, 248, 236);
+
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .footer-section {
+    
     padding: 15px 0px;
     color: #f8f8f8;
-    height: 100px;
+    height: 70px;
     position: relative;
 }
 
@@ -2347,6 +2365,13 @@ body {
     justify-content: center;
 }
 
+.contacts-section {
+    background-image: var(--contactsBG);
+    background-size: cover;  
+    background-position: center center; 
+    background-repeat: no-repeat;  
+}
+
 
 
 
@@ -2531,7 +2556,7 @@ body {
     font-weight: bold;
     width: auto;
     height: auto;
-    color: var(--titleColor);
+    color: var(--buttonColor);
     padding: 10px;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(54, 54, 55, 0.9));
     cursor: pointer;
@@ -2651,7 +2676,12 @@ body {
 .subTitle {
     text-align: center;
     margin: 0 0 10px 0;
-    padding: 0 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
+    background-color: rgba(247, 124, 8, 0.35);
+}
+.subTitle h4{
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .container {
