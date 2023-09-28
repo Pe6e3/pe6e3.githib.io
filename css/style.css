@@ -28,15 +28,15 @@
     /* --servicesBG: url('../images/bg/1-9.jpg'); */
     /* --portfolioBG:url('../images/bg/1-4.jpg'); */
     --sertificateBG: url('../images/bg/1-9.jpg');
-    --jobExpBG:  url('../images/bg/1.jpg');
-    --aboutBG:  url('../images/bg/1-9.jpg');
+    --jobExpBG: url('../images/bg/1.jpg');
+    --aboutBG: url('../images/bg/1-9.jpg');
     --contactsBG: url('../images/bg/1-4.jpg');
-    --footerBG:  url('../images/bg/1-2.jpg');
+    --footerBG: url('../images/bg/1-2.jpg');
 
     --titleBG: url('../images/bg/2-2.jpg');
 
     --subscribeModalBG: url('../images/bg/1-10.jpg');
-    --portfolioModalBG:url('../images/bg/1-10.jpg');
+    --portfolioModalBG: url('../images/bg/1-10.jpg');
 }
 
 @font-face {
@@ -205,7 +205,7 @@ fieldset {
 
 .section-title {
     background-image: var(--titleBG);
-    
+
     text-align: center;
     padding-left: 50px;
 
@@ -667,12 +667,22 @@ tr>td:nth-child(2) {
     border-radius: 100%;
     position: absolute;
     left: -60px;
+    top: calc(50% - 60px);
     color: var(--titleColorDark);
-    background: #0c4480;
     padding-top: 25px;
-    box-shadow: -5px 6px 4px 0px rgba(90, 91, 95, 0.3);
-    transform: scale(0.8);
+
+    background: linear-gradient(135deg, #eca0096b, #eca009);
+    box-shadow: 3px 6px 15px 0px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease-in-out;
+    border: 2px outset rgba(244, 144, 4, 0.6);
 }
+
+
+
+
+
+
 
 .experience-circle i {
     display: block;
@@ -692,15 +702,17 @@ tr>td:nth-child(2) {
 .experience-content {
     margin-left: 80px;
     position: relative;
-    background: #0000002d;
-    border: 2px inset #2c1f4a4a;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #f8aa0d7c, #e19b29ce);
+    border: 2px outset #ef78084a;
+    border-radius: 15px;
     padding: 20px 25px;
+    box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 0.2);
+
 }
 
 
-.experience-content h4 {
-    line-height: 30px;
+.experience-content h3 {
+    margin: auto;
 }
 
 
@@ -720,7 +732,7 @@ tr>td:nth-child(2) {
 }
 
 .experience-content p {
-    color: var(--textColor2);
+    color: var(--textColor);
     font-family: var(--textFont3);
 }
 
@@ -1029,7 +1041,7 @@ tr>td:nth-child(2) {
 .portfolio {
     /* background-image: var(--portfolioBG); */
     background-color: rgb(255, 248, 236);
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1507,8 +1519,6 @@ ul.portfolio li.active {
     height: 140px;
     text-align: center;
     transition: 1s;
-
-
 }
 
 @media(max-width:580px) {
@@ -1705,7 +1715,7 @@ body {
 }
 
 .footer-section {
-    
+
     padding: 15px 0px;
     color: #f8f8f8;
     height: 70px;
@@ -2367,9 +2377,9 @@ body {
 
 .contacts-section {
     background-image: var(--contactsBG);
-    background-size: cover;  
-    background-position: center center; 
-    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
@@ -2679,7 +2689,8 @@ body {
     padding: 20px 20px 10px 20px;
     background-color: rgba(247, 124, 8, 0.35);
 }
-.subTitle h4{
+
+.subTitle h4 {
     font-size: 25px;
     font-weight: bold;
 }
