@@ -777,15 +777,10 @@ tr>td:nth-child(2) {
 
 /* About */
 
-.about {
-    /* background-image: var(--aboutBG); */
-    background-color: rgb(255, 248, 236);
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 0;
+.about >p{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    line-height: 150%;
 }
 
 .about::before {
@@ -1059,14 +1054,10 @@ tr>td:nth-child(2) {
     color: var(--titleColorDark);
 }
 
-.portfolio-block p {
-    line-height: 150% !important;
-}
 
 .portfolio-modal .modal-content {
     background: var(--portfolioModalBG);
     background-repeat: repeat;
-    /* font-size: 30px; */
     line-height: 150%;
     height: 100%;
     padding: 0 30px;
@@ -1517,11 +1508,19 @@ ul.portfolio li.active {
     vertical-align: middle;
 }
 
+.services-section .weak-service {
+    background: linear-gradient(-45deg, gray, rgb(194, 193, 193)) !important;
+}
+
+.weak-service>h3 {
+    color: gray !important;
+}
+
 
 .services-section .services-detail {
     border-radius: 100%;
-    background: linear-gradient(135deg, #eca0096b, #eca009);
-    box-shadow: 0px 0px 20px 0px rgba(191, 255, 0, 0.08);
+    background: linear-gradient(150deg, #ffe69ad2, #ff9101);
+    box-shadow: 3px 6px 10px 0px rgba(51, 68, 0, 0.58);
     transition: all 0.3s ease-in-out;
     position: relative;
     width: 140px;
@@ -1529,6 +1528,7 @@ ul.portfolio li.active {
     text-align: center;
     transition: 1s;
 }
+
 
 @media(max-width:580px) {
     .services-section .services-detail {
@@ -2382,9 +2382,10 @@ body {
 .contacts {
     display: flex;
     justify-content: center;
+    padding: 30px 50px;
 }
 
-.contacts-section {
+.hiddingContacts {
     background-image: var(--contactsBG);
     background-size: cover;
     background-position: center center;
@@ -2779,6 +2780,66 @@ body {
             rgb(240, 250, 220),
             rgb(250, 250, 250));
     background-image: var(--lightBG);
+}
 
-            
+.carousel-2 .owl-item {
+    padding: 10px 0 30px 0;
+}
+.carousel-2 .owl-pic  {
+    background: #000;
+    margin: 40px 0;
+    border: 5px solid #000;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid #000;
+    transition: all 0.4s ease;
+    height: 240px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3), 0 16px 20px rgba(0,0,0,0.2);
+}
+.carousel-2 .owl-item.center .owl-pic {
+    opacity: 1;
+    border: 8px solid #BFE2FF;
+    margin: 0 0 0 -15%;
+    width: 130%;
+    height: 320px;
+}
+.carousel-2 .owl-item.center + .owl-item {
+    position: relative;
+    z-index: -1;
+}
+.carousel-2 .owl-pic img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s opacity ease, 0.3s transform ease;
+    opacity: 0.6;
+    object-fit: cover;
+}
+.carousel-2 .owl-item .owl-pic:hover img,
+.carousel-2 .owl-item.center .owl-pic img {
+    opacity: 1;
+}
+.carousel-2 .owl-nav .owl-prev,
+.carousel-2 .owl-nav .owl-next {
+    position: absolute;
+    cursor: pointer;
+    font-size: 60px!important;
+    color: #FFF!important;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    transition: 0.3s opacity ease;
+    opacity: 0.6;
+    margin: 0;
+    padding: 0;
+}
+.carousel-2 .owl-nav .owl-prev:hover,
+.carousel-2 .owl-nav .owl-next:hover {
+    opacity: 1;
+}
+.carousel-2 .owl-nav .owl-prev,
+.carousel-2 .owl-nav .owl-prev:hover {
+    left: 0;
+}
+.carousel-2 .owl-nav .owl-next,
+.carousel-2 .owl-nav .owl-next:hover {
+    right: 0;
 }
