@@ -18,7 +18,7 @@
     --titleColorDark: #96361c;
     --titleColorLight: wheat;
     --textColor: #9d121e;
-    --tableColor: rgb(178, 159, 241);
+    --tableColor: rgb(243, 255, 185);
     --textColor2: rgb(192, 182, 167);
     --textColorDark: rgb(6, 3, 30);
     --navTextDark: rgb(160, 160, 160);
@@ -527,7 +527,7 @@ tr:nth-child(1)>td {
 }
 
 tr>td:nth-child(1) {
-    background-color: #140b79d1;
+    background-color: #ffcc95;
     font-weight: 500;
     font-size: 13px;
     color: #888888;
@@ -536,7 +536,7 @@ tr>td:nth-child(1) {
 tr>td:nth-child(2) {
     font-weight: 500;
     color: var(--tableColor);
-    background: #2f6fb4be;
+    background: #f9870ebe;
 }
 
 .header-top-area {
