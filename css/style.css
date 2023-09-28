@@ -14,7 +14,7 @@
 
     --linkFont: 'Lineyka';
 
-    --buttonColor: wheat;
+    --buttonColor: 96361c;
     --titleColorDark: #96361c;
     --titleColorLight: wheat;
     --textColor: #9d121e;
@@ -751,7 +751,6 @@ tr>td:nth-child(2) {
     background-attachment: fixed;
     position: relative;
     z-index: 0;
-    color: antiquewhite;
 }
 
 .about::before {
@@ -1045,7 +1044,6 @@ tr>td:nth-child(2) {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: rgb(250, 250, 255);
 }
 
 
@@ -1116,7 +1114,8 @@ ul.portfolio li.active {
     box-shadow: 0px 0px 25px 3px rgba(232, 240, 4, 0.2);
     display: flex;
     flex-direction: column;
-    @media(max-width:500px){
+
+    @media(max-width:500px) {
         width: auto;
     }
 }
@@ -1254,7 +1253,7 @@ ul.portfolio li.active {
 .testimonial-carousel-list {
     padding: 30px;
     margin-bottom: 30px;
-    background-color: #0f00443b;
+    background-color: #f994063b;
     border-radius: 4px;
     box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.25);
     transition: all 0.3s ease-in-out;
@@ -1270,19 +1269,7 @@ ul.portfolio li.active {
     position: relative;
 }
 
-.testimonial-word::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 80%;
-    background-color: rgba(0, 0, 50, 0.5);
-    border-radius: 10px;
-    z-index: 1;
-    pointer-events: none;
-    /* Это позволит кликам проходить через псевдоэлемент */
-}
+
 
 @media (max-width: 1200px) {
     .testimonial-word img {
@@ -1367,7 +1354,7 @@ ul.portfolio li.active {
     width: 65px;
     height: 65px;
     line-height: 60px;
-    background-color: #2f75c0;
+    background-color: #f48803;
     transition: all 0.3s ease-in-out;
 }
 
@@ -2552,19 +2539,21 @@ body {
 }
 
 .buttonx {
+    
     font-family: var(--buttonFont);
     font-weight: bold;
     width: auto;
     height: auto;
     color: var(--buttonColor);
     padding: 10px;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(54, 54, 55, 0.9));
+    background: linear-gradient(rgba(117, 1, 1, 0.8), rgba(55, 55, 54, 0.9));
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
-    border: 4px inline gray;
+    border-radius: 12px;
+    border: 0;
     transition: 1s;
+    border: 2px solid rgba(255, 132, 0, 0.7);
 }
 
 .buttonx:hover {
@@ -2592,7 +2581,9 @@ body {
 
 
 .buttonx:active:after {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(54, 54, 55, 0.6));
+    background: linear-gradient(rgba(117, 1, 1, 0.1), rgba(237, 193, 0, 0.1));
+    
+
 }
 
 .buttonx:hover:before {
@@ -2605,7 +2596,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(54, 54, 55, 0.9));
+    background: linear-gradient(rgba(254, 233, 169, 0.8), rgba(237, 193, 0, 0.9));
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -2720,15 +2711,16 @@ body {
     visibility: hidden;
     width: fit-content;
     height: fit-content;
-    background-color: #f27718;
+    background: linear-gradient(135deg, #eca009a0, #f0a105);
+    border: 2px outset rgba(255, 166, 0, 0.62);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 3px 5px;
     position: absolute;
     z-index: 1000;
-    bottom: 100%;
-    left: 50%;
+    bottom: 102%;
+    left: 51%;
     margin-left: -60px;
     transition: 1s;
 
@@ -2736,7 +2728,7 @@ body {
 }
 
 .hoverme .h-down {
-    bottom: -30px;
+    bottom: -35px;
     left: 55px;
 }
 
