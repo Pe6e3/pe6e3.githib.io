@@ -172,31 +172,31 @@
 
     });
 
-    // Проверка, если страница открыта с мобильного устройства
-    function isMobileDevice() {
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
+    // // Проверка, если страница открыта с мобильного устройства
+    // function isMobileDevice() {
+    //     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // }
 
-    // Обработчик для звука при наведении (с проверкой на мобильное устройство)
-    document.body.addEventListener('mouseover', (event) => {
-        const target = event.target;
-        // Проверяем, если это не мобильное устройство
-        if (!isMobileDevice() && target.matches('a, button')) {
-            const hoverSound = new Audio("/sounds/hover2.mp3");
-            hoverSound.volume = 0.3;
-            hoverSound.play();
-        }
-    });
+    // // Обработчик для звука при наведении (с проверкой на мобильное устройство)
+    // document.body.addEventListener('mouseover', (event) => {
+    //     const target = event.target;
+    //     // Проверяем, если это не мобильное устройство
+    //     if (!isMobileDevice() && target.matches('a, button, .buttonx')) {
+    //         const hoverSound = new Audio("/sounds/hover2.mp3");
+    //         hoverSound.volume = 0.3;
+    //         hoverSound.play();
+    //     }
+    // });
 
-    // Обработчик для звука при нажатии
-    document.body.addEventListener('mousedown', (event) => {
-        const target = event.target;
-        if (target.matches('a, button') && event.button === 0) {
-            const clickSound = new Audio("/sounds/click.mp3");
-            clickSound.volume = 0.2;
-            clickSound.play();
-        }
-    });
+    // // Обработчик для звука при нажатии
+    // document.body.addEventListener('mousedown', (event) => {
+    //     const target = event.target;
+    //     if (target.matches('a, button, .buttonx') && event.button === 0) {
+    //         const clickSound = new Audio("/sounds/click.mp3");
+    //         clickSound.volume = 0.2;
+    //         clickSound.play();
+    //     }
+    // });
 
 
 
