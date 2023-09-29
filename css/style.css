@@ -58,6 +58,7 @@
     font-family: 'Montserrat';
     src: url('/fonts/myFonts/Montserrat.ttf');
 }
+
 @font-face {
     font-family: 'Zekton';
     src: url('/fonts/myFonts/Zekton.ttf');
@@ -2626,9 +2627,9 @@ body {
     padding: 15px 0;
     height: 80px;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 1px);
     z-index: 1;
 }
 
