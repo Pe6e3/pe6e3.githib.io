@@ -43,7 +43,7 @@
 
 
         window.onload = function () {
-            $('.preloader').delay(80000).fadeOut('slow');
+            $('.preloader').delay(800).fadeOut('slow');
         };
 
 
