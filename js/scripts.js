@@ -58,16 +58,18 @@
                 var target = $(button.data('target'));
         
                 // Скрываем все блоки перед открытием нового
-                $('[class*="hidding"]').not(target).slideUp();
+                $('[class*="hidding"]').not(target).slideUp('easeOutBounce'); 
         
-                // Плавно перемещаемся вверх страницы
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 1000);
-        
-                // Если целевой блок не видим, то открываем его
-                if (!target.is(':visible')) {
-                    target.slideDown();
+                // Если целевой блок видим и открыт, то скрываем его
+                if (target.is(':visible')) {
+                    target.slideUp('easeOutBounce'); 
+                } else {
+                
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000, function () {
+                        target.slideDown('easeOutBounce'); 
+                    });
                 }
             });
         });
