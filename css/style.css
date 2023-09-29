@@ -1,33 +1,16 @@
 /* Global Style */
 
 :root {
-    --titleFont: 'Woodstick';
-    --titleFont2: 'Comfortaa';
+    --titleFont: 'Comfortaa';
     --textFont: 'Source';
-    --textFont2: 'Pobeda Bold';
-    --textFont3: 'Geologica';
-    --textFont4: 'Tektur';
-    --textFont5: 'Montserrat A';
-
-
-    /* --aboutFont: 'Montserrat'; */
+    --textFont2: 'Geologica';
+    --textFont3: 'Tektur';
     --aboutFont: 'Geologica';
     --tableFont: 'Montserrat';
-
-
     --boldFont: 'Montserrat';
-    /* --buttonFont: 'Montserrat';
-    --buttonFont: 'Source';
-    --buttonFont: 'Montserrat A';
-    --buttonFont: 'PlayR';
-    --buttonFont: 'PlayB';
-    --buttonFont: 'RussoOne';
-    --buttonFont: 'Lineyka';
-    --buttonFont: 'Geologica'; */
     --buttonFont: 'Comfortaa';
 
     --linkFont: 'Lineyka';
-    --buttonColor: #7e1c01;
     --titleColorDark: #96361c;
     --titleColorLight: wheat;
     --textColor: #9d121e;
@@ -36,20 +19,13 @@
     --textColorDark: rgb(6, 3, 30);
 
 
-    /* --servicesBG: url('../images/bg/1-9.jpg'); */
-    /* --portfolioBG:url('../images/bg/1-4.jpg'); */
-    --sertificateBG: url('../images/bg/1-9.jpg');
-    --jobExpBG: url('../images/bg/1.jpg');
-    --aboutBG: url('../images/bg/1-9.jpg');
-    --contactsBG: url('../images/bg/1-4.jpg');
-    --footerBG: url('../images/bg/1-2.jpg');
-    --lightBG: url('../images/bg/1-10.jpg');
-    --navBG: url('../images/bg/4-8.jpg');
+    --contactsBG: url('../images/bg/Contacts.jpg');
+    --footerBG: url('../images/bg/MainBG.jpg');
+    --lightBG: url('../images/bg/LightBG.jpg');
+    --navBG: url('../images/bg/NavBG.jpg');
 
-    --titleBG: url('../images/bg/2-2.jpg');
 
-    --subscribeModalBG: url('../images/bg/1-10.jpg');
-    --portfolioModalBG: url('../images/bg/1-10.jpg');
+    --modalBG: url('../images/bg/LightBG.jpg');
 }
 
 @font-face {
@@ -59,47 +35,13 @@
 }
 
 @font-face {
-    font-family: 'PlayB';
-    src: url('/fonts/myFonts/Play/Play-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'PlayR';
-    src: url('/fonts/myFonts/Play/Play-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'RussoOne';
-    src: url('/fonts/myFonts/RussoOne-Regular.ttf');
-}
-
-
-@font-face {
     font-family: 'Tektur';
     src: url('/fonts/myFonts/Tektur-VariableFont_wdth,wght.ttf');
 }
 
 @font-face {
-    font-family: 'Pobeda Bold';
-    src: url('/fonts/myFonts/Pobeda/pobeda-bold.ttf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Pobeda Regular';
-    src: url('/fonts/myFonts/Pobeda/pobeda-regular.ttf');
-    font-weight: normal;
-}
-
-@font-face {
     font-family: 'Source';
     src: url('/fonts/myFonts/SourceSans3-VariableFont_wght.ttf');
-}
-
-
-@font-face {
-    font-family: 'DisneyPark';
-    src: url('/fonts/myFonts/DisneyPark.ttf');
 }
 
 @font-face {
@@ -116,12 +58,10 @@
     font-family: 'Montserrat';
     src: url('/fonts/myFonts/Montserrat.ttf');
 }
-
 @font-face {
-    font-family: 'Montserrat A';
-    src: url('/fonts/myFonts/Montserrat Alternates.ttf');
+    font-family: 'Zekton';
+    src: url('/fonts/myFonts/Zekton.ttf');
 }
-
 
 @font-face {
     font-family: 'Woodstick';
@@ -134,7 +74,7 @@ body {
     line-height: 24px;
     letter-spacing: 1px;
     height: 100%;
-    font-family: var(--textFont4), Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: var(--textFont3), Geneva, Tahoma, sans-serif, sans-serif;
 }
 
 
@@ -235,7 +175,6 @@ fieldset {
 
 
 .section-title {
-    /* background-image: var(--titleBG); */
     background: linear-gradient(270deg, #eca009b5, #eca009);
     border: 1px inset rgba(255, 166, 0, 0.275);
     text-align: center;
@@ -428,7 +367,6 @@ fieldset {
 
 
 .job-exp {
-    /* background-image: var(--jobExpBG); */
     background-color: rgb(255, 248, 236);
 
     background-size: cover;
@@ -633,7 +571,7 @@ tr>td:nth-child(2) {
 
 .experience-content p {
     color: var(--textColor);
-    font-family: var(--textFont3);
+    font-family: var(--textFont2);
 }
 
 
@@ -773,7 +711,7 @@ tr>td:nth-child(2) {
 
 .subscribe .modal-content {
     color: var(--titleColorDark);
-    background: var(--subscribeModalBG);
+    background: var(--modalBG);
     background-repeat: repeat;
 
     padding: 20px;
@@ -891,7 +829,8 @@ tr>td:nth-child(2) {
 
 
 .portfolio-modal .modal-content {
-    background: var(--portfolioModalBG);
+    background-image: var(--modalBG);
+    background-size: auto;
     background-repeat: repeat;
     line-height: 150%;
     height: 100%;
@@ -899,7 +838,6 @@ tr>td:nth-child(2) {
 }
 
 .portfolio {
-    /* background-image: var(--portfolioBG); */
     background-color: rgb(255, 248, 236);
 
     background-size: cover;
@@ -977,7 +915,8 @@ ul.portfolio li.active {
     flex-direction: column;
 
     @media(max-width:500px) {
-        width: auto;
+        width: 90vw;
+        margin: 4px;
     }
 }
 
@@ -1002,7 +941,7 @@ ul.portfolio li.active {
     padding: 10px;
     font-size: 18px;
     color: rgb(100, 0, 0);
-    font-family: var(--textFont3);
+    font-family: var(--textFont2);
     font-weight: bold;
 
     @media(max-width: 500px) {
@@ -1104,7 +1043,6 @@ ul.portfolio li.active {
 /* Testimonial */
 
 .testimonial-section {
-    /* background-image: var(--sertificateBG); */
     background-color: rgb(255, 248, 236);
     background-size: cover;
     background-repeat: no-repeat;
@@ -2477,7 +2415,7 @@ body {
 }
 
 .subTitle h4 {
-    font-family: var(--titleFont2);
+    font-family: var(--titleFont);
     font-size: 25px;
     font-weight: bold;
 
