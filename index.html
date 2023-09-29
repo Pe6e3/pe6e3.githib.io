@@ -90,11 +90,11 @@
         <button class="buttonx button-toggle" data-target=".hiddingContacts">
             КОНТАКТЫ
         </button>
-
     </div>
 
+
     <!-- -- -- Home Section Start -->
-    <section class="home-section">
+    <!-- <section class="home-section">
 
         <div class="home-table">
 
@@ -131,790 +131,794 @@
             <source src="videos/bg-150px.mp4" type="video/mp4">
         </video>
 
-    </section><!-- Home Section End -->
+    </section> -->
+    <!-- Home Section End -->
 
-    <!-- -- -- Стек навыков Start -->
-    <section id="services" class="services-section">
+    <div class="PageContent">
+
+        <!-- -- -- Стек навыков Start -->
+        <section id="services" class="services-section">
 
 
-        <div class="lightBG hiddingStack">
+            <div class="lightBG hiddingStack">
 
-            <div class="subTitle">
-                <div class="divider dark">
-                    <i class="icon-drop"></i>
+                <div class="subTitle">
+                    <div class="divider dark">
+                        <i class="icon-drop"></i>
+                    </div>
+                    <h4>Технологии, которыми я в той или иной степени владею</h4>
                 </div>
-                <h4>Технологии, которыми я в той или иной степени владею</h4>
+
+                <div class="services">
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/Csharp.png" id="c#">
+                        <h3>Основной язык <br> C#</h3>
+                        <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+                    </div>
+
+
+
+
+                    <div class="services-detail hoverme ">
+                        <img src="img/ico/dotNet.svg" id=".net">
+                        <h3>ASP.NET MVC EF </h3>
+                        <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+                    </div>
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/linq.png" id="linq">
+                        <h3> LINQ </h3>
+                        <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+                    </div>
+
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/mssql.svg" id="mssql">
+                        <h3> MS SQL </h3>
+                        <span class="hovertext"> newbie ■■■□□ Junior+ </span>
+                    </div>
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/winForms.png" id="winforms">
+                        <h3> WinForms </h3>
+                        <span class="hovertext"> newbie ■■■□□ Junior+ </span>
+                    </div>
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/unity.svg" id="unity">
+                        <h3> Unity3D </h3>
+                        <span class="hovertext"> newbie ■■□□□ Junior+ </span>
+                    </div>
+
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/html5.svg" id="html">
+                        <h3> HTML5 </h3>
+                        <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+                    </div>
+
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/css3.svg" id="css">
+                        <h3>CSS</h3>
+                        <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+                    </div>
+
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/github.png" id="github">
+                        <h3>GitHub</h3>
+                        <span class="hovertext"> newbie ■■□□□ Junior+ </span>
+                    </div>
+
+                    <div class="services-detail hoverme">
+                        <img src="img/ico/js.png" id="js">
+                        <h3>JavaScript</h3>
+                        <span class="hovertext"> newbie ■■□□□ Junior+ </span>
+                    </div>
+
+                    <div class="services-detail weak-service hoverme">
+                        <img src="img/ico/flutter.png" id="js">
+                        <h3>Flutter*</h3>
+                        <span class="hovertext">В планах изучить <br> ■□□□□</span>
+                    </div>
+
+                    <div class="services-detail weak-service hoverme">
+                        <img src="img/ico/xamarin-transformed.png" id="js">
+                        <h3>Xamarin*</h3>
+                        <span class="hovertext">В планах изучить <br> □□□□□</span>
+                    </div>
+
+                    <div class="services-detail weak-service hoverme">
+                        <img src="img/ico/restApi.png" id="js">
+                        <h3>RestApi*</h3>
+                        <span class="hovertext">В планах изучить <br> ■□□□□ </span>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- Стек навыков End -->
+
+
+
+
+        <div class="modal-overlay">
+            <div class="modal-img">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
+        </div>
+
+
+
+        <!-- -- -- Портфолио Start -->
+        <section id="portfolio" class="portfolio">
+
+
+            <div class="lightBG hiddingPortfolio">
+
+                <div class="subTitle">
+                    <div class="divider dark">
+                        <i class="icon-picture"></i>
+                    </div>
+                    <h4>Здесь несколько проектов, которые я делал для портфолио,<br>
+                        и чтобы потренироваться в написании кода
+                    </h4>
+                </div>
+
+
+                <div class="portfolio-inner">
+
+                    <!-- ↓↓↓ 1й проект ↓↓↓ ppp1 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-1">
+
+
+                        <div class="portfolio-card">
+                            <div class="portfolio-title">
+                                <p> 1. MVC проект: Новостной портал с панелью администратора </p>
+                            </div>
+
+                            <div class="project-icon">
+                                <div class="hoverme">
+                                    <img src="img/ico/Csharp.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/dotNet.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/mssql.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/linq.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/css3.svg">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/html5.svg">
+                                    <span class="hovertext  h-down"> ■■■■□ </span>
+                                </div>
+                                <div class="hoverme">
+                                    <img src="img/ico/js.png">
+                                    <span class="hovertext  h-down"> ■□□□□ </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- ↑↑↑ 1й проект ↑↑↑ -->
+
+
+                    <!-- ↓↓↓ 2й проект ↓↓↓ ppp2 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-2">
+
+                        <div class="portfolio-card">
+                            <div class="portfolio-title">
+                                <p>2. Программа на WinForms для составления меню в дет саду</p>
+                            </div>
+                            <div class="project-icon">
+
+                                <div class="hoverme">
+                                    <img src="img/ico/Csharp.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/winForms.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/mssql.svg">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/linq.png">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- ↑↑↑ 2й проект ↑↑↑ -->
+
+                    <!-- ↓↓↓ 3й проект ↓↓↓ ppp3 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-3">
+                        <div class="portfolio-title">
+                            <p>3. Парсинг данных с сайта. Программа на WinForms</p>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="project-icon">
+
+                                <div class="hoverme">
+                                    <img src="img/ico/Csharp.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/winForms.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/Regex.png">
+                                    <span class="hovertext  h-down"> ■■■■□ </span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- ↑↑↑ 3й проект ↑↑↑ -->
+
+                    <!-- ↓↓↓ 4й проект ↓↓↓ ppp4 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-4">
+
+                        <div class="portfolio-card">
+                            <div class="portfolio-title">
+                                <p>4. Игра на Unity: накорми животных</p>
+                            </div>
+                            <div class="project-icon">
+                                <div class="hoverme">
+                                    <img src="img/ico/Csharp.png">
+                                    <span class="hovertext  h-down"> ■■□□□</span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/unity.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- ↑↑↑ 4й проект ↑↑↑ -->
+
+                    <!-- ↓↓↓ 5й проект ↓↓↓ ppp5 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-5">
+
+                        <div class="portfolio-card">
+                            <div class="portfolio-title">
+                                <p>5. MVC проект: треккер для еды по подобию складского учета</p>
+                            </div>
+                            <div class="project-icon">
+
+                                <div class="hoverme">
+                                    <img src="img/ico/Csharp.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/dotNet.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/mssql.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/linq.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/css3.svg">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/html5.svg">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/js.png">
+                                    <span class="hovertext  h-down"> ■□□□□ </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ↑↑↑ 5й проект ↑↑↑ -->
+
+                    <!-- ↓↓↓ 6й проект ↓↓↓ ppp6 -->
+                    <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-6">
+
+                        <div class="portfolio-card">
+                            <div class="portfolio-title">
+                                <p>6. Название проекта</p>
+                            </div>
+                            <div class="project-icon">
+
+
+                                <div class="hoverme">
+                                    <img src="img/ico/mssql.svg">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/linq.png">
+                                    <span class="hovertext  h-down"> ■■■■■ </span>
+                                </div>
+
+                                <div class="hoverme">
+                                    <img src="img/ico/css3.svg">
+                                    <span class="hovertext  h-down"> ■■■□□ </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- ↑↑↑ 6й проект ↑↑↑ -->
+
+
+                </div>
+
+
             </div>
 
-            <div class="services">
 
-                <div class="services-detail hoverme">
-                    <img src="img/ico/Csharp.png" id="c#">
-                    <h3>Основной язык <br> C#</h3>
-                    <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+
+        </section><!-- Портфолио End -->
+
+
+        <!-- -- -- Сертификаты Start -->
+        <section id="testimonials" class="testimonial-section">
+
+
+            <div class="lightBG hiddingTestimonal ">
+                <div class="subTitle">
+                    <div class="divider dark">
+                        <i class="icon-speech"></i>
+                    </div>
+                    <h4>Здесь пока только диплом ВУЗа и сертификат разработчика <br>
+                        (со временем будет больше)
+                    </h4>
                 </div>
 
+                <div class="col documents">
+                    <div class="testimonial-carousel-list margin-top-20">
+
+                        <div class="testimonial-word ">
+                            <a href="#" data-toggle="modal" data-target="#SpacDevModal">
+                                <img src="images/testimonial/Сертификат.jpg" class="img-responsive">
+                            </a>
+                            <h1>DevSpace: Разработчик C#</h1>
+                            <h4>Оффлайн курсы в школе программировния DevSpace. 9 месяцев, 270 часов</h4>
+                        </div>
+
+                        <div class="testimonial-word ">
+                            <a href="#" data-toggle="modal" data-target="#TpuModal"
+                                title="Диплом Бакалавра. Пока не могу сделать скан">
+                                <img src="images/testimonial/diploma.jpg" class="img-responsive">
+                            </a>
+                            <h1>ТПУ: менеджмент</h1>
+                            <h4>Томский Политехнический Университет, ИСГТ,
+                                менеджмент, бакалавр ('08-'14)</h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- Сертификаты End -->
 
 
+        <!-- -- -- Опыт работы Start -->
+        <section class="job-exp" id="jobExp ">
 
-                <div class="services-detail hoverme ">
-                    <img src="img/ico/dotNet.svg" id=".net">
-                    <h3>ASP.NET MVC EF </h3>
-                    <span class="hovertext"> newbie ■■■■□ Junior+ </span>
+            <div class="lightBG hiddingExp">
+
+                <div class="subTitle">
+                    <div class="divider dark">
+                        <i class="icon-briefcase"></i>
+                    </div>
+                    <h4>
+                        У меня пока нет опыта работы в <i style="color:red"> программировании
+                        </i style="color:red">. <br>
+                        Если есть необходимость - можете ознакомиться с опытом работы
+                        <i style="color:red"> в целом</i style="color:red">.
+                    </h4>
                 </div>
 
+                <div class="experience">
 
-                <div class="services-detail hoverme">
-                    <img src="img/ico/linq.png" id="linq">
-                    <h3> LINQ </h3>
-                    <span class="hovertext"> newbie ■■■■□ Junior+ </span>
-                </div>
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-briefcase"></i>
+                            <h6>11 месяцев</h6>
+                        </div>
+                        <div class="experience-content">
+                            <h3> Менеджер отдела клининга</h3>
+                            <h5>ГК ЛАМА, г.Томск</h5>
+                            <p>
+                                <strong>Основные обязанности:</strong> <br>
+                                Выстраивание процессов связанных с
+                                механизированной и ручной уборкой территорий зимой и летом, уборкой
+                                внутри
+                                помещений. <br>
+                                Текущая деятельность, связанная с уборкой территорий, помещений,
+                                вывозу
+                                ТБО,
+                                сбору и реализации вторсырья.
+                                <br> <strong>Достижения:</strong> <br>
+                                Подразделение вывело деятельность по утилизации отходов в сети с
+                                убытков
+                                на
+                                прибыль. Заключён первый контракт на предоставление услуг сторонней
+                                организации.<br>
+                                Выросли доходы от реализации вторсырья за счёт увеличения объёмов
+                                сбора
+                                и
+                                сменой
+                                на
+                                более выгодные источники сбыта.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-briefcase"></i>
+                            <h6>3 года 4 мес</h6>
+                        </div>
+                        <div class="experience-content">
+                            <h3> Менеджер проектов</h3>
+                            <h5>ГК ЛАМА, г.Томск</h5>
+                            <p>
+                                <strong>Основные обязанности:</strong> <br>
+                                Внедрение процессов по оптимизации деятельности
+                                компании в
+                                области
+                                нового направления: <br> самостоятельный вывоз ТБО и сбор вторсырья<br>
+
+                                Оптимизация процессов в работе инженера по охране труда.<br>
+                                Текущая деятельность,
+                                связанная с организацией проведения медосмотров, саниминимумов,
+                                псих.освидетельствования, СОУТ
+
+                                <br> <strong>Достижения:</strong> <br>
+                                Выполненены заявленные цели проекта по вывозу ТБО, проект перешел в
+                                текущую
+                                деятельность, образовано новое подразделение: Отдел клининга<br>
+
+                                Разработана и внедрена система учёта всех сотрудников производства,
+                                позволяющая
+                                контролировать сроки проведения медосмотров и санминимумов, вести
+                                запись
+                                на
+                                внутреннее обучение и присваивать уровни квалификации.<br>
+                                За счет некоторых автоматизаций с помощью настройки ПО снижена
+                                нагрузка
+                                на
+                                руководителей и инженера ОТ для качественного контроля выполнения
+                                требований
+                                СанПиН
+                                и РПН.
+                            </p>
+                        </div>
+                    </div>
 
 
 
-                <div class="services-detail hoverme">
-                    <img src="img/ico/mssql.svg" id="mssql">
-                    <h3> MS SQL </h3>
-                    <span class="hovertext"> newbie ■■■□□ Junior+ </span>
-                </div>
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-briefcase"></i>
+                            <h6>1 год 10 мес</h6>
+                        </div>
+                        <div class="experience-content">
+                            <h3> Менеджер проектов по запуску объектов</h3>
+                            <h5>ГК ЛАМА, г.Томск</h5>
+                            <p>
+                                Ведение проектов по запуску магазинов от этапа демонтажа до передачи
+                                готового
+                                объекта заказчику для выставления товаров на полки. <br>
+                                С апреля по ноябрь 2021г запустил 7 магазинов в г. Новосибирск:<br>
+                                • Евроспар - 1 шт<br>
+                                • Спар - 2 шт<br>
+                                • Хороший выбор - 4 шт <br>
+                                Несколько реконцептов в г. Томск в т.ч. без закрытия магазинов
+                                (ночные
+                                работы в
+                                несколько этапов без прекращения торговой деятельности)
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-briefcase"></i>
+                            <h6>9 месяцев</h6>
+                        </div>
+                        <div class="experience-content">
+                            <h3> ИО начальника отдела транспортной логистики</h3>
+                            <h5>ГК ЛАМА, г.Томск</h5>
+                            <p>
+                                <strong>Основные обязанности:</strong> <br>
+                                Организация работы подразделения по ежедневной доставке продуктов со
+                                склада
+                                на
+                                магазины всей сети, междугородней доставки товаров на склад. <br>
+                                Оптимизация логистических схем для снижения затрат и увеличению уровня сервиса.
+                                <br> <strong>Достижения:</strong> <br>
+                                Внедрена сдельная оплата труда для водителей, оптимизированы многие
+                                маршруты
+                                путём
+                                объединения и перераспределения отгрузок товаров, налажена работа
+                                диспетчеров
+                                для
+                                ведения качественного учёта объёмов перевозимых грузов
+                            </p>
+                        </div>
+                    </div>
 
-                <div class="services-detail hoverme">
-                    <img src="img/ico/winForms.png" id="winforms">
-                    <h3> WinForms </h3>
-                    <span class="hovertext"> newbie ■■■□□ Junior+ </span>
-                </div>
-
-
-                <div class="services-detail hoverme">
-                    <img src="img/ico/unity.svg" id="unity">
-                    <h3> Unity3D </h3>
-                    <span class="hovertext"> newbie ■■□□□ Junior+ </span>
-                </div>
-
-
-
-                <div class="services-detail hoverme">
-                    <img src="img/ico/html5.svg" id="html">
-                    <h3> HTML5 </h3>
-                    <span class="hovertext"> newbie ■■■■□ Junior+ </span>
-                </div>
-
-
-
-                <div class="services-detail hoverme">
-                    <img src="img/ico/css3.svg" id="css">
-                    <h3>CSS</h3>
-                    <span class="hovertext"> newbie ■■■■□ Junior+ </span>
-                </div>
-
-
-                <div class="services-detail hoverme">
-                    <img src="img/ico/github.png" id="github">
-                    <h3>GitHub</h3>
-                    <span class="hovertext"> newbie ■■□□□ Junior+ </span>
-                </div>
-
-                <div class="services-detail hoverme">
-                    <img src="img/ico/js.png" id="js">
-                    <h3>JavaScript</h3>
-                    <span class="hovertext"> newbie ■■□□□ Junior+ </span>
-                </div>
-
-                <div class="services-detail weak-service hoverme">
-                    <img src="img/ico/flutter.png" id="js">
-                    <h3>Flutter*</h3>
-                    <span class="hovertext">В планах изучить <br> ■□□□□</span>
-                </div>
-
-                <div class="services-detail weak-service hoverme">
-                    <img src="img/ico/xamarin-transformed.png" id="js">
-                    <h3>Xamarin*</h3>
-                    <span class="hovertext">В планах изучить <br> □□□□□</span>
-                </div>
-
-                <div class="services-detail weak-service hoverme">
-                    <img src="img/ico/restApi.png" id="js">
-                    <h3>RestApi*</h3>
-                    <span class="hovertext">В планах изучить <br> ■□□□□ </span>
+                    <div class="experience-item">
+                        <div class="experience-circle">
+                            <i class="icon-briefcase"></i>
+                            <h6>8 месяцев</h6>
+                        </div>
+                        <div class="experience-content">
+                            <h3> Менеджер проектов</h3>
+                            <h5>Вторпроект филиал г. Томск (ИП Матвейчук)</h5>
+                            <p>
+                                Оптимизация бизнес процессов по приему и подготовке к дальнейшей
+                                отгрузке
+                                вторсырья. <br>
+                                В т.ч. курирование работы производственного персонала: кладовщик,
+                                прессовщики,
+                                разнорабочие, водители, инженер-механик.<br>
+                                Автоматизация некоторых бизнес процессов с помощью Google-таблиц и
+                                Bitrix
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </section><!-- Стек навыков End -->
+        </section><!-- Опыт работы End -->
+
+
+        <!-- -- -- Обо мне Start -->
+        <section id="about" class="about ">
+
+            <div class="lightBG hiddingAbout">
+
+                <div class="subTitle">
+                    <div class="divider dark">
+                        <i class="icon-emotsmile"></i>
+                    </div>
+                    <h4>Информация, не относящаяся к профессиональным навыкам</h4>
+                </div>
+                <div class="about">
+                    <p>
+
+                           Приветствую! <br><br>
+                           В этом разделе хочу расписать все подряд о себе, чтобы сложилось какое-то представление обо
+                        мне как о человеке, а не о сотруднике. <br>
+                           Возможно, это будет Вам важно с точки зрения командообразования. <br> <br>
+                         ▫︎  Я стараюсь придерживаться здорового образа жизни, постоянно занимаюсь какой-то физической
+                        активностью. <br>
+                        Последнее время на первом месте - бег, на втором - тренажерный зал. Также часто хожу в горы,
+                        иногда
+                        с ночевкой <br>
+                         ▫︎  Также интересуюсь темой питания. Не курю, алкоголь употребляю крайне редко. <br>
+                         ▫︎  Медленно, но постоянно что-то читаю. Сейчас добрался до книг из школьной программы -
+                        постепенно закрываю пробелы. <br>
+                         ▫︎  Раньше увлекался зимним дрифтом, но пока отложил это хобби до лучших времен. <br>
+                         ▫︎  Есть небольшой опыт путешествия автостопом с палаткой. <br>
+                         ▫︎  В целом люблю здоровый/умеренный экстрим <br>
+
+                         ▫︎  Имею скорее математический, инженерный склад ума, чем гуманитарный. Люблю
+                        систематизировать,
+                        автоматизировать, вести подсчеты. <br>
+                         ▫︎  К сожалению пока не раскрыл в себе никаких творческих талантов - плохо рисую, не пою, не
+                        сочинаю стихов, не играю на музыкальных иструментах. Но тяга к творчеству есть, и именно
+                        программирование для меня стало той отдушиной, через которую я могу проявить себя как творец.
+                        <br>
+                           Я считаю здорово, что я нашел для себя способ совместить свою тягу к творчеству и инженерное
+                        мышление. Хотя не планирую сдаваться и в дальнейшем все же планирую научиться играть на
+                        некоторых музыкальных инструментах <br><br>
+                           В целом могу охарактеризовать себя в первую очередь как Справедливый и Честный. Никогда не
+                        возьму чужого, уважаю чужую свободу и пространство. <br>
+                        Живу для себя, но не эгоцентрист, не хожу по головам, не паразитирую и т.п. <br><br>
+
+                           По типу личности: скорее что-то среднее между интровертом и экстравертом. Редко первый иду на
+                        контакт, но если контакт произошел - с легкостью и удовольствием поддерживаю беседу.
+                    </p>
+
+                    <div class="carousel-2 owl-carousel">
+
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/dam.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/gorelnik.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/japanese.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/pioneer.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/swing.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/BAP2.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/3broth.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/moto.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/red101.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/thai.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/Crimea.jpg" />
+                            </div>
+                        </a>
+                        <a href="#link" class="modal-trigger">
+                            <div class="owl-pic">
+                                <img src="img/snow.jpg" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="modal-img">
+                        <span class="close-modal">&times;</span>
+                        <img class="modal-content" id="modal-img">
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- Обо мне End -->
+
+
+        <!-- -- -- Контакты Start -->
+        <section id="contact" class="contacts-section">
 
 
 
+            <div class="lightBG1 hiddingContacts ">
 
-    <div class="modal-overlay">
-        <div class="modal-img">
-            <span class="close-modal">&times;</span>
-            <img class="modal-content" id="modal-img">
-        </div>
+                <div class="subTitle" style="background-color: rgba(0, 0, 0, 0);">
+                    <div class="divider dark">
+                        <i class="icon-envelope-open"></i>
+                    </div>
+                </div>
+
+                <div class="contacts">
+
+
+                    <ul class="social-icon">
+                        <li><a href="https://instagram.com/pe6e3" class="social-ico" target="_blank">
+                                <img src="img/ico/insta.png" title="@Pe6e3"></a></li>
+                        <li><a href="https://t.me/ntonkz" class="social-ico" target="_blank">
+                                <img src="img/ico/telega.png" title="@ntonKZ"></a></li>
+                        <li><a href="https://wa.me/77478704750" class="social-ico" target="_blank">
+                                <img src="img/ico/whatsapp.png" title="+77478704750"></a></li>
+                        <li><a href="tel:+77478704750" class="social-ico" target="_blank">
+                                <img src="img/ico/mobile.png" title="+77478704750"></a></li>
+                        <li><a href="mailto:xPe6e3@gmail.com" class="social-ico" target="_blank">
+                                <img src="img/ico/mail.png" title=""></a></li>
+                        <li><a href="https://github.com/Pe6e3" class="social-ico" target="_blank">
+                                <img src="img/ico/github.png" title="@Pe6e3"></a></li>
+                        <li><a href="https://www.strava.com/athletes/33302170" class="social-ico" target="_blank">
+                                <img src="img/ico/strava.png" title="@Pe6e3"></a></li>
+
+
+                    </ul>
+                </div>
+
+                <br>
+
+                <div class="col  text-center" style="padding-bottom: 30px;">
+                    <button class="buttonx" data-toggle="modal" data-target="#contactsmodal">
+                        Отобразить текстом
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Контакты End -->
+
+
+
+        <!-- -- -- Footer Start -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+
+                    <noscript>
+                        <div>
+                            <img src="https://mc.yandex.ru/watch/95038714" style="position:absolute; left:-9999px;"
+                                alt="" />
+                        </div>
+                    </noscript>
+
+
+                </div>
+            </div>
+
+        </footer> <!-- Footer End -->
+
     </div>
-
-
-
-    <!-- -- -- Портфолио Start -->
-    <section id="portfolio" class="portfolio">
-
-
-        <div class="lightBG hiddingPortfolio">
-
-            <div class="subTitle">
-                <div class="divider dark">
-                    <i class="icon-picture"></i>
-                </div>
-                <h4>Здесь несколько проектов, которые я делал для портфолио,<br>
-                    и чтобы потренироваться в написании кода
-                </h4>
-            </div>
-
-
-            <div class="portfolio-inner">
-
-                <!-- ↓↓↓ 1й проект ↓↓↓ ppp1 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-1">
-
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-title">
-                            <p> 1. MVC проект: Новостной портал с панелью администратора </p>
-                        </div>
-
-                        <div class="project-icon">
-                            <div class="hoverme">
-                                <img src="img/ico/Csharp.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/dotNet.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/mssql.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/linq.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/css3.svg">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/html5.svg">
-                                <span class="hovertext  h-down"> ■■■■□ </span>
-                            </div>
-                            <div class="hoverme">
-                                <img src="img/ico/js.png">
-                                <span class="hovertext  h-down"> ■□□□□ </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <!-- ↑↑↑ 1й проект ↑↑↑ -->
-
-
-                <!-- ↓↓↓ 2й проект ↓↓↓ ppp2 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-2">
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-title">
-                            <p>2. Программа на WinForms для составления меню в дет саду</p>
-                        </div>
-                        <div class="project-icon">
-
-                            <div class="hoverme">
-                                <img src="img/ico/Csharp.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/winForms.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/mssql.svg">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/linq.png">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <!-- ↑↑↑ 2й проект ↑↑↑ -->
-
-                <!-- ↓↓↓ 3й проект ↓↓↓ ppp3 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-3">
-                    <div class="portfolio-title">
-                        <p>3. Парсинг данных с сайта. Программа на WinForms</p>
-                    </div>
-                    <div class="portfolio-card">
-                        <div class="project-icon">
-
-                            <div class="hoverme">
-                                <img src="img/ico/Csharp.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/winForms.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/Regex.png">
-                                <span class="hovertext  h-down"> ■■■■□ </span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-                <!-- ↑↑↑ 3й проект ↑↑↑ -->
-
-                <!-- ↓↓↓ 4й проект ↓↓↓ ppp4 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-4">
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-title">
-                            <p>4. Игра на Unity: накорми животных</p>
-                        </div>
-                        <div class="project-icon">
-                            <div class="hoverme">
-                                <img src="img/ico/Csharp.png">
-                                <span class="hovertext  h-down"> ■■□□□</span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/unity.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                </div>
-                <!-- ↑↑↑ 4й проект ↑↑↑ -->
-
-                <!-- ↓↓↓ 5й проект ↓↓↓ ppp5 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-5">
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-title">
-                            <p>5. MVC проект: треккер для еды по подобию складского учета</p>
-                        </div>
-                        <div class="project-icon">
-
-                            <div class="hoverme">
-                                <img src="img/ico/Csharp.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/dotNet.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/mssql.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/linq.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/css3.svg">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/html5.svg">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/js.png">
-                                <span class="hovertext  h-down"> ■□□□□ </span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- ↑↑↑ 5й проект ↑↑↑ -->
-
-                <!-- ↓↓↓ 6й проект ↓↓↓ ppp6 -->
-                <div class="item buttonx buttonx-orange" data-toggle="modal" data-target="#portfolio-modal-6">
-
-                    <div class="portfolio-card">
-                        <div class="portfolio-title">
-                            <p>6. Название проекта</p>
-                        </div>
-                        <div class="project-icon">
-
-
-                            <div class="hoverme">
-                                <img src="img/ico/mssql.svg">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/linq.png">
-                                <span class="hovertext  h-down"> ■■■■■ </span>
-                            </div>
-
-                            <div class="hoverme">
-                                <img src="img/ico/css3.svg">
-                                <span class="hovertext  h-down"> ■■■□□ </span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- ↑↑↑ 6й проект ↑↑↑ -->
-
-
-            </div>
-
-
-        </div>
-
-
-
-    </section><!-- Портфолио End -->
-
-
-    <!-- -- -- Сертификаты Start -->
-    <section id="testimonials" class="testimonial-section">
-
-
-        <div class="lightBG hiddingTestimonal ">
-            <div class="subTitle">
-                <div class="divider dark">
-                    <i class="icon-speech"></i>
-                </div>
-                <h4>Здесь пока только диплом ВУЗа и сертификат разработчика <br>
-                    (со временем будет больше)
-                </h4>
-            </div>
-
-            <div class="col documents">
-                <div class="testimonial-carousel-list margin-top-20">
-
-                    <div class="testimonial-word ">
-                        <a href="#" data-toggle="modal" data-target="#SpacDevModal">
-                            <img src="images/testimonial/Сертификат.jpg" class="img-responsive">
-                        </a>
-                        <h1>DevSpace: Разработчик C#</h1>
-                        <h4>Оффлайн курсы в школе программировния DevSpace. 9 месяцев, 270 часов</h4>
-                    </div>
-
-                    <div class="testimonial-word ">
-                        <a href="#" data-toggle="modal" data-target="#TpuModal"
-                            title="Диплом Бакалавра. Пока не могу сделать скан">
-                            <img src="images/testimonial/diploma.jpg" class="img-responsive">
-                        </a>
-                        <h1>ТПУ: менеджмент</h1>
-                        <h4>Томский Политехнический Университет, ИСГТ,
-                            менеджмент, бакалавр ('08-'14)</h4>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section><!-- Сертификаты End -->
-
-
-    <!-- -- -- Опыт работы Start -->
-    <section class="job-exp" id="jobExp ">
-
-        <div class="lightBG hiddingExp">
-
-            <div class="subTitle">
-                <div class="divider dark">
-                    <i class="icon-briefcase"></i>
-                </div>
-                <h4>
-                    У меня пока нет опыта работы в <i style="color:red"> программировании
-                    </i style="color:red">. <br>
-                    Если есть необходимость - можете ознакомиться с опытом работы
-                    <i style="color:red"> в целом</i style="color:red">.
-                </h4>
-            </div>
-
-            <div class="experience">
-
-                <div class="experience-item">
-                    <div class="experience-circle">
-                        <i class="icon-briefcase"></i>
-                        <h6>11 месяцев</h6>
-                    </div>
-                    <div class="experience-content">
-                        <h3> Менеджер отдела клининга</h3>
-                        <h5>ГК ЛАМА, г.Томск</h5>
-                        <p>
-                            <strong>Основные обязанности:</strong> <br>
-                            Выстраивание процессов связанных с
-                            механизированной и ручной уборкой территорий зимой и летом, уборкой
-                            внутри
-                            помещений. <br>
-                            Текущая деятельность, связанная с уборкой территорий, помещений,
-                            вывозу
-                            ТБО,
-                            сбору и реализации вторсырья.
-                            <br> <strong>Достижения:</strong> <br>
-                            Подразделение вывело деятельность по утилизации отходов в сети с
-                            убытков
-                            на
-                            прибыль. Заключён первый контракт на предоставление услуг сторонней
-                            организации.<br>
-                            Выросли доходы от реализации вторсырья за счёт увеличения объёмов
-                            сбора
-                            и
-                            сменой
-                            на
-                            более выгодные источники сбыта.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-circle">
-                        <i class="icon-briefcase"></i>
-                        <h6>3 года 4 мес</h6>
-                    </div>
-                    <div class="experience-content">
-                        <h3> Менеджер проектов</h3>
-                        <h5>ГК ЛАМА, г.Томск</h5>
-                        <p>
-                            <strong>Основные обязанности:</strong> <br>
-                            Внедрение процессов по оптимизации деятельности
-                            компании в
-                            области
-                            нового направления: <br> самостоятельный вывоз ТБО и сбор вторсырья<br>
-
-                            Оптимизация процессов в работе инженера по охране труда.<br>
-                            Текущая деятельность,
-                            связанная с организацией проведения медосмотров, саниминимумов,
-                            псих.освидетельствования, СОУТ
-
-                            <br> <strong>Достижения:</strong> <br>
-                            Выполненены заявленные цели проекта по вывозу ТБО, проект перешел в
-                            текущую
-                            деятельность, образовано новое подразделение: Отдел клининга<br>
-
-                            Разработана и внедрена система учёта всех сотрудников производства,
-                            позволяющая
-                            контролировать сроки проведения медосмотров и санминимумов, вести
-                            запись
-                            на
-                            внутреннее обучение и присваивать уровни квалификации.<br>
-                            За счет некоторых автоматизаций с помощью настройки ПО снижена
-                            нагрузка
-                            на
-                            руководителей и инженера ОТ для качественного контроля выполнения
-                            требований
-                            СанПиН
-                            и РПН.
-                        </p>
-                    </div>
-                </div>
-
-
-
-                <div class="experience-item">
-                    <div class="experience-circle">
-                        <i class="icon-briefcase"></i>
-                        <h6>1 год 10 мес</h6>
-                    </div>
-                    <div class="experience-content">
-                        <h3> Менеджер проектов по запуску объектов</h3>
-                        <h5>ГК ЛАМА, г.Томск</h5>
-                        <p>
-                            Ведение проектов по запуску магазинов от этапа демонтажа до передачи
-                            готового
-                            объекта заказчику для выставления товаров на полки. <br>
-                            С апреля по ноябрь 2021г запустил 7 магазинов в г. Новосибирск:<br>
-                            • Евроспар - 1 шт<br>
-                            • Спар - 2 шт<br>
-                            • Хороший выбор - 4 шт <br>
-                            Несколько реконцептов в г. Томск в т.ч. без закрытия магазинов
-                            (ночные
-                            работы в
-                            несколько этапов без прекращения торговой деятельности)
-                        </p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-circle">
-                        <i class="icon-briefcase"></i>
-                        <h6>9 месяцев</h6>
-                    </div>
-                    <div class="experience-content">
-                        <h3> ИО начальника отдела транспортной логистики</h3>
-                        <h5>ГК ЛАМА, г.Томск</h5>
-                        <p>
-                            <strong>Основные обязанности:</strong> <br>
-                            Организация работы подразделения по ежедневной доставке продуктов со
-                            склада
-                            на
-                            магазины всей сети, междугородней доставки товаров на склад. <br>
-                            Оптимизация логистических схем для снижения затрат и увеличению уровня сервиса.
-                            <br> <strong>Достижения:</strong> <br>
-                            Внедрена сдельная оплата труда для водителей, оптимизированы многие
-                            маршруты
-                            путём
-                            объединения и перераспределения отгрузок товаров, налажена работа
-                            диспетчеров
-                            для
-                            ведения качественного учёта объёмов перевозимых грузов
-                        </p>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-circle">
-                        <i class="icon-briefcase"></i>
-                        <h6>8 месяцев</h6>
-                    </div>
-                    <div class="experience-content">
-                        <h3> Менеджер проектов</h3>
-                        <h5>Вторпроект филиал г. Томск (ИП Матвейчук)</h5>
-                        <p>
-                            Оптимизация бизнес процессов по приему и подготовке к дальнейшей
-                            отгрузке
-                            вторсырья. <br>
-                            В т.ч. курирование работы производственного персонала: кладовщик,
-                            прессовщики,
-                            разнорабочие, водители, инженер-механик.<br>
-                            Автоматизация некоторых бизнес процессов с помощью Google-таблиц и
-                            Bitrix
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section><!-- Опыт работы End -->
-
-
-    <!-- -- -- Обо мне Start -->
-    <section id="about" class="about ">
-
-        <div class="lightBG hiddingAbout">
-
-            <div class="subTitle">
-                <div class="divider dark">
-                    <i class="icon-emotsmile"></i>
-                </div>
-                <h4>Информация, не относящаяся к профессиональным навыкам</h4>
-            </div>
-            <div class="about">
-                <p>
-
-                       Приветствую! <br><br>
-                       В этом разделе хочу расписать все подряд о себе, чтобы сложилось какое-то представление обо
-                    мне как о человеке, а не о сотруднике. <br>
-                       Возможно, это будет Вам важно с точки зрения командообразования. <br> <br>
-                     ▫︎  Я стараюсь придерживаться здорового образа жизни, постоянно занимаюсь какой-то физической
-                    активностью. <br>
-                    Последнее время на первом месте - бег, на втором - тренажерный зал. Также часто хожу в горы,
-                    иногда
-                    с ночевкой <br>
-                     ▫︎  Также интересуюсь темой питания. Не курю, алкоголь употребляю крайне редко. <br>
-                     ▫︎  Медленно, но постоянно что-то читаю. Сейчас добрался до книг из школьной программы -
-                    постепенно закрываю пробелы. <br>
-                     ▫︎  Раньше увлекался зимним дрифтом, но пока отложил это хобби до лучших времен. <br>
-                     ▫︎  Есть небольшой опыт путешествия автостопом с палаткой. <br>
-                     ▫︎  В целом люблю здоровый/умеренный экстрим <br>
-
-                     ▫︎  Имею скорее математический, инженерный склад ума, чем гуманитарный. Люблю
-                    систематизировать,
-                    автоматизировать, вести подсчеты. <br>
-                     ▫︎  К сожалению пока не раскрыл в себе никаких творческих талантов - плохо рисую, не пою, не
-                    сочинаю стихов, не играю на музыкальных иструментах. Но тяга к творчеству есть, и именно
-                    программирование для меня стало той отдушиной, через которую я могу проявить себя как творец.
-                    <br>
-                       Я считаю здорово, что я нашел для себя способ совместить свою тягу к творчеству и инженерное
-                    мышление. Хотя не планирую сдаваться и в дальнейшем все же планирую научиться играть на
-                    некоторых музыкальных инструментах <br><br>
-                       В целом могу охарактеризовать себя в первую очередь как Справедливый и Честный. Никогда не
-                    возьму чужого, уважаю чужую свободу и пространство. <br>
-                    Живу для себя, но не эгоцентрист, не хожу по головам, не паразитирую и т.п. <br><br>
-
-                       По типу личности: скорее что-то среднее между интровертом и экстравертом. Редко первый иду на
-                    контакт, но если контакт произошел - с легкостью и удовольствием поддерживаю беседу.
-                </p>
-
-                <div class="carousel-2 owl-carousel">
-
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/dam.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/gorelnik.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/japanese.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/pioneer.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/swing.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/BAP2.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/3broth.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/moto.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/red101.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/thai.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/Crimea.jpg" />
-                        </div>
-                    </a>
-                    <a href="#link" class="modal-trigger">
-                        <div class="owl-pic">
-                            <img src="img/snow.jpg" />
-                        </div>
-                    </a>
-                </div>
-
-                <div class="modal-img">
-                    <span class="close-modal">&times;</span>
-                    <img class="modal-content" id="modal-img">
-                </div>
-            </div>
-
-        </div>
-
-    </section><!-- Обо мне End -->
-
-
-    <!-- -- -- Контакты Start -->
-    <section id="contact" class="contacts-section">
-
-
-
-        <div class="lightBG1 hiddingContacts ">
-
-            <div class="subTitle" style="background-color: rgba(0, 0, 0, 0);">
-                <div class="divider dark">
-                    <i class="icon-envelope-open"></i>
-                </div>
-            </div>
-
-            <div class="contacts">
-
-
-                <ul class="social-icon">
-                    <li><a href="https://instagram.com/pe6e3" class="social-ico" target="_blank">
-                            <img src="img/ico/insta.png" title="@Pe6e3"></a></li>
-                    <li><a href="https://t.me/ntonkz" class="social-ico" target="_blank">
-                            <img src="img/ico/telega.png" title="@ntonKZ"></a></li>
-                    <li><a href="https://wa.me/77478704750" class="social-ico" target="_blank">
-                            <img src="img/ico/whatsapp.png" title="+77478704750"></a></li>
-                    <li><a href="tel:+77478704750" class="social-ico" target="_blank">
-                            <img src="img/ico/mobile.png" title="+77478704750"></a></li>
-                    <li><a href="mailto:xPe6e3@gmail.com" class="social-ico" target="_blank">
-                            <img src="img/ico/mail.png" title=""></a></li>
-                    <li><a href="https://github.com/Pe6e3" class="social-ico" target="_blank">
-                            <img src="img/ico/github.png" title="@Pe6e3"></a></li>
-                    <li><a href="https://www.strava.com/athletes/33302170" class="social-ico" target="_blank">
-                            <img src="img/ico/strava.png" title="@Pe6e3"></a></li>
-
-
-                </ul>
-            </div>
-
-            <br>
-
-            <div class="col  text-center" style="padding-bottom: 30px;">
-                <button class="buttonx" data-toggle="modal" data-target="#contactsmodal">
-                    Отобразить текстом
-                </button>
-            </div>
-
-        </div>
-
-    </section>
-    <!-- Контакты End -->
-
-
-
-    <!-- -- -- Footer Start -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-
-                <noscript>
-                    <div>
-                        <img src="https://mc.yandex.ru/watch/95038714" style="position:absolute; left:-9999px;"
-                            alt="" />
-                    </div>
-                </noscript>
-
-
-            </div>
-        </div>
-
-    </footer> <!-- Footer End -->
-
-
+    <!-- PageContent End -->
     <!-- All Javascript Plugins  -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugin.js"></script>
