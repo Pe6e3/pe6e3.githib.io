@@ -48,34 +48,31 @@
 
 
 
-
         $(document).ready(function () {
             // Скрываем все блоки при загрузке страницы
             $('[class*="hidding"]').slideUp();
-        })
-
-        $('.button-toggle').click(function () {
-            var button = $(this);
-            var target = $(button.data('target'));
-
-            // Скрываем все блоки
-            $('[class*="hidding"]').slideUp();
-
-            
-
-
-            // Открываем выбранный блок
-            if (!target.is(':visible')) {
-                target.slideDown();
+        
+            // Обработчик события для кнопок
+            $('button').click(function () {
+                var button = $(this);
+                var target = $(button.data('target'));
+        
+                // Скрываем все блоки перед открытием нового
+                $('[class*="hidding"]').not(target).slideUp();
+        
+                // Плавно перемещаемся вверх страницы
                 $('html, body').animate({
-                    scrollTop: button.offset().top - 60
+                    scrollTop: 0
                 }, 1000);
-            } else {
-                $('html, body').animate({
-                    scrollTop: button.offset().top - 400
-                }, 1000);
-            }
+        
+                // Если целевой блок не видим, то открываем его
+                if (!target.is(':visible')) {
+                    target.slideDown();
+                }
+            });
         });
+        
+
 
         /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
 
@@ -199,16 +196,16 @@
 
     openModalImage();
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const modalTriggers = document.querySelectorAll('[data-toggle="modal"]');
-    
-        modalTriggers.forEach(function(trigger) {
-            trigger.addEventListener('click', function() {
-                    openModalImage();
+
+        modalTriggers.forEach(function (trigger) {
+            trigger.addEventListener('click', function () {
+                openModalImage();
             });
         });
     });
-    
+
 
     // Находим все элементы с классом "modal-trigger" (ссылки на изображения)
     function openModalImage() {
