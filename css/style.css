@@ -19,13 +19,13 @@
     --textColorDark: rgb(6, 3, 30);
 
 
-    --contactsBG: url('../images/bg/Contacts.jpg');
-    --footerBG: url('../images/bg/MainBG.jpg');
-    --lightBG: url('../images/bg/LightBG.jpg');
-    --navBG: url('../images/bg/NavBG.jpg');
+    --contactsBG: url('../images/bg/Contacts.webp');
+    --footerBG: url('../images/bg/MainBG.webp');
+    --lightBG: url('../images/bg/LightBG.webp');
+    --navBG: url('../images/bg/NavBG.webp');
 
 
-    --modalBG: url('../images/bg/LightBG.jpg');
+    --modalBG: url('../images/bg/LightBG.webp');
 }
 
 @font-face {
