@@ -101,25 +101,6 @@
 
 
 
-
-        /* Scroll To Top */
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 500) {
-                $('.scroll-to-top').fadeIn();
-            } else {
-                $('.scroll-to-top').fadeOut();
-            }
-        });
-
-
-        $('.scroll-to-top').click(function () {
-            $('html, body').animate({ scrollTop: 0 }, 800);
-            return false;
-        });
-
-
-
         /* Testimonial Carousel/Slider */
 
         $(".testimonial-carousel-list").owlCarousel({
@@ -151,9 +132,8 @@
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 imageElement.src = images[currentImageIndex];
             }
-            setInterval(changeImage, 2000);
+            setInterval(changeImage, 3000);
         });
-
 
 
         /* Statistics Counter */
@@ -224,46 +204,60 @@
         }
     });
 
+    openModalImage();
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const modalTriggers = document.querySelectorAll('[data-toggle="modal"]');
+    
+        modalTriggers.forEach(function(trigger) {
+            trigger.addEventListener('click', function() {
+                    openModalImage();
+            });
+        });
+    });
+    
 
     // Находим все элементы с классом "modal-trigger" (ссылки на изображения)
-    const modalTriggers = document.querySelectorAll('.modal-trigger');
-    const modal = document.querySelector('.modal-img');
-    const modalImg = document.getElementById('modal-img');
-    const closeModal = document.querySelector('.close-modal');
+    function openModalImage() {
 
-    // Функция для открытия модального окна
-    function openModal(e) {
-        e.preventDefault(); // Предотвращаем переход по ссылке
-        modal.style.display = 'block';
-        modalImg.src = this.querySelector('img').src;
-    }
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+        const modal = document.querySelector('.modal-img');
+        const modalImg = document.getElementById('modal-img');
+        const closeModal = document.querySelector('.close-modal');
 
-    // Функция для закрытия модального окна
-    function closeModalFn() {
-        modal.style.display = 'none';
-    }
-
-    // Привязываем события к элементам
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', openModal);
-    });
-
-    closeModal.addEventListener('click', closeModalFn);
-
-    // Закрывать модальное окно также при клике вне изображения
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModalFn();
+        // Функция для открытия модального окна
+        function openModal(e) {
+            e.preventDefault(); // Предотвращаем переход по ссылке
+            modal.style.display = 'block';
+            modalImg.src = this.querySelector('img').src;
         }
-    });
 
-    // Закрывать модальное окно при нажатии клавиши Escape
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeModalFn();
+        // Функция для закрытия модального окна
+        function closeModalFn() {
+            modal.style.display = 'none';
         }
-    });
+
+        // Привязываем события к элементам
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', openModal);
+        });
+
+        closeModal.addEventListener('click', closeModalFn);
+
+        // Закрывать модальное окно также при клике вне изображения
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModalFn();
+            }
+        });
+
+        // Закрывать модальное окно при нажатии клавиши Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModalFn();
+            }
+        });
+    }
 
 
 })(jQuery);

@@ -2779,7 +2779,7 @@ body {
 .modal-img {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10000;
     padding-top: 50px;
     left: 0;
     top: 0;
@@ -2808,4 +2808,7 @@ body {
     cursor: pointer;
 }
 
- 
+ .portfolio-carousel>img{
+    height: 300px;
+    width: auto;
+ }
