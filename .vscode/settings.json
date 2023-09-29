@@ -3,3 +3,12 @@
     "editor.renderWhitespace": "boundary",
     "editor.fontSize": 16
 }
+
+{
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true
+}

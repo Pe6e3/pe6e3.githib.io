@@ -2467,8 +2467,8 @@ body {
 }
 
 .project-icon img {
-    width: 43px !important;
-    height: 43px;
+    width: 47px !important;
+    height: 47px;
     padding: 4px;
     border-radius: 6px !important;
     object-fit: cover;
@@ -2477,9 +2477,26 @@ body {
     border: 2px outset rgba(175, 175, 175, 0.3);
     transition: 1s;
 
-    @media(max-width:767px) {
+    @media(max-width:490px) {
+        width: 40px !important;
+        height: 40px;
+    }
+    @media(max-width:440px) {
+        width: 38px !important;
+        height: 38px;
+    }
+    @media(max-width:415px) {
         width: 34px !important;
         height: 34px;
+    }
+    @media(max-width:390px) {
+        width: 31px !important;
+        height: 31px;
+    }
+
+    @media(max-width:360px) {
+        width: 28px !important;
+        height: 28px;
     }
 }
 
@@ -2575,6 +2592,7 @@ body {
 
 .button-close {
     color: #801a35;
+    -color: #e78fa77b !important;
     opacity: 0.8;
     position: absolute;
     right: 0;
@@ -2808,7 +2826,14 @@ body {
     cursor: pointer;
 }
 
- .portfolio-carousel>img{
+.portfolio-carousel>img {
+    margin: auto;
     height: 300px;
     width: auto;
- }
+    margin: 20px 0;
+
+    @media(max-width:500px) {
+        height: 40vw;
+
+    }
+}
