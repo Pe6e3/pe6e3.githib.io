@@ -34,8 +34,6 @@
     --tableColor: rgb(243, 255, 185);
     --textColor2: rgb(192, 182, 167);
     --textColorDark: rgb(6, 3, 30);
-    --navTextDark: rgb(160, 160, 160);
-    --navTextLight: rgb(92, 157, 255);
 
 
     /* --servicesBG: url('../images/bg/1-9.jpg'); */
@@ -356,7 +354,7 @@ fieldset {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 99999;    
+    z-index: 99999;
     display: flex;
     justify-content: center;
 }
@@ -558,52 +556,6 @@ tr>td:nth-child(2) {
     width: 92px;
 }
 
-.navigation-menu .navbar-nav li a {
-    color: var(--navTextDark);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-    padding: 30px 15px;
-    -webkit-transition: .3s;
-    transition: .3s;
-    font-weight: 600;
-}
-
-.navigation-menu .navbar-nav li a:hover {
-    background: none;
-    color: #f7639a;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-.nav li a:focus,
-.nav li a:hover {
-    background: none;
-    color: #4c9cef;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-.navbar {
-    margin: 0;
-}
-
-.navigation-background {
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    background: #051059;
-}
-
-.navigation-background .logo {
-    padding-top: 18px;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-.navigation-background .logo a {
-    color: #ffffff;
-
-}
 
 .logo a {
     width: 230px;
@@ -615,17 +567,6 @@ tr>td:nth-child(2) {
 }
 
 
-.navigation-background .navigation-menu .navbar-nav li a {
-    color: var(--navTextLight);
-
-    padding: 20px 15px;
-    -webkit-transition: .3s;
-    transition: .3s;
-}
-
-.navigation-background .navigation-menu .navbar-nav li a:hover {
-    color: rgb(166, 196, 247);
-}
 
 
 
@@ -1709,25 +1650,7 @@ body {
 }
 
 
-@media only screen and (min-width: 767px) and (max-width: 991px) {
-    .navigation-menu .navbar-nav li a {
-        padding: 30px 11px;
-        font-size: 12px;
-    }
 
-    .navigation-background .navigation-menu .navbar-nav li a {
-        padding: 30px 11px;
-        font-size: 12px;
-    }
-
-    .navigation-background .logo {
-        padding-top: 28px;
-    }
-
-    .margin-left-setting {
-        margin-left: 0px !important;
-    }
-}
 
 
 @media only screen and (max-width: 991px) {
@@ -1736,68 +1659,6 @@ body {
     }
 }
 
-
-@media only screen and (max-width: 767px) {
-    .navbar-toggle .icon-bar {
-        background: #f7639a;
-    }
-
-    .navigation-background .navbar-toggle .icon-bar {
-        background: #ffffff;
-    }
-
-    .navbar-toggle {
-        margin-right: 0px;
-        margin-top: -30px;
-    }
-
-    .navbar {
-        min-height: 0px;
-    }
-
-    .navigation-menu .navbar-nav li a {
-        padding: 11px 15px;
-        color: #ffffff;
-    }
-
-    .navigation-menu .navbar-nav li a:hover {
-        color: #ffffff;
-    }
-
-    .navigation-background .navigation-menu .navbar-nav li a:hover {
-        color: #ffffff;
-    }
-
-    .navigation-background .navigation-menu .navbar-nav li a {
-        padding: 11px 15px;
-    }
-
-    .navbar-fixed-bottom .navbar-collapse,
-    .navbar-fixed-top .navbar-collapse {
-        max-height: 420px;
-    }
-
-    .navbar-toggle {
-        margin-top: -30px;
-    }
-
-    .navbar-collapse {
-        background: #0a2a4d;
-        width: 250px;
-        position: absolute;
-        right: 0;
-    }
-
-    .nav li {
-        transition: 0.3s;
-    }
-}
-
-.nav li:hover {
-    background-color: rgba(255, 255, 0, 0.15);
-    border-radius: 4px;
-    transition: 0.5s;
-}
 
 
 
@@ -2483,14 +2344,17 @@ body {
         width: 40px !important;
         height: 40px;
     }
+
     @media(max-width:440px) {
         width: 38px !important;
         height: 38px;
     }
+
     @media(max-width:415px) {
         width: 34px !important;
         height: 34px;
     }
+
     @media(max-width:390px) {
         width: 31px !important;
         height: 31px;
@@ -2681,7 +2545,7 @@ body {
 
 .hoverme .hovertext {
     visibility: hidden;
-    width: fit-content;
+    width: 200px;
     height: fit-content;
     background: linear-gradient(135deg, #eca009dc, #f0a205e8);
     border: 2px outset rgba(255, 166, 0, 0.62);
@@ -2692,7 +2556,7 @@ body {
     position: absolute;
     z-index: 1000;
     bottom: 102%;
-    left: 51%;
+    right: calc(50% - 100px);
     margin-left: -60px;
     transition: 1s;
 
@@ -2838,4 +2702,13 @@ body {
         height: 40vw;
 
     }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 15px 0;
+    height: 80px;
 }
