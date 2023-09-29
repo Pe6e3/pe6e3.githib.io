@@ -61,14 +61,8 @@
             // Скрываем все блоки
             $('[class*="hidding"]').slideUp();
 
-            // Убираем "Скрыть" со всех кнопок
-            $('.button-toggle').text(function () {
-                return $(this).text().replace("Скрыть", "");
-            });
+            
 
-            if (!button.text().includes("Скрыть")) {
-                button.text("Скрыть " + button.text());
-            }
 
             // Открываем выбранный блок
             if (!target.is(':visible')) {
@@ -77,7 +71,6 @@
                     scrollTop: button.offset().top - 60
                 }, 1000);
             } else {
-                button.text(button.text().replace("Скрыть", ""));
                 $('html, body').animate({
                     scrollTop: button.offset().top - 400
                 }, 1000);

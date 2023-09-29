@@ -2672,7 +2672,9 @@ body {
     }
 }
 
-
+.PageContent {
+    margin-top: 80px;
+}
 
 .navbar {
     background-image: var(--navBG);
@@ -2692,6 +2694,53 @@ body {
     z-index: 1;
 }
 
+
+.navbar .buttonx {
+    @media(max-width: 1200px) {
+        font-size: 16px !important;
+        padding: 10px;
+        margin: 5px;
+        height: 50px;
+    }
+
+
+    @media(max-width: 550px) {
+        font-size: 12px !important;
+    }
+
+    @media(max-width: 390px) {
+        font-size: 11px !important;
+        padding: 5px;
+        margin: 3px;
+    }
+
+    @media(max-width: 350px) {
+        font-size: 9px !important;
+        padding: 5px;
+        margin: 3px;
+    }
+
+}
+
+
+.navbar {
+    @media(max-width: 1200px) {}
+
+    @media(max-width: 900px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 140px;
+    }
+
+
+}
+
 .PageContent {
-    margin-top: 80px;
+
+
+
+    @media(max-width: 800px) {
+        margin-top: 140px;
+    }
 }
