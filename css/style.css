@@ -356,17 +356,19 @@ fieldset {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 99999;
+    z-index: 99999;    
+    display: flex;
+    justify-content: center;
 }
 
 .preloader p {
     position: absolute;
     top: 48%;
-    left: 50%;
-    text-align: center;
+    /* left: 48%; */
     font-size: 20px;
     color: var(--textColor2);
     font-family: var(--textFont);
+
 }
 
 .preloader:before,
@@ -375,8 +377,8 @@ fieldset {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 35%;
+
     background-color: #4c9cef;
     animation: squaremove 1s ease-in-out infinite;
     -webkit-animation: squaremove 1s ease-in-out infinite;
