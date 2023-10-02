@@ -2454,6 +2454,7 @@ body {
     visibility: hidden;
     width: 200px;
     height: fit-content;
+    line-height: 150%;
     background: linear-gradient(135deg, #eca009dc, #f0a205e8);
     border: 2px outset rgba(255, 166, 0, 0.62);
     color: #fff;
@@ -2471,6 +2472,10 @@ body {
 
     @media(max-width:500px) {
         border: 1px outset rgba(255, 166, 0, 0.75);
+        font-size: 8px;
+        width: 120px;
+        
+        right: calc(50% - 60px);
 
     }
 }

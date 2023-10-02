@@ -67,7 +67,7 @@
                 
                     $('html, body').animate({
                         scrollTop: 0
-                    }, 1000, function () {
+                    },  function () {
                         target.slideDown('easeOutBounce'); 
                     });
                 }
