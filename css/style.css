@@ -586,6 +586,7 @@ tr>td:nth-child(2) {
 .about,
 .contacts-section {
     background-image: var(--lightBG);
+    
 }
 
 .about>p {
@@ -2501,6 +2502,7 @@ body {
             rgb(240, 250, 220),
             rgb(250, 250, 250));
     background-image: var(--lightBG);
+    background-repeat: repeat;
 }
 
 .carousel-2 .owl-item {
