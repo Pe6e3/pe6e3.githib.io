@@ -2278,7 +2278,7 @@ body {
 
 .project-icon img:hover {
     transform: scale(1.05);
-    background-color: #f4efefb5;
+    background-color: #f0ff8e96;
     transition: 0.2s;
 }
 
@@ -2462,7 +2462,7 @@ body {
     border-radius: 6px;
     padding: 3px 5px;
     position: absolute;
-    z-index: 1000;
+    z-index: 100000;
     bottom: 102%;
     right: calc(50% - 100px);
     margin-left: -60px;
@@ -2480,9 +2480,12 @@ body {
     }
 }
 
-.hoverme .h-down {
-    bottom: -35px;
-    left: 55px;
+
+.hoverme .w-50px {
+ width: 50px;
+ right: calc(50% - 25px);
+ font-size: 11px;
+
 }
 
 .hoverme:hover .hovertext {
