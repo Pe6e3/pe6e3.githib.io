@@ -50,24 +50,24 @@
         $(document).ready(function () {
             // Скрываем все блоки при загрузке страницы
             $('[class*="hidding"]').slideUp();
-
+        
             // Обработчик события для кнопок
-            $('button').click(function () {
+            $('.button-toggle').click(function () {
                 var button = $(this);
                 var target = $(button.data('target'));
-
-                // Скрываем все блоки перед открытием нового
-                $('[class*="hidding"]').not(target).slideUp('easeOutBounce');
-
+        
                 // Если целевой блок видим и открыт, то скрываем его
                 if (target.is(':visible')) {
                     target.slideUp('easeOutBounce');
                 } else {
                     // Снимаем класс "active" со всех кнопок
-                    $('button').removeClass('active');
+                    $('.button-toggle').removeClass('active');
                     // Добавляем класс "active" только к выбранной кнопке
                     button.addClass('active');
-
+        
+                    // Скрываем все блоки, кроме целевого
+                    $('[class*="hidding"]').not(target).slideUp('easeOutBounce');
+        
                     $('html, body').animate({
                         scrollTop: 0
                     }, function () {
@@ -76,6 +76,7 @@
                 }
             });
         });
+        
 
 
         /*  ↑↑↑ Кнопка для скрытия/раскрытия контента ↑↑↑ */
@@ -254,6 +255,8 @@
         });
     }
 
+
+    
 
 })(jQuery);
 
